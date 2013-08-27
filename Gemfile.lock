@@ -158,9 +158,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass
   coffee-rails (~> 4.0.0)
   devise
+  haml
   jbuilder (~> 1.2)
   jquery-rails
   mysql2

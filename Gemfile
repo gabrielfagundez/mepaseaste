@@ -48,5 +48,5 @@ end
 gem 'devise'
 gem 'rails_admin'
 
-# Add styles from bootstrap
-gem 'bootstrap-sass'
+# Style for pages using HAML
+gem 'haml'
