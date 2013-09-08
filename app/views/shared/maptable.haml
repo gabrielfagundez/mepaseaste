@@ -1,20 +1,21 @@
-.panel.blue-background
-  #sin-datos
+#sin-datos
+  .panel.blue-background
     %p
       Aun no has ingresado ningun origen, ni ningun destino.
       %br
       Prueba ingresando puntos en el mapa haciendo clicks en el punto que deseas agregar.
 
 
+#con-datos.hide
+  %table{width: '100%', id: 'tabla_de_datos'}
+    %thead
+      %tr
+        %th.table-small
+          Tipo
+        %th.table-big
+          Ubicacion
+        %th.table-big
+          Nombre
+    %tbody
+
 = render template: 'home/opciones'
-
-
-%table{width: '100%'}
-  %thead
-    %tr
-      %th.table-small
-        Tipo
-      %th.table-big
-        Ubicacion
-      %th.table-big
-        Nombre
