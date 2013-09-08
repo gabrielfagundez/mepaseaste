@@ -1,41 +1,12 @@
-.row
-  .small-12.columns
-    #sin-datos
-      %p
-        Aun no has ingresado ningun origen, ni ningun destino.
-        %br
-        Prueba ingresando puntos en el mapa haciendo clicks en el punto que deseas
-        agregar.
-    #sin-datos-sep.px20-separator
-
-
-
--# Opciones
-.row
-  .small-6.columns
+.panel.blue-background
+  #sin-datos
     %p
-      Selecciona la tarifa
-    .switch.round
-      %input{id: 'a', name: 'switch_accurance', type: 'radio', checked: 'true'}
-      %label{for: 'a', onclick: ''}
-        Diurna
-      %input{id: 'b', name: 'switch_accurance', type: 'radio'}
-      %label{for: 'b', onclick: ''}
-        Nocturna
-      %span
+      Aun no has ingresado ningun origen, ni ningun destino.
+      %br
+      Prueba ingresando puntos en el mapa haciendo clicks en el punto que deseas agregar.
 
-  .small-6.columns
-    %p
-      Selecciona la precision
-    .switch.round
-      %input{id: 'c', name: 'switch_day', type: 'radio', checked: 'true'}
-      %label{for: 'c', onclick: ''}
-        Baja
-      %input{id: 'd', name: 'switch_day', type: 'radio'}
-      %label{for: 'd', onclick: ''}
-        Alta
-      %span
 
+= render template: 'home/opciones'
 
 
 %table{width: '100%'}

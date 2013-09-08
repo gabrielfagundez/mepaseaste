@@ -1,0 +1,26 @@
+-# Opciones
+.panel
+  .row
+    .small-6.columns
+      %p
+        Tarifa
+      .switch.round
+        %input{id: 'tarifa_diurna', name: 'switch_accurance', type: 'radio', checked: 'true'}
+        %label{for: 'tarifa_diurna', onclick: ''}
+          Dia
+        %input{id: 'tarifa_nocturna', name: 'switch_accurance', type: 'radio'}
+        %label{for: 'tarifa_nocturna', onclick: ''}
+          Noche
+        %span
+
+    .small-6.columns
+      %p
+        Precision
+      .switch.round
+        %input{id: 'baja_precision', name: 'switch_day', type: 'radio', checked: 'true'}
+        %label{for: 'baja_precision', onclick: ''}
+          Baja
+        %input{id: 'alta_precision', name: 'switch_day', type: 'radio'}
+        %label{for: 'alta_precision', onclick: ''}
+          Alta
+        %span
