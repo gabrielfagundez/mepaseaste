@@ -22,11 +22,11 @@ var geocoder;
 
 
 function initialize(allow_markers) {
-    // Instantiate a directions service.
-    directionsService = new google.maps.DirectionsService();
-
-    // Instanciamos el geocoder
-    geocoder = new google.maps.Geocoder();
+//    // Instantiate a directions service.
+//    directionsService = new google.maps.DirectionsService();
+//
+//    // Instanciamos el geocoder
+//    geocoder = new google.maps.Geocoder();
 
     var mapOptions = {
         zoom: zoom,
@@ -44,20 +44,20 @@ function initialize(allow_markers) {
         })
     };
 
-    // Create a renderer for directions and bind it to the map.
-    var rendererOptions = {
-        map: map,
-        suppressMarkers: true
-    }
-
-    for(var ii=0; ii<4; ii++){
-        var directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);
-        directionsDisplays.push(directionsDisplay);
-    }
-
-
-    // Instantiate an info window to hold step text.
-    stepDisplay = new google.maps.InfoWindow();
+//    // Create a renderer for directions and bind it to the map.
+//    var rendererOptions = {
+//        map: map,
+//        suppressMarkers: true
+//    }
+//
+//    for(var ii=0; ii<4; ii++){
+//        var directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);
+//        directionsDisplays.push(directionsDisplay);
+//    }
+//
+//
+//    // Instantiate an info window to hold step text.
+//    stepDisplay = new google.maps.InfoWindow();
 
 }
 
