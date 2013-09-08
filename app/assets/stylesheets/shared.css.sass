@@ -1,4 +1,5 @@
 $blue: #12406f
+$grey: #e6e6e6
 
 body
   background-image: url("/img/grain_200x200.png")
@@ -24,11 +25,20 @@ h3
   font-weight: normal
   color: #252525
 
+.row
+  max-width: 1024px
+
+.button
+  background: $blue
+
 .blue-text
   color: $blue
 
 .bold
   font-weight: bold
+
+.italic
+  font-style: italic
 
 .content
   width: 100%
@@ -36,6 +46,7 @@ h3
 
 .center
   text-align: center
+  vertical-align: center
 
 .px10-separator
   height: 10px
@@ -60,3 +71,36 @@ h3
 .blue-a
   height: 200px
   background: $blue
+
+.grey-text
+  color: $grey
+
+.barra_superior
+  width: 100%
+  height: 40px
+  background-color: #333333
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 999
+
+.free-space
+  height: 60px
+
+.right-centered-text
+  text-align: right
+  height: 40px
+  margin-top: 5px
+  margin-bottom: auto
+
+.text-sup
+  border-top: 5px
+  display: inline
+  color: $grey
+  font-size: 12px
+
+.img-sup
+  display: inline
+  width: 40px
+  height: 40px
