@@ -1,0 +1,32 @@
+.px50-separator
+
+.row
+  .small-10.columns.small-centered
+    - if devise_error_messages! != ''
+      .alert-box.radius
+        %p
+          = devise_error_messages!
+
+    .panel.radius.center
+      %h2 Olvide mi contrasena
+      .px10-separator
+
+      = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
+        %div
+          = f.label :email
+          %br
+          = f.email_field :email, :autofocus => true
+
+        %div
+          = f.label :password
+          %br
+          = f.password_field :password
+
+        %div
+          = f.label :password_confirmation
+          %br
+          = f.password_field :password_confirmation
+
+        .px20-separator
+        %div
+          = f.submit 'Resetear mi contrasena', class: 'button'

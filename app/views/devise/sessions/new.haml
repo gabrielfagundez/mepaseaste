@@ -1,0 +1,44 @@
+.px50-separator
+
+.row
+  .small-10.columns.small-centered
+    .panel.radius.center
+      %h2
+        Aun no tienes cuenta?
+        %br
+        %a{href:new_user_registration_path}
+          Registrate
+        y empieza a disfrutar de todas las funciones que
+        %a{href: root_url}
+          MePaseaste.UY
+        tiene para vos!
+
+.row
+  .small-10.columns.small-centered
+    - if devise_error_messages! != ''
+      .alert-box.radius
+        %p
+          = devise_error_messages!
+
+    .panel.radius.center
+      %h2 Iniciar Sesion
+      .px10-separator
+
+      = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+        %div
+          = f.label :email
+          %br
+          = f.email_field :email, :autofocus => true
+
+        %div
+          = f.label :password
+          %br
+          = f.password_field :password
+
+        .px20-separator
+        %div
+          = f.submit 'Iniciar Sesion', class: 'button'
+
+        .panel
+          %a{href: new_user_password_path}
+            Olvidaste tu contrasena?
