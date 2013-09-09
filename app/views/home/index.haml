@@ -20,7 +20,11 @@
 
 .px100-separator
 
-= render template: 'shared/android'
+- if current_user.blank?
+  = render template: 'shared/android'
+- else
+  = render template: 'shared/destinosusuales'
+
 
 
 
