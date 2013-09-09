@@ -12,20 +12,24 @@
       .px10-separator
 
       = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
-        %div
-          = f.label :email
-          %br
-          = f.email_field :email, :autofocus => true
 
-        %div
-          = f.label :password
-          %br
-          = f.password_field :password
+        .row.collapse
+          .small-9.columns
+            = f.email_field :email, :autofocus => true
+          .small-3.columns
+            = f.label :email, class: 'postfix radius'
 
-        %div
-          = f.label :password_confirmation
-          %br
-          = f.password_field :password_confirmation
+        .row.collapse
+          .small-9.columns
+            = f.password_field :password
+          .small-3.columns
+            = f.label :password, class: 'postfix radius'
+
+        .row.collapse
+          .small-9.columns
+            = f.password_field :password_confirmation
+          .small-3.columns
+            = f.label 'Confirma tu Password', class: 'postfix radius'
 
         .px20-separator
         %div
