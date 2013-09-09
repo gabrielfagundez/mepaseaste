@@ -11,8 +11,6 @@ class User < ActiveRecord::Base
 
   scope :superadmins, includes(:roles).where("roles.name = 'superadmin'")
 
-
-
   def has_role(role_name)
     roles.include?(Role.where(name: role_name).first)
   end

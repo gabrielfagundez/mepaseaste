@@ -26,5 +26,4 @@ class Role < ActiveRecord::Base
   def user?
     self.name == 'user'
   end
-
 end
