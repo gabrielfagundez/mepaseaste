@@ -1,12 +1,13 @@
 .px20-separator
 
-.row
-  .small-10.small-centered.columns
-    .panel.radius
-      %p.center
-        %a{href: new_user_session_path}
-          Registrate o Inicia Sesion
-        para almacenar destinos usuales, acceder a nuevas funciones y mas!
+- if current_user.blank?
+  .row
+    .small-10.small-centered.columns
+      .panel.radius
+        %p.center
+          %a{href: new_user_session_path}
+            Registrate o Inicia Sesion
+          para almacenar destinos usuales, acceder a nuevas funciones y mas!
 
 .px10-separator
 

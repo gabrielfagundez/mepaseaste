@@ -7,6 +7,8 @@ Mepaseaste::Application.routes.draw do
   get '/contacto'       => 'contact#contacto'
   get '/about'          => 'contact#about'
 
+  resources :destinos
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

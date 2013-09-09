@@ -1,0 +1,25 @@
+.row
+  .full-grey-line
+
+.px50-separator
+
+.row
+  .large-6.columns.center
+    .panel.radius
+      %h2
+        Destinos Guardados
+      - if current_user.destinos.empty?
+        .panel.callout.radius
+          Aun no tienes destinos almacenados. Prueba agregando uno en
+          %a{href: new_destino_path, color: '#252525' }
+            este enlace.
+      - else
+        - current_user.destinos.each do |destino|
+          destino.ubicacion
+
+
+
+  .large-6.columns.center
+    .panel.radius
+      %h2
+        Destinos Usuales

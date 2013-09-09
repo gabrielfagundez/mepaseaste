@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130909230110) do
+ActiveRecord::Schema.define(version: 20130909232708) do
+
+  create_table "destinos", force: true do |t|
+    t.string   "ubicacion",  default: "", null: false
+    t.string   "nombre",     default: "", null: false
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "rails_admin_histories", force: true do |t|
     t.text     "message"
