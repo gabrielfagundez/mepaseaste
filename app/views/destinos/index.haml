@@ -1,0 +1,26 @@
+.px20-separator
+
+.row
+  .large-12.columns.center
+    %h2
+      Agrega un nuevo destino
+
+.row
+  .large-8.columns.small-centered.center
+    .panel.radius
+      %p
+        Selecciona un punto en el mapa y agrega la informacion necesaria en el recuadro. El destino sera almacenado
+        y podras acceder a el cuando quieras.
+
+.px20-separator
+
+.row
+  .large-8.columns
+    = render template: 'shared/map'
+
+  .large-4.columns
+    .show-for-small
+      .px20-separator
+
+    .panel.radius
+      .tabla-destinos
