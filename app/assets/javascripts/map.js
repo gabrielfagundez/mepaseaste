@@ -140,11 +140,18 @@ function createMarker(event) {
         if (status == google.maps.GeocoderStatus.OK) {
             if (results[0]) {
                 $('#geocode_' + marker.markerId).html("<p>" + results[0].formatted_address + "</p>");
+                // Redimensionamos el mapa si es necesario
+                redimensionMap();
+                google.maps.event.trigger(map, 'resize');
             }
         } else {
             alert("Geocoder failed due to: " + status);
         }
     });
+
+    // Redimensionamos el mapa si es necesario
+    redimensionMap();
+    google.maps.event.trigger(map, 'resize');
 
     return marker;
 }
