@@ -1,3 +1,6 @@
+- if current_user.present?
+  = render template: 'shared/barralogin'
+
 .px20-separator
 
 - if current_user.blank?
@@ -19,7 +22,7 @@
   .large-4.columns
     = render template: 'shared/maptable'
 
-.px100-separator
+.px50-separator
 
 - if current_user.blank?
   = render template: 'shared/android'
