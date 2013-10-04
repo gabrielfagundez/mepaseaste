@@ -3,7 +3,7 @@ production:
   encoding: utf8
   collation: utf8_general_ci
   reconnect: false
-  database: mepaseaste_production
+  database: heroku_71a25f26c1d7e46
   pool: 5
   username: b7004484dedd52
   password: 759a6468
