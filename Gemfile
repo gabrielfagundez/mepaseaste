@@ -22,6 +22,7 @@ gem 'rails_admin'
 
 group :production do
   gem 'rails_12factor'
+  gem 'pg'
 end
 
 group :development do
