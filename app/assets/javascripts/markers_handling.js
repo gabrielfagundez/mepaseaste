@@ -178,10 +178,9 @@ function getDistance(marker, url){
                         marker.tiempos_anteriores_raw.push(tiempo['value']);
 
                     } else {
-                        alert('Ocurrió un error en la funcion de obtener distacia en un punto específico');
+                        alert('Ocurrió un error en la funcion de obtener distacia - La llamada a Google dio error en un punto específico');
                     }
                 }
-
 
             } else {
                 alert('Ocurrió un error en la funcion de obtener distancia - La llamada a Google dio Success pero devolvio error interno');
