@@ -22,8 +22,6 @@ gem 'rails_admin'
 
 group :production do
   gem 'rails_12factor'
-
-  # TODO: Remove when migrating from Postgres to MySQL is finished.
   gem 'pg'
 end
 

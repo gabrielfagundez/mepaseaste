@@ -20,32 +20,32 @@ var iter = 0;
 // Variables para reverse geocoder
 var geocoder;
 
-
 function initialize(allow_markers) {
-    // Instantiate a directions service.
+
+    // Direction Service
     directionsService = new google.maps.DirectionsService();
 
-    // Instanciamos el geocoder
+    // Geocoder
     geocoder = new google.maps.Geocoder();
 
-    // Opciones del mapa
+    // Map options
     var mapOptions = {
         zoom: zoom,
         center: new google.maps.LatLng(-34.7600432, -56.2019143),
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
-    // Creamos el mapa
+    // Map
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-    // Permitimos agregar marcadores
+    // Allows to add markers
     if(allow_markers){
         google.maps.event.addListener(map, 'click', function(event, i) {
             createMarker(event);
         })
     };
 
-    // Renderizador de direcciones bindeado al mapa
+    // Map routes renderer
     var rendererOptions = {
         map: map,
         suppressMarkers: true
@@ -55,114 +55,9 @@ function initialize(allow_markers) {
         directionsDisplays.push(directionsDisplay);
     }
 
-    // InfoWindow para el proximo paso
+    // Next step Infowindow
     stepDisplay = new google.maps.InfoWindow();
 
-}
-
-
-function createMarker(event) {
-    infoWindow.close();
-
-    if(markerId == 1) {
-        icon = '/icon/start_marker.png';
-    } else {
-        icon = '/icon/end_marker.png';
-    }
-
-    if(markerId == 1) {
-        nombre = 'Donde partimos?';
-    } else {
-        nombre = 'De quien es este hogar?';
-    }
-
-    if(markerId == 1) {
-        start = true;
-    } else {
-        start = false;
-    }
-
-    marker = new google.maps.Marker({
-        draggable: true,
-        position: event.latLng,
-        map: map,
-
-        // Variables relativas a la aplicacion web
-        markerId: markerId,
-        nombre: nombre,
-        icon: icon,
-        start: start
-    });
-
-    google.maps.event.addListener(marker, 'click', function() {
-        showBubble(event.latLng, marker['markerId']);
-        map.panTo(event.latLng);
-    });
-
-    // Update marker id
-    markerId = markerId + 1;
-
-    markers.push(marker);
-
-    // Actualizamos la tabla inferior
-    tabla = $('#tabla_de_datos');
-    html =
-        "<tr id='fila_" + marker.markerId + "'>" +
-            "<a href='javascript:centerMarker(" + marker.markerId + ");'>" +
-                "<th class='table-small'>" +
-                    "<img src='/assets" + marker.icon + "'>" +
-                "</th>" +
-            "</a>" +
-            "<th class='table-big' id='geocode_" + marker.markerId + "'><p>Obteniendo direccion.. </p></th>" +
-            "<th class='table-big' id='nombre_" + marker.markerId + "' ><p>" + marker.nombre + "</p></th>" +
-        "</tr>";
-    tabla.append(html);
-
-    // Borramos la indicacion superior
-    $('#con-datos').show();
-    $('#sin-datos').hide();
-
-    if(markers.length == 1) {
-        $('#outPopUp_origen').show();
-        $('#inPopUp_origen').show();
-    } else {
-        $('#outPopUp').show();
-        $('#inPopUp').show();
-    }
-
-    if(markers.length > 1){
-        $('#boton_enviar_datos').show();
-    }
-
-
-    // Realizamos el Geocode de las direcciones
-    geocoder.geocode({'latLng': event.latLng}, function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-            if (results[0]) {
-                $('#geocode_' + marker.markerId).html("<p>" + results[0].formatted_address + "</p>");
-                // Redimensionamos el mapa si es necesario
-                redimensionMap();
-                google.maps.event.trigger(map, 'resize');
-            }
-        } else {
-            alert("Geocoder failed due to: " + status);
-        }
-    });
-
-    // Redimensionamos el mapa si es necesario
-    redimensionMap();
-    google.maps.event.trigger(map, 'resize');
-
-    return marker;
-}
-
-function getMarkerByID(id) {
-    for(var i=0; i < markers.length; i++) {
-        var marker = markers[i];
-        if(marker && marker.markerId == id) {
-            return marker;
-        }
-    }
 }
 
 function agregarNombre(){
