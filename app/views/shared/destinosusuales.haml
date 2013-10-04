@@ -4,22 +4,9 @@
 .px50-separator
 
 .row
-  .large-6.columns.center
-    .panel.radius
-      %h2
-        Destinos Guardados
-      - if current_user.destinos.empty?
-        .panel.callout.radius
-          Aun no tienes destinos almacenados. Prueba agregando uno en
-          %a{href: destinos_path, color: '#252525' }
-            este enlace.
-      - else
-        - current_user.destinos.each do |destino|
-          destino.ubicacion
-
-
-
-  .large-6.columns.center
-    .panel.radius
-      %h2
-        Destinos Usuales
+  .small-4.columns
+    = image_tag 'home/fst_frame.fw.png'
+  .small-4.columns
+    = image_tag 'home/second_frame.fw.png'
+  .small-4.columns
+    = image_tag 'home/third_frame.fw.png'
