@@ -21,3 +21,8 @@ module Mepaseaste
     # config.i18n.default_locale = :de
   end
 end
+
+BANDERA_DIURNA          = 27.71
+BANDERA_NOCTURNA        = 33.252
+CIEN_METROS_DIURNO      = 1.61
+CIEN_METROS_NOCTURNO    = 1.932

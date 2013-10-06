@@ -29,6 +29,14 @@
 
 .px50-separator
 
+.row
+  .large-4.columns.center-text
+    = image_tag 'home/fst_frame.png'
+  .large-4.columns.center-text
+    = image_tag 'home/second_frame.png'
+  .large-4.columns.center-text
+    = image_tag 'home/third_frame.png'
+
 - if current_user.blank?
   = render template: 'shared/android'
 - else

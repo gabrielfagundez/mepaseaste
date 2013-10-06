@@ -9,7 +9,10 @@ Mepaseaste::Application.routes.draw do
 
   resources :destinos
 
-  post '/sending_data'   => 'data#process_data'
+  post '/sending_data'  => 'data#process_data'
+  get '/show_data'      => 'data#show_data'
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
