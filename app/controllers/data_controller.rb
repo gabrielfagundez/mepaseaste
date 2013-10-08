@@ -61,12 +61,46 @@ class DataController < ApplicationController
       end
     end
 
+    crear_archivos_publicos
+
     # Renderizamos la nueva pagina
     respond_to do |format|
       format.js {
         render text: 'window.location.replace("/show_data");'
       }
     end
+  end
+
+
+  def crear_archivos_publicos
+
+    # Creamos los archivos que usara el Algoritmo Evolutivo
+    FileUtils.touch('public/parametros.txt')
+    FileUtils.touch('public/costos.txt')
+
+    # Creamos el archivo de configuración paramétrica de nuestro algoritmo
+    cantidad = 2 * (cantidad_marcadores - 1) - 1
+    File.open('public/parametros.txt', 'w') do |file|
+      file.write cantidad
+      file.write "\n"
+      tarifa == 'diurna' ? (file.write BANDERA_DIURNA) : (file.write BANDERA_NOCTURNA)
+      file.write "\n"
+      file.write '0'
+      file.write "\n"
+      file.write 'public/costos.txt'
+    end
+
+    # Creamos la matriz de costos
+    File.open('public/costos.txt', 'w') do |file|
+      for i in 0..(cantidad_marcadores - 1) do
+        for j in 0..(cantidad_marcadores - 1) do
+          file.write @matriz_costos[i][j]
+          file.write ' '
+        end
+        file.write "\n"
+      end
+    end
+
   end
 
 end
