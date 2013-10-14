@@ -17,15 +17,15 @@
 .row
   .large-8.columns
 
-    = render template: 'shared/map'
+    = render template: 'international/shared/map'
 
   .large-4.columns
-    = render template: 'shared/maptable'
+    = render template: 'international/shared/maptable'
 
 .px20-separator
 .px10-separator
 
-= render template: 'shared/enviardatos'
+= render template: 'international/shared/enviardatos'
 
 .px50-separator
 
@@ -38,9 +38,9 @@
     = image_tag 'home/third_frame.png'
 
 - if current_user.blank?
-  = render template: 'shared/android'
+  = render template: 'international/shared/android'
 - else
-  = render template: 'shared/destinosusuales'
+  = render template: 'international/shared/destinosusuales'
 
 
 

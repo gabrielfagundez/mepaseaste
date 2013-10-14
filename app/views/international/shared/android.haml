@@ -1,0 +1,63 @@
+.px50-separator
+
+
+-# Blue Line
+.row
+  .small-4.columns.not-visible-line
+  .small-4.columns.blue-line
+  .small-4.columns.not-visible-line
+
+-# Text Inside Blue Lines
+.row
+  .small-12.columns
+    .px10-separator
+    %h1
+      .center.blue-text
+        Proximamente..
+        %br
+        MePaseaste.UY para telefonos Android
+    .px10-separator
+
+-# Blue Line
+.row
+  .small-4.columns.not-visible-line
+  .small-4.columns.blue-line
+  .small-4.columns.not-visible-line
+
+
+.px50-separator
+
+-# Content
+.row
+  .large-8.columns.center
+    %h3.bold
+      Apuntate ya mismo a la lista de espera para descargar la aplicacion gratis
+
+    .px20-separator
+
+    .row
+      .large-7.small-centered.columns
+        = image_tag 'home/triangle.png'
+        %p
+          .panel.radius
+            %h3
+              .blue-text.bold
+                12356
+                %br
+                Personas han reservado
+                %br
+                la aplicacion
+        .px20-separator
+        %form
+          %fieldset
+            .row
+              .small-12.columns.small-centered
+                %input{type: 'text', placeholder: 'Dejanos tu email', name: 'email'}
+                .full-grey-line
+                .px10-separator
+                .medium.button.radius.full-space
+                  %h2.grey-text
+                    Reservar
+
+  .large-4.columns.center
+    = image_tag 'home/phone.png'

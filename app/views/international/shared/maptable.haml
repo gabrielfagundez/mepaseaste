@@ -1,0 +1,25 @@
+.show-for-small
+  .px20-separator
+
+#tabla-datos
+  #sin-datos
+    .panel.blue-background
+      %p.bold
+        Aun no has ingresado ningun origen, ni destino.
+        %br
+        Prueba ingresando puntos en el mapa o sigue las
+        %a{href: '#'}
+          instrucciones interactivas.
+
+
+  #con-datos.hide
+    %table{width: '100%', id: 'tabla_de_datos'}
+      %thead
+        %tr
+          %th.table-small
+            Tipo
+          %th.table-big
+            Ubicacion
+          %th.table-big
+            Nombre
+      %tbody

@@ -1,0 +1,11 @@
+.grey-background
+  .px20-separator
+  .row
+    .small-10.small-centered.columns
+      = render template: 'home/opciones'
+
+  .row
+    .small-10.small-centered.columns
+      .button.round.center.full-space
+        %a{onclick: 'sendData();'}
+          Enviar Datos
