@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MePaseaste.UY</title>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+  <link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
+
+  <link rel="icon" type="image/ico" href="favicon.ico" />
+
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/css/foundation.css">
+  <script src="js/vendor/custom.modernizr.js"></script>
+
+  <%= stylesheet_link_tag    'international', media: 'all' %>
+  <%= javascript_include_tag 'international' %>
+  <%= csrf_meta_tags %>
+</head>
+<body onload="initialize(true)">
+    <%= render template: 'shared/header' %>
+    <%= yield %>
+    <%= render template: 'shared/footer' %>
+</body>
+</html>

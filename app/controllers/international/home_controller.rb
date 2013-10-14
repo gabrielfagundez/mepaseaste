@@ -1,5 +1,5 @@
 class International::HomeController < ApplicationController
-  #layout :international
+  layout 'international'
 
   def index
     # Borramos ejecucion previa del algoritmo si existe
