@@ -25,23 +25,23 @@ var apikey = 'd6apr3UDROuv'
 
 function initialize(allow_markers) {
 
-    // Direction Service
+    // Servicio de Direcciones
     directionsService = new google.maps.DirectionsService();
 
     // Geocoder
     geocoder = new google.maps.Geocoder();
 
-    // Map options
+    // Opciones del mapa
     var mapOptions = {
         zoom: zoom,
         center: new google.maps.LatLng(-34.7600432, -56.2019143),
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
-    // Map
+    // Mapa
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-    // Allows to add markers
+    // Permitir marcadores
     if(allow_markers){
         google.maps.event.addListener(map, 'click', function(event, i) {
             createMarker(event);
@@ -58,7 +58,7 @@ function initialize(allow_markers) {
         directionsDisplays.push(directionsDisplay);
     }
 
-    // Next step Infowindow
+    // Información del próximo paso
     stepDisplay = new google.maps.InfoWindow();
 
 }
