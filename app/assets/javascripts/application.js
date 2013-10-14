@@ -1,6 +1,7 @@
 //= require jquery
 //= require application/main.js
-//= require application/map.js
-//= require application/markers_handling.js
+//= require shared/map.js
+//= require shared/markers_handling
 //= require application/redimension-map.js
 //= require application/send_data_from_map.js
+//= require application/get_distance.js

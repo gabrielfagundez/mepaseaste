@@ -20,6 +20,9 @@ var iter = 0;
 // Variables para reverse geocoder
 var geocoder;
 
+// Esta variable hace referencia a la API KEY para usar la API de taxis internacional
+var apikey = 'd6apr3UDROuv'
+
 function initialize(allow_markers) {
 
     // Direction Service
