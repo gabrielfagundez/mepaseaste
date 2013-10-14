@@ -1,0 +1,48 @@
+- if current_user.present?
+  = render template: 'shared/barralogin'
+
+.px20-separator
+
+- if current_user.blank?
+  .row
+    .small-10.small-centered.columns
+      .panel.radius
+        %p.center
+          %a{href: new_user_session_path}
+            Registrate o Inicia Sesion
+          para almacenar destinos usuales, acceder a nuevas funciones y mas!
+
+.px10-separator
+
+.row
+  .large-8.columns
+
+    = render template: 'shared/map'
+
+  .large-4.columns
+    = render template: 'shared/maptable'
+
+.px20-separator
+.px10-separator
+
+= render template: 'shared/enviardatos'
+
+.px50-separator
+
+.row
+  .large-4.columns.center-text
+    = image_tag 'home/fst_frame.png'
+  .large-4.columns.center-text
+    = image_tag 'home/second_frame.png'
+  .large-4.columns.center-text
+    = image_tag 'home/third_frame.png'
+
+- if current_user.blank?
+  = render template: 'shared/android'
+- else
+  = render template: 'shared/destinosusuales'
+
+
+
+
+

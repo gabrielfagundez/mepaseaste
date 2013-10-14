@@ -12,6 +12,10 @@ Mepaseaste::Application.routes.draw do
   post '/sending_data'  => 'data#process_data'
   get '/show_data'      => 'data#show_data'
 
+  namespace :international do
+    get '/'             => 'home#index'
+  end
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
