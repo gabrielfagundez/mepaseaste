@@ -1,27 +1,51 @@
+location_entity = '';
+
 function addNewPoint(marker, cant_markers) {
 
-    if(cant_markers != 0){
+    if(cant_markers == 0){
 
-        // Calculamos la distancia a los demas marcadores ingresados
-        url = 'http://maps.googleapis.com/maps/api/distancematrix/json?';
-        url = url + 'origins=' + marker.position.lat() + ',' + marker.position.lng();
-        url = url + '&destinations=';
-
-        // Iteramos en los marcadores
-        var dests = ''
-        for(var actual_pos = 0; actual_pos < cant_markers; actual_pos++) {
-            if(actual_pos == 0){
-                dests = markers[actual_pos].position.lat() + ',' + markers[actual_pos].position.lng();
-            } else {
-                dests =  dests + '|' + markers[actual_pos].position.lat() + ',' + markers[actual_pos].position.lng();
-            }
-        }
-        url = url + dests;
-        url = url + '&mode=driving&language=es&sensor=false';
+        // Busquemos la entidad más cercana
+        url = 'http://api.taxifarefinder.com/entity?key=' + apikey + '&';
+        url = url + 'location=' + marker.position.lat() + ',' + marker.position.lng();
 
         console.log(url);
 
-        getDistance(marker, url);
+        $.ajax({
+            url: url,
+            type: "GET",
+            dataType: "json",
+            success: function(data){
+                console.log(data);
+            },
+            error: function(data){
+                alert('Ocurrió un error en la funcion de obtener entity.');
+            }
+        });
+
+    };
+
+    if(cant_markers != 0){
+
+//        // Calculamos la distancia a los demas marcadores ingresados
+//        url = 'http://maps.googleapis.com/maps/api/distancematrix/json?';
+//        url = url + 'origins=' + marker.position.lat() + ',' + marker.position.lng();
+//        url = url + '&destinations=';
+//
+//        // Iteramos en los marcadores
+//        var dests = ''
+//        for(var actual_pos = 0; actual_pos < cant_markers; actual_pos++) {
+//            if(actual_pos == 0){
+//                dests = markers[actual_pos].position.lat() + ',' + markers[actual_pos].position.lng();
+//            } else {
+//                dests =  dests + '|' + markers[actual_pos].position.lat() + ',' + markers[actual_pos].position.lng();
+//            }
+//        }
+//        url = url + dests;
+//        url = url + '&mode=driving&language=es&sensor=false';
+//
+//        console.log(url);
+//
+//        getDistance(marker, url);
     }
 
 
