@@ -3,7 +3,6 @@ function sendData() {
 
     // Seteamos variables generales
     obj.tipo_tarifa = 'diurna';
-    obj.tipo_precision = 'alta';
     obj.marcadores = new Array();
 
     // Agregamos la informacion de distancias
