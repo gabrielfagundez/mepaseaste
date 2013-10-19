@@ -1,8 +1,8 @@
 class DataController < ApplicationController
-  skip_before_filter :verify_authenticity_token, only: [ :process_data ]
+  skip_before_filter :verify_authenticity_token,  only: [ :process_data ]
 
-  before_filter :crear_matriz_de_distancias
-  append_before_filter :crear_matriz_de_costos
+  before_filter :crear_matriz_de_distancias,      only: [ :process_data ]
+  append_before_filter :crear_matriz_de_costos,   only: [ :process_data ]
 
 
   #
