@@ -18,7 +18,7 @@ class DataController < ApplicationController
   def process_data
 
     # Ejecutamos el algoritmo evolutivo
-    IO.popen("bin/genetic_algorithm #{ archivo_de_configuracion } #{ archivo_de_parametros } #{ archivo_de_solucion } |grep ^Solution: > #{ archivo_simplificado }")
+    IO.popen("bin/genetic_algorithm #{ archivo_de_configuracion } #{ archivo_de_parametros } #{ archivo_de_solucion } | grep ^Solution: > #{ archivo_simplificado }")
 
 
     # Renderizamos la nueva pagina
@@ -122,6 +122,11 @@ class DataController < ApplicationController
   #
   # El siguiente archivo posee una matriz de costos entre los
   # diferentes destinos que va a utilizar el algoritmo evolutivo.
+  # El mismo debe tener la siguiente estructura:
+  #   0 161.0 305.9 334.88
+  #   161.0 0 191.59 178.71
+  #   305.9 191.59 0 305.9
+  #   334.88 178.71 305.9 0
   #
   def archivo_de_costos
     FileUtils.touch(AE_CONFIG['archivo_de_costos'])

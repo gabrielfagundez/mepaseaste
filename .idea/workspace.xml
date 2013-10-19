@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d959abbd-3f32-4983-b8e2-126a1e8a8577" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/shared/barralogin.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/foundation.css" afterPath="$PROJECT_DIR$/public/css/foundation.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.haml" afterPath="$PROJECT_DIR$/app/views/home/index.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/data_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/data_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mepaseaste.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Gemfile" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377613938049" ignored="false" />
+    <file path="/Gemfile" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381853488594" ignored="false" />
     <file path="$PROJECT_DIR$/../mepaseaste-proximamente/Gemfile" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377478228846" ignored="false" />
     <file path="$PROJECT_DIR$/../mepaseaste-proximamente/config/database.yml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377478320158" ignored="false" />
-    <file path="/database.yml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377478310215" ignored="false" />
-    <file path="/Dummy.txt" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378763790219" ignored="false" />
+    <file path="/database.yml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1380899521133" ignored="false" />
+    <file path="/Dummy.txt" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382198467463" ignored="false" />
     <file path="/test.html" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377561047079" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/controllers/cas_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377615608740" ignored="false" />
     <file path="/cas_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377615338211" ignored="false" />
@@ -37,34 +35,34 @@
     <file path="/cas_account_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377613603485" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/models/customer.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377613931560" ignored="false" />
     <file path="/customer.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377612864053" ignored="false" />
-    <file path="/a.dummy" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378774647956" ignored="false" />
+    <file path="/a.dummy" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382205210347" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/coverage/index.html" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377612309107" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/unit/customer_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377612316832" ignored="false" />
     <file path="/customer_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377612211948" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/db/structure.sql" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377613924940" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/Gemfile" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377613957346" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/Gemfile" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381853549955" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/brakeman.html" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377617722461" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/config/initializers/secret_token.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377617806231" ignored="false" />
-    <file path="/home_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378073680000" ignored="false" />
-    <file path="/index.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378773857260" ignored="false" />
+    <file path="/home_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382202959800" ignored="false" />
+    <file path="/index.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381786471036" ignored="false" />
     <file path="/home.css" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378588964334" ignored="false" />
-    <file path="/common.css" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378074709469" ignored="false" />
+    <file path="/common.css" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381785897187" ignored="false" />
     <file path="/application.html.erb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378690771121" ignored="false" />
     <file path="/header.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378692251034" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Arkayde/arkayde/app/assets/stylesheets/application.css.scss" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378124955242" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Arkayde/arkayde/tmp/cache/assets/D91/080/sprockets%2Fbcca522c6302f184f12fe0e8a7d7e71a" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378125029841" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Arkayde/arkayde/tmp/cache/assets/CE5/650/sprockets%2F8ab512c9b33ac90e699b73469d71f061" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378125029841" ignored="false" />
-    <file path="/home.css.sass" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378693346575" ignored="false" />
+    <file path="/home.css.sass" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381002354216" ignored="false" />
     <file path="/box_inferior.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378591851015" ignored="false" />
-    <file path="/shared.css.sass" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378770406876" ignored="false" />
+    <file path="/shared.css.sass" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381785894200" ignored="false" />
     <file path="/android.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378691631224" ignored="false" />
     <file path="/foundation.css" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378623099813" ignored="false" />
-    <file path="/routes.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378769701803" ignored="false" />
+    <file path="/routes.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381784440783" ignored="false" />
     <file path="/contact_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378645759922" ignored="false" />
     <file path="/contacto.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378654773033" ignored="false" />
     <file path="/map.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378648983982" ignored="false" />
     <file path="/maptable.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378772044420" ignored="false" />
-    <file path="/map.js" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378772457918" ignored="false" />
+    <file path="/map.js" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381786921144" ignored="false" />
     <file path="/_pop_up.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378664804552" ignored="false" />
     <file path="/popups.css.sass" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378666401862" ignored="false" />
     <file path="/_pop_up_origen.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378666416932" ignored="false" />
@@ -76,13 +74,56 @@
     <file path="/user.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378769558009" ignored="false" />
     <file path="/20130909225447_add_role_id.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378767297016" ignored="false" />
     <file path="/role.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378767457328" ignored="false" />
-    <file path="/destinosusuales.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378773732520" ignored="false" />
+    <file path="/destinosusuales.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1380934180958" ignored="false" />
     <file path="/20130909232708_tabla_destinos.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378769464279" ignored="false" />
     <file path="/destino.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378769419657" ignored="false" />
     <file path="/destinos_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378769633115" ignored="false" />
     <file path="/redimension-map.js" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378772189788" ignored="false" />
     <file path="/destinos.css.sass" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378773444112" ignored="false" />
     <file path="/barralogin.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378774381397" ignored="false" />
+    <file path="/index.html" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1380896432929" ignored="false" />
+    <file path="/markers_handling.js" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381787562190" ignored="false" />
+    <file path="/enviardatos.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1380918562625" ignored="false" />
+    <file path="/opciones.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1380911558546" ignored="false" />
+    <file path="/send_data_from_map.js" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1380914294189" ignored="false" />
+    <file path="/data_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382209057111" ignored="false" />
+    <file path="/international.html.erb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381784771553" ignored="false" />
+    <file path="/application.css" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381785239019" ignored="false" />
+    <file path="/international.css" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381785217104" ignored="false" />
+    <file path="/application.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381785747525" ignored="false" />
+    <file path="/*.regexp" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382198535842" ignored="false" />
+    <file path="/production.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381787916928" ignored="false" />
+    <file path="/get_cost.js" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382045670619" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/models/camera/lghd100.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381842484659" ignored="false" />
+    <file path="/remote_logger_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381841614383" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/numerex_common/app/controllers/remote_logger_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381841616647" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/numerex_common/app/controllers/up_check_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381841629491" ignored="false" />
+    <file path="/up_check_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381841626940" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/unit/lghd100_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381842484659" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/config/lg_camera_settings.yml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381842484659" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/lib/cameras/lghd100/proxy.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381842484659" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/models/client.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381842546764" ignored="false" />
+    <file path="/client.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381842513530" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/models/ability.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381848990809" ignored="false" />
+    <file path="/ability.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381842538630" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/unit/ability_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381848937591" ignored="false" />
+    <file path="/ability_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381844785062" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/test_helper.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381849204611" ignored="false" />
+    <file path="/test_helper.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381849197257" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/unit/client_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381845573115" ignored="false" />
+    <file path="/client_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381845573115" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/cas-authorization/lib/cas/authorization/version.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381850240191" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/cas-authorization/cas-authorization.gemspec" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381853693955" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/cas-authorization/Gemfile.lock" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381850788852" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/cas-authorization/Rakefile" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381850448793" ignored="false" />
+    <file path="/cas-authorization.gemspec" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381853693955" ignored="false" />
+    <file path="/authorization.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381854809007" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/cas-authorization/lib/cas/authorization.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381854809655" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/Gemfile.lock" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381853555548" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/controllers/application_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381854487945" ignored="false" />
+    <file path="/application_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381854485463" ignored="false" />
+    <file path="/ae_config.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382206421919" ignored="false" />
+    <file path="/ae_config.yml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382207835970" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,28 +148,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.haml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/home/index.haml">
+      <file leaf-file-name="home_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="4" selection-start="496" selection-end="496" vertical-scroll-proportion="0.37037036">
+            <state line="9" column="37" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="barralogin.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/shared/barralogin.haml">
+      <file leaf-file-name="data_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/data_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="123" column="42" selection-start="3735" selection-end="3735" vertical-scroll-proportion="0.7">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/shared/map.haml">
+      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="12" selection-start="4" selection-end="4" vertical-scroll-proportion="-0.0">
+            <state line="12" column="42" selection-start="339" selection-end="348" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ae_config.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/ae_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="20" selection-start="202" selection-end="222" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -141,6 +191,10 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="GeneratorOptions">
+    <option name="VCS_SHOW_CONFIRMATION" value="true" />
+    <option name="ENVIRONMENT" value="development" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -152,30 +206,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/destino.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20130909232708_tabla_destinos.rb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/destinos_controller.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/shared/maptable.haml" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/redimension-map.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/map.js" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/shared.css.sass" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/destinos.css.sass" />
-        <option value="$PROJECT_DIR$/app/views/destinos/new.haml" />
-        <option value="$PROJECT_DIR$/app/views/destinos/index.haml" />
-        <option value="$PROJECT_DIR$/app/views/shared/destinosusuales.haml" />
-        <option value="$PROJECT_DIR$/public/css/foundation.css" />
-        <option value="$PROJECT_DIR$/app/views/shared/barralogin.haml" />
-        <option value="$PROJECT_DIR$/app/views/home/index.haml" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/international/home.css.sass" />
+        <option value="$PROJECT_DIR$/app/views/international/home/index.haml" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/international/map.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/international.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/shared/map.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/shared/markers_handling.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application/get_distance.js" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/international/get_cost.js" />
+        <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application/send_data_from_map.js" />
+        <option value="$PROJECT_DIR$/config/initializers/ae_config.rb" />
+        <option value="$PROJECT_DIR$/config/ae_config.yml" />
+        <option value="$PROJECT_DIR$/app/controllers/data_controller.rb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="1301" />
-    <option name="height" value="744" />
+    <option name="y" value="22" />
+    <option name="width" value="1440" />
+    <option name="height" value="874" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -203,7 +256,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -212,10 +264,6 @@
               <option name="myItemId" value="mepaseaste" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -237,7 +285,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -251,33 +299,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="migrate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mepaseaste" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mepaseaste" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shared" />
+              <option name="myItemId" value="initializers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -291,33 +317,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mepaseaste" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mepaseaste" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="destinos" />
+              <option name="myItemId" value="ae_config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -331,7 +335,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="bin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -345,100 +349,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mepaseaste" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mepaseaste" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mepaseaste" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mepaseaste" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mepaseaste" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mepaseaste" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="ae_files" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$USER_HOME$/MooveIT/Numerex/NextView-CAS" />
+    <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
     <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/controllers" />
-      <recent name="$PROJECT_DIR$/app/views/shared/popups" />
-      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/app/assets/javascripts/shared" />
       <recent name="$PROJECT_DIR$/app/assets/javascripts" />
-      <recent name="$PROJECT_DIR$/app/assets/images" />
+      <recent name="$PROJECT_DIR$/app/views/international" />
+      <recent name="$PROJECT_DIR$/app/assets/javascripts/international" />
+      <recent name="$PROJECT_DIR$/app/assets/stylesheets/international" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/views/devise" />
-      <recent name="$PROJECT_DIR$/app/assets/images" />
-      <recent name="$PROJECT_DIR$/app/views/shared" />
-      <recent name="$PROJECT_DIR$/public/img" />
-      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/app/assets/javascripts/shared" />
+      <recent name="$PROJECT_DIR$/app/assets/javascripts" />
+      <recent name="$PROJECT_DIR$/app/assets/javascripts/mainpage" />
+      <recent name="$PROJECT_DIR$/app/assets/stylesheets/mainpage" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Rails.Development: mepaseaste">
@@ -698,19 +638,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
+    <frame x="0" y="22" width="1440" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293944" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32791728" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25611326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.2756972" sideWeight="0.6712963" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.42599744" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.2754663" sideWeight="0.6705277" order="3" side_tool="false" content_ui="combo" x="528" y="70" width="384" height="777" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.5727156" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -780,118 +720,108 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/international/home.css.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="21" selection-start="6696" selection-end="6696" vertical-scroll-proportion="0.0">
+        <state line="10" column="1" selection-start="173" selection-end="173" vertical-scroll-proportion="0.20026702" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/international.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="211" selection-end="248" vertical-scroll-proportion="0.18181819" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="57" selection-start="241" selection-end="241" vertical-scroll-proportion="0.18181819" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application/get_distance.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="0" selection-start="2888" selection-end="2888" vertical-scroll-proportion="1.7575758">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/destino.rb">
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="13" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0">
+        <state line="62" column="59" selection-start="2572" selection-end="2572" vertical-scroll-proportion="0.4848485" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="7" selection-start="854" selection-end="854" vertical-scroll-proportion="0.33244327" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="27" selection-start="204" selection-end="204" vertical-scroll-proportion="0.10013351">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/destinos_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/international/get_cost.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
+        <state line="36" column="95" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.020026702">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130909232708_tabla_destinos.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/shared/markers_handling.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="15" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0">
+        <state line="50" column="4" selection-start="1267" selection-end="1267" vertical-scroll-proportion="0.020026702">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/shared/map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="24" selection-start="1152" selection-end="1164" vertical-scroll-proportion="0.020026702">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application/send_data_from_map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="119" selection-end="119" vertical-scroll-proportion="0.13636364">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/ae_config.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="9" selection-start="0" selection-end="9" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="37" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/ae_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="20" selection-start="202" selection-end="222" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="22" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
+        <state line="12" column="42" selection-start="339" selection-end="348" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/shared.css.sass">
+    <entry file="file://$PROJECT_DIR$/app/controllers/data_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="13" selection-start="693" selection-end="693" vertical-scroll-proportion="0.36829838">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="144" column="57" selection-start="3873" selection-end="3873" vertical-scroll-proportion="0.3146853">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/redimension-map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="51" selection-start="135" selection-end="135" vertical-scroll-proportion="0.06993007">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/maptable.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="34" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/destinos.css.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="13" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/destinos/index.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="21" selection-start="503" selection-end="503" vertical-scroll-proportion="-15.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/destinosusuales.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="27" selection-start="294" selection-end="294" vertical-scroll-proportion="0.4814815">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/foundation.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2822" column="35" selection-start="150339" selection-end="150339" vertical-scroll-proportion="0.4471154">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/barralogin.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/map.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="12" selection-start="4" selection-end="4" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/index.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="4" selection-start="496" selection-end="496" vertical-scroll-proportion="0.37037036">
+        <state line="123" column="42" selection-start="3735" selection-end="3735" vertical-scroll-proportion="0.7">
           <folding />
         </state>
       </provider>
