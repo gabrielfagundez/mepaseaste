@@ -17,9 +17,7 @@ class DataController < ApplicationController
   #
   def process_data
 
-    crear_archivos_publicos
-
-
+    # Ejecutamos el algoritmo evolutivo
     IO.popen("bin/genetic_algorithm #{ archivo_de_configuracion } #{ archivo_de_parametros } #{ archivo_de_solucion } |grep ^Solution: > #{ archivo_simplificado }")
 
 
@@ -87,9 +85,6 @@ class DataController < ApplicationController
     end
   end
 
-  # Creación de archivos
-
-
   #
   # El siguiente archivo posee la configuración para la
   # ejecución en particular
@@ -131,9 +126,9 @@ class DataController < ApplicationController
   def archivo_de_costos
     FileUtils.touch(AE_CONFIG['archivo_de_costos'])
 
-    File.open('ae_files/costos.txt', 'w') do |file|
-      for i in 0..(@matriz_costos - 1) do
-        for j in 0..(@matriz_costos - 1) do
+    File.open(AE_CONFIG['archivo_de_costos'], 'w') do |file|
+      for i in 0..(cantidad_marcadores - 1) do
+        for j in 0..(cantidad_marcadores - 1) do
           file.write @matriz_costos[i][j]
           file.write ' '
         end
