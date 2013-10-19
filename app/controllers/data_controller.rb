@@ -63,6 +63,25 @@ class DataController < ApplicationController
 
     crear_archivos_publicos
 
+
+    if(@cantidad_marcadores == 2)
+      File.open('public/raw_results.txt', 'w') do |file|
+        file.write 'Solution:  0 1 0 Fitness: ' + (((($distancias[0][1])/100).to_i)*(CIEN_METROS_DIURNO) + BANDERA_DIURNA).round(2).to_s        if $tarifa_diurna
+        file.write 'Solution:  0 1 0 Fitness: ' + (((($distancias[1][1])/100).to_i)*(CIEN_METROS_NOCTURNO) + BANDERA_NOCTURNA).round(2).to_s    unless $tarifa_diurna
+      end
+    else
+      # Corremos el algoritmo evolutivo teniendo en cuenta la seleccion del usuario
+      parametros = "ae_files/parametros.txt"
+      solucion = "public/sol.txt"
+
+      if precision == 'alta'
+        IO.popen("bin/genetic_algorithm config/ae_config/configuracion_rapida.cfg #{ parametros } #{ solucion } |grep ^Solution: > public/raw_results.txt")
+      else
+        IO.popen("bin/genetic_algorithm config/ae_config/configuracion_lenta.cfg #{ parametros } #{ solucion } |grep ^Solution: > public/raw_results.txt")
+      end
+    end
+
+
     # Renderizamos la nueva pagina
     respond_to do |format|
       format.js {

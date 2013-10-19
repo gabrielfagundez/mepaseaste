@@ -1,11 +1,15 @@
 location_entity = '';
 
+function hola_mundo(json){
+    console.log('json');
+}
+
 function addNewPoint(marker, cant_markers) {
 
     if(cant_markers == 0){
 
         // Busquemos la entidad más cercana
-        url = 'http://api.taxifarefinder.com/entity?key=' + apikey + '&';
+        url = 'http://api.taxifarefinder.com/entity?callback=hola_mundo&key=' + apikey + '&';
         url = url + 'location=' + marker.position.lat() + ',' + marker.position.lng();
 
         console.log(url);
@@ -13,7 +17,7 @@ function addNewPoint(marker, cant_markers) {
         $.ajax({
             url: url,
             type: "GET",
-            dataType: "json",
+            dataType: "jsonp",
             success: function(data){
                 console.log(data);
             },
