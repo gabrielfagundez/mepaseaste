@@ -2,15 +2,24 @@
 
 .row
   .large-12.columns
+    %h2
+      Resultados:
 
-    = render template: 'shared/map'
-
-.px20-separator
 .px10-separator
+
+= render template: 'data/generaldata'
 
 .row
   .large-12.columns
+    .panel.radius
+      %h3
+        Marcadores ingresados en el mapa:
+        .px10-separator
+      = render template: 'shared/map'
 
+.px10-separator
+
+= render template: 'data/taxis'
 
 
 :javascript

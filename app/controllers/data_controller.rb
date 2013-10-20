@@ -52,8 +52,8 @@ class DataController < ApplicationController
   end
 
   def show_data
-    query = Query.find(params[:query_id])
-    @marcadores = query.locations
+    @query = Query.find(params[:query_id])
+    @marcadores = @query.locations
   end
 
   private

@@ -1,0 +1,13 @@
+.row
+  .large-12.columns
+    .panel.radius
+      %h3
+        Información general:
+      %br
+
+      %li
+        %p Ha seleccionado la tarifa #{ @query.tipo_tarifa }.
+      %li
+        %p Además, los cálculos se hicieron en base a #{ @query.cantidad_marcadores } marcadores.
+      %li
+        %p Finalmente, la consulta fue realizada en la fecha #{ @query.created_at.to_s }.
