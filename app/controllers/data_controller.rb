@@ -17,6 +17,9 @@ class DataController < ApplicationController
   #
   def process_data
 
+    # Creamos y almacenamos la entidad de query
+    Query.create(cantidad_marcadores: cantidad_marcadores, user: current_user)
+
     # Ejecutamos el algoritmo evolutivo
     IO.popen("bin/genetic_algorithm #{ archivo_de_configuracion } #{ archivo_de_parametros } #{ archivo_de_solucion } | grep ^Solution: > #{ archivo_simplificado }")
 

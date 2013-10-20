@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d959abbd-3f32-4983-b8e2-126a1e8a8577" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/shared/barralogin.haml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20131020162421_create_queries.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/costos.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/parametros.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/query.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/models/query_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/raw_results.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/data_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/data_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.haml" afterPath="$PROJECT_DIR$/app/views/home/index.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/international/home/index.haml" afterPath="$PROJECT_DIR$/app/views/international/home/index.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/data/show_data.haml" afterPath="$PROJECT_DIR$/app/views/data/show_data.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mepaseaste.iws" />
@@ -16,7 +19,7 @@
     <file path="$PROJECT_DIR$/../mepaseaste-proximamente/Gemfile" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377478228846" ignored="false" />
     <file path="$PROJECT_DIR$/../mepaseaste-proximamente/config/database.yml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377478320158" ignored="false" />
     <file path="/database.yml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1380899521133" ignored="false" />
-    <file path="/Dummy.txt" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382219266084" ignored="false" />
+    <file path="/Dummy.txt" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382286255281" ignored="false" />
     <file path="/test.html" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377561047079" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/controllers/cas_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377615608740" ignored="false" />
     <file path="/cas_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377615338211" ignored="false" />
@@ -76,7 +79,7 @@
     <file path="/new.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378773483792" ignored="false" />
     <file path="/new.html.erb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378696524197" ignored="false" />
     <file path="/20130909224317_add_role_model.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378766633460" ignored="false" />
-    <file path="/user.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378769558009" ignored="false" />
+    <file path="/user.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382286579634" ignored="false" />
     <file path="/20130909225447_add_role_id.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378767297016" ignored="false" />
     <file path="/role.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378767457328" ignored="false" />
     <file path="/destinosusuales.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1380934180958" ignored="false" />
@@ -91,7 +94,7 @@
     <file path="/enviardatos.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1380918562625" ignored="false" />
     <file path="/opciones.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1380911558546" ignored="false" />
     <file path="/send_data_from_map.js" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1380914294189" ignored="false" />
-    <file path="/data_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382218017697" ignored="false" />
+    <file path="/data_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382286641814" ignored="false" />
     <file path="/international.html.erb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381784771553" ignored="false" />
     <file path="/application.css" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381785239019" ignored="false" />
     <file path="/international.css" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381785217104" ignored="false" />
@@ -129,6 +132,9 @@
     <file path="/application_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381854485463" ignored="false" />
     <file path="/ae_config.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382206421919" ignored="false" />
     <file path="/ae_config.yml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382207835970" ignored="false" />
+    <file path="/20131020162421_create_queries.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382286760059" ignored="false" />
+    <file path="/query.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382286544855" ignored="false" />
+    <file path="$PROJECT_DIR$/log/development.log" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382286825962" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,16 +162,34 @@
       <file leaf-file-name="data_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/data_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="4" selection-start="1061" selection-end="1061" vertical-scroll-proportion="0.0">
+            <state line="55" column="6" selection-start="1577" selection-end="1577" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20130909232708_tabla_destinos.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20130909232708_tabla_destinos.rb">
+      <file leaf-file-name="20131020162421_create_queries.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20131020162421_create_queries.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="30" selection-start="262" selection-end="262" vertical-scroll-proportion="0.15212981">
+            <state line="2" column="102" selection-start="91" selection-end="91" vertical-scroll-proportion="0.060851928">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="query.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/query.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="19" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -194,9 +218,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/international.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/shared/map.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/shared/markers_handling.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application/get_distance.js" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
@@ -206,10 +227,13 @@
         <option value="$PROJECT_DIR$/config/initializers/ae_config.rb" />
         <option value="$PROJECT_DIR$/config/ae_config.yml" />
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/data_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/home/index.haml" />
         <option value="$PROJECT_DIR$/app/views/international/home/index.haml" />
         <option value="$PROJECT_DIR$/app/views/data/show_data.haml" />
+        <option value="$PROJECT_DIR$/app/models/query.rb" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/data_controller.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20131020162421_create_queries.rb" />
       </list>
     </option>
   </component>
@@ -698,20 +722,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/international/get_cost.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="95" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.020026702">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/shared/markers_handling.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="4" selection-start="1267" selection-end="1267" vertical-scroll-proportion="0.020026702">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/shared/map.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="24" selection-start="1152" selection-end="1164" vertical-scroll-proportion="0.020026702">
@@ -782,16 +792,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/data_controller.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130909232708_tabla_destinos.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="4" selection-start="1061" selection-end="1061" vertical-scroll-proportion="0.0">
+        <state line="3" column="71" selection-start="100" selection-end="165" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130909232708_tabla_destinos.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130826004941_devise_create_users.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="30" selection-start="262" selection-end="262" vertical-scroll-proportion="0.15212981">
+        <state line="9" column="14" selection-start="337" selection-end="338" vertical-scroll-proportion="0.23504274">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="19" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/data_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="6" selection-start="1577" selection-end="1577" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/query.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20131020162421_create_queries.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="102" selection-start="91" selection-end="91" vertical-scroll-proportion="0.060851928">
           <folding />
         </state>
       </provider>
