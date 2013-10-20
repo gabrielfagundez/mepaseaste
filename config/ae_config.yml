@@ -1,11 +1,11 @@
 archivo_de_configuracion:
   'config/ae_config/configuracion_rapida.cfg'
 archivo_de_parametros:
-  'public/parametros.txt'
+  '/parametros.txt'
 archivo_de_solucion:
-  'public/sol.txt'
+  '/sol.txt'
 archivo_de_costos:
-  'public/costos.txt'
+  '/costos.txt'
 archivo_simplificado:
-  'public/raw_results.txt'
+  '/raw_results.txt'
 

@@ -18,7 +18,7 @@ class DataController < ApplicationController
   def process_data
 
     # Creamos y almacenamos la entidad de query
-    query = Query.create(
+    @query = Query.create(
         cantidad_marcadores:  cantidad_marcadores,
         tipo_tarifa:          tipo_tarifa,
         user:                 current_user,
@@ -29,7 +29,7 @@ class DataController < ApplicationController
     # Almacenamos la información de los marcadores
     params[:data_marcadores].each do |data_marcador|
       Location.create(
-          query:              query,
+          query:              @query,
           location_query_pos: data_marcador['location_query_pos'],
           latitude:           data_marcador['latitude'],
           longitude:          data_marcador['longitude'],
@@ -40,13 +40,14 @@ class DataController < ApplicationController
     end
 
     # Ejecutamos el algoritmo evolutivo
+    FileUtils.mkdir_p('public/' + @query.id.to_s)
     IO.popen("bin/genetic_algorithm #{ archivo_de_configuracion } #{ archivo_de_parametros } #{ archivo_de_solucion } | grep ^Solution: > #{ archivo_simplificado }")
 
 
     # Renderizamos la nueva pagina
     respond_to do |format|
       format.js {
-        render text: "window.location.replace('/show_data?query_id=#{ query.id }');"
+        render text: "window.location.replace('/show_data?query_id=#{ @query.id }');"
       }
     end
   end
@@ -62,11 +63,11 @@ class DataController < ApplicationController
   end
 
   def archivo_de_solucion
-    @archivo_solucion ||= AE_CONFIG['archivo_de_solucion']
+    @archivo_solucion ||= 'public/' + @query.id.to_s + AE_CONFIG['archivo_de_solucion']
   end
 
   def archivo_simplificado
-    @archivo_simplificado ||= AE_CONFIG['archivo_simplificado']
+    @archivo_simplificado ||= 'public/' + @query.id.to_s + AE_CONFIG['archivo_simplificado']
   end
 
   def tipo_tarifa
@@ -126,24 +127,24 @@ class DataController < ApplicationController
   # la ubicación del archivo correspondiente a la matriz de costos.
   #
   def archivo_de_parametros
-    FileUtils.touch(AE_CONFIG['archivo_de_parametros'])
+    FileUtils.touch('public/' + @query.id.to_s + AE_CONFIG['archivo_de_parametros'])
 
     cantidad = 2 * (cantidad_marcadores - 1) - 1
 
-    File.open(AE_CONFIG['archivo_de_parametros'], 'w') do |file|
+    File.open('public/' + @query.id.to_s + AE_CONFIG['archivo_de_parametros'], 'w') do |file|
       file.write cantidad
       file.write "\n"
       tipo_tarifa == 'diurna' ? (file.write BANDERA_DIURNA) : (file.write BANDERA_NOCTURNA)
       file.write "\n"
       file.write '0'
       file.write "\n"
-      file.write AE_CONFIG['archivo_de_costos']
+      file.write 'public/' + @query.id.to_s + AE_CONFIG['archivo_de_costos']
     end
 
     # Creamos el archivo de costos
     archivo_de_costos
 
-    AE_CONFIG['archivo_de_parametros']
+    'public/' + @query.id.to_s + AE_CONFIG['archivo_de_parametros']
   end
 
   #
@@ -156,9 +157,9 @@ class DataController < ApplicationController
   #   334.88 178.71 305.9 0
   #
   def archivo_de_costos
-    FileUtils.touch(AE_CONFIG['archivo_de_costos'])
+    FileUtils.touch('public/' + @query.id.to_s + AE_CONFIG['archivo_de_costos'])
 
-    File.open(AE_CONFIG['archivo_de_costos'], 'w') do |file|
+    File.open('public/' + @query.id.to_s + AE_CONFIG['archivo_de_costos'], 'w') do |file|
       for i in 0..(cantidad_marcadores - 1) do
         for j in 0..(cantidad_marcadores - 1) do
           file.write @matriz_costos[i][j]
