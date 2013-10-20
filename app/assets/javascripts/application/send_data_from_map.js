@@ -15,6 +15,7 @@ function sendData() {
         marcador_temporal.latitude              = markers[i].position.lat();
         marcador_temporal.longitude             = markers[i].position.lng();
         marcador_temporal.address               = markers[i].address;
+        marcador_temporal.icon                  = markers[i].icon
 
         obj.data_marcadores.push(marcador_temporal);
     }

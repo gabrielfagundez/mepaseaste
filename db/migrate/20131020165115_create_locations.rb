@@ -5,6 +5,7 @@ class CreateLocations < ActiveRecord::Migration
       t.integer :location_query_pos
       t.string  :latitude
       t.string  :longitude
+      t.string  :icon
 
       t.string  :address
 

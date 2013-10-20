@@ -94,7 +94,7 @@ function createMarker(event) {
         if (status == google.maps.GeocoderStatus.OK) {
             if (results[0]) {
                 $('#geocode_' + marker.markerId).html("<p>" + results[0].formatted_address + "</p>");
-                markers[markerId].address = results[0].formatted_address;
+                getMarkerByID(marker.markerId).address = results[0].formatted_address;
 
                 // Redimensionamos el mapa si es necesario
                 redimensionMap();
@@ -121,3 +121,19 @@ function getMarkerByID(id) {
         }
     }
 }
+
+function addMarkerToResultPage(latitude, longitude, icon){
+    position = new google.maps.LatLng(latitude, longitude)
+
+    marker = new google.maps.Marker({
+        draggable: false,
+        position: position,
+        map: map,
+        icon: icon,
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+        showBubble(event.latLng, marker['markerId']);
+        map.panTo(event.latLng);
+    });
+};

@@ -1,4 +1,4 @@
-.px10-separator
+.px20-separator
 
 .row
   .large-12.columns
@@ -7,5 +7,16 @@
 
 .px20-separator
 .px10-separator
+
+.row
+  .large-12.columns
+
+
+
+:javascript
+  initialize(false);
+- @marcadores.each do |marcador|
+  :javascript
+    addMarkerToResultPage('#{ marcador.latitude }', '#{ marcador.longitude }', '#{ marcador.icon }');
 
 

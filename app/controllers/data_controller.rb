@@ -34,6 +34,7 @@ class DataController < ApplicationController
           latitude:           data_marcador['latitude'],
           longitude:          data_marcador['longitude'],
           longitude:          data_marcador['longitude'],
+          icon:               data_marcador['icon'],
           address:            data_marcador['address']
       )
     end
@@ -52,6 +53,7 @@ class DataController < ApplicationController
 
   def show_data
     query = Query.find(params[:query_id])
+    @marcadores = query.locations
   end
 
   private

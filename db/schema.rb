@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20131020165115) do
     t.integer  "location_query_pos"
     t.string   "latitude"
     t.string   "longitude"
+    t.string   "icon"
     t.string   "address"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -26,8 +27,8 @@ ActiveRecord::Schema.define(version: 20131020165115) do
   create_table "queries", force: true do |t|
     t.integer  "cantidad_marcadores", default: 0,        null: false
     t.string   "tipo_tarifa",         default: "diurna", null: false
-    t.string   "distancias"
-    t.string   "costos"
+    t.text     "distancias"
+    t.text     "costos"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
