@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 20131020165115) do
   create_table "queries", force: true do |t|
     t.integer  "cantidad_marcadores", default: 0,        null: false
     t.string   "tipo_tarifa",         default: "diurna", null: false
+    t.string   "distancias"
+    t.string   "costos"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"

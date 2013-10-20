@@ -19,9 +19,12 @@ class DataController < ApplicationController
 
     # Creamos y almacenamos la entidad de query
     query = Query.create(
-        cantidad_marcadores: cantidad_marcadores,
-        tipo_tarifa: tipo_tarifa,
-        user: current_user)
+        cantidad_marcadores:  cantidad_marcadores,
+        tipo_tarifa:          tipo_tarifa,
+        user:                 current_user,
+        distancias:           @matriz_distancias,
+        costos:               @matriz_costos
+    )
 
     # Almacenamos la información de los marcadores
     params[:data_marcadores].each do |data_marcador|
@@ -99,7 +102,7 @@ class DataController < ApplicationController
         if @matriz_distancias[i][j] > 100
           costo_actual = 0
           costo_actual += tipo_tarifa == 'diurna' ? (((@matriz_distancias[i][j])/100).to_i) * (CIEN_METROS_DIURNO) : (((@matriz_distancias[i][j])/100).to_i) * (CIEN_METROS_NOCTURNO)
-          @matriz_costos[i][j] = costo_actual
+          @matriz_costos[i][j] = costo_actual.round(3)
         else
           @matriz_costos[i][j] = 0
         end

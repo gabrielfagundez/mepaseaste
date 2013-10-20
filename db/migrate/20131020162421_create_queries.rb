@@ -3,6 +3,8 @@ class CreateQueries < ActiveRecord::Migration
     create_table :queries do |t|
       t.integer :cantidad_marcadores,               :null => false, :default => ''
       t.string  :tipo_tarifa,                       :null => false, :default => 'diurna'
+      t.string  :distancias
+      t.string  :costos
 
 
       t.integer :user_id
