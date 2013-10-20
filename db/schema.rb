@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131020162421) do
+ActiveRecord::Schema.define(version: 20131020165115) do
 
-  create_table "destinos", force: true do |t|
-    t.string   "latitud",    default: "", null: false
-    t.string   "longitud",   default: "", null: false
-    t.string   "ubicacion",  default: "", null: false
-    t.string   "nombre",     default: "", null: false
-    t.integer  "user_id"
+  create_table "locations", force: true do |t|
+    t.integer  "query_id"
+    t.integer  "location_query_pos"
+    t.string   "latitude"
+    t.string   "longitude"
+    t.string   "address"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
