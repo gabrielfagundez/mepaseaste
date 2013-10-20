@@ -29,6 +29,10 @@ class DataController < ApplicationController
     end
   end
 
+  def show_data
+
+  end
+
   private
   def archivo_de_configuracion
     @archivo_configuracion ||= AE_CONFIG['archivo_de_configuracion']
