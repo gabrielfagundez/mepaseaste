@@ -18,7 +18,10 @@ class DataController < ApplicationController
   def process_data
 
     # Creamos y almacenamos la entidad de query
-    Query.create(cantidad_marcadores: cantidad_marcadores, user: current_user)
+    query = Query.create(
+        cantidad_marcadores: cantidad_marcadores,
+        tipo_tarifa: tipo_tarifa,
+        user: current_user)
 
     # Ejecutamos el algoritmo evolutivo
     IO.popen("bin/genetic_algorithm #{ archivo_de_configuracion } #{ archivo_de_parametros } #{ archivo_de_solucion } | grep ^Solution: > #{ archivo_simplificado }")
@@ -27,13 +30,14 @@ class DataController < ApplicationController
     # Renderizamos la nueva pagina
     respond_to do |format|
       format.js {
-        render text: 'window.location.replace("/show_data");'
+        render text: "window.location.replace('/show_data?query_id=#{ query.id }');"
       }
     end
   end
 
   def show_data
-
+    query = Query.find(params[:query_id])
+    raise query.inspect
   end
 
   private
@@ -50,7 +54,7 @@ class DataController < ApplicationController
   end
 
   def tipo_tarifa
-    @tupo_tarifa ||= params[:tipo_tarifa]
+    @tipo_tarifa ||= params[:tipo_tarifa]
   end
 
   def cantidad_marcadores

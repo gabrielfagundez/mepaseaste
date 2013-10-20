@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d959abbd-3f32-4983-b8e2-126a1e8a8577" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20131020162421_create_queries.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/costos.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/parametros.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/query.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/models/query_test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/raw_results.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130909232708_tabla_destinos.rb" afterPath="$PROJECT_DIR$/db/migrate/20130909232708_tabla_destinos.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131020162421_create_queries.rb" afterPath="$PROJECT_DIR$/db/migrate/20131020162421_create_queries.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/data_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/data_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mepaseaste.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,7 +76,7 @@
     <file path="/20130909225447_add_role_id.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378767297016" ignored="false" />
     <file path="/role.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378767457328" ignored="false" />
     <file path="/destinosusuales.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1380934180958" ignored="false" />
-    <file path="/20130909232708_tabla_destinos.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378769464279" ignored="false" />
+    <file path="/20130909232708_tabla_destinos.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382287211983" ignored="false" />
     <file path="/destino.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378769419657" ignored="false" />
     <file path="/destinos_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378769633115" ignored="false" />
     <file path="/redimension-map.js" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378772189788" ignored="false" />
@@ -94,7 +87,7 @@
     <file path="/enviardatos.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1380918562625" ignored="false" />
     <file path="/opciones.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1380911558546" ignored="false" />
     <file path="/send_data_from_map.js" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1380914294189" ignored="false" />
-    <file path="/data_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382286641814" ignored="false" />
+    <file path="/data_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382287652282" ignored="false" />
     <file path="/international.html.erb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381784771553" ignored="false" />
     <file path="/application.css" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381785239019" ignored="false" />
     <file path="/international.css" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381785217104" ignored="false" />
@@ -132,9 +125,8 @@
     <file path="/application_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381854485463" ignored="false" />
     <file path="/ae_config.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382206421919" ignored="false" />
     <file path="/ae_config.yml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382207835970" ignored="false" />
-    <file path="/20131020162421_create_queries.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382286760059" ignored="false" />
+    <file path="/20131020162421_create_queries.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382287593049" ignored="false" />
     <file path="/query.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382286544855" ignored="false" />
-    <file path="$PROJECT_DIR$/log/development.log" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382286825962" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,37 +151,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="data_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="data_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/data_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="6" selection-start="1577" selection-end="1577" vertical-scroll-proportion="0.0">
+            <state line="19" column="50" selection-start="719" selection-end="719" vertical-scroll-proportion="0.38050735">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20131020162421_create_queries.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="20131020162421_create_queries.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20131020162421_create_queries.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="102" selection-start="91" selection-end="91" vertical-scroll-proportion="0.060851928">
+            <state line="5" column="6" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="query.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/query.rb">
+      <file leaf-file-name="destino.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/destino.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <file leaf-file-name="20130909232708_tabla_destinos.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20130909232708_tabla_destinos.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="19" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+            <state line="3" column="38" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -218,7 +210,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/shared/markers_handling.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application/get_distance.js" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
@@ -232,8 +223,9 @@
         <option value="$PROJECT_DIR$/app/views/data/show_data.haml" />
         <option value="$PROJECT_DIR$/app/models/query.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/data_controller.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20130909232708_tabla_destinos.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20131020162421_create_queries.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/data_controller.rb" />
       </list>
     </option>
   </component>
@@ -648,7 +640,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.5727156" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32947233" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -722,13 +714,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/shared/map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="24" selection-start="1152" selection-end="1164" vertical-scroll-proportion="0.020026702">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application/send_data_from_map.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="119" selection-end="119" vertical-scroll-proportion="0.13636364">
@@ -792,13 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130909232708_tabla_destinos.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="71" selection-start="100" selection-end="165" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130826004941_devise_create_users.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="14" selection-start="337" selection-end="338" vertical-scroll-proportion="0.23504274">
@@ -808,28 +786,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="19" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/data_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="6" selection-start="1577" selection-end="1577" vertical-scroll-proportion="0.0">
+        <state line="11" column="38" selection-start="350" selection-end="350" vertical-scroll-proportion="0.22029373">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/query.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
+        <state line="2" column="0" selection-start="52" selection-end="52" vertical-scroll-proportion="0.040053405">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/destino.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130909232708_tabla_destinos.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="38" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20131020162421_create_queries.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="102" selection-start="91" selection-end="91" vertical-scroll-proportion="0.060851928">
+        <state line="5" column="6" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/data_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="50" selection-start="719" selection-end="719" vertical-scroll-proportion="0.38050735">
           <folding />
         </state>
       </provider>

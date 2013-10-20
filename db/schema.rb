@@ -14,6 +14,8 @@
 ActiveRecord::Schema.define(version: 20131020162421) do
 
   create_table "destinos", force: true do |t|
+    t.string   "latitud",    default: "", null: false
+    t.string   "longitud",   default: "", null: false
     t.string   "ubicacion",  default: "", null: false
     t.string   "nombre",     default: "", null: false
     t.integer  "user_id"
@@ -22,7 +24,8 @@ ActiveRecord::Schema.define(version: 20131020162421) do
   end
 
   create_table "queries", force: true do |t|
-    t.integer  "cantidad_marcadores", default: 0, null: false
+    t.integer  "cantidad_marcadores", default: 0,        null: false
+    t.string   "tipo_tarifa",         default: "diurna", null: false
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
