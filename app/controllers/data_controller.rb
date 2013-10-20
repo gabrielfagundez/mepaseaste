@@ -23,6 +23,18 @@ class DataController < ApplicationController
         tipo_tarifa: tipo_tarifa,
         user: current_user)
 
+    # Almacenamos la información de los marcadores
+    params[:data_marcadores].each do |data_marcador|
+      Location.create(
+          query:              query,
+          location_query_pos: data_marcador['location_query_pos'],
+          latitude:           data_marcador['latitude'],
+          longitude:          data_marcador['longitude'],
+          longitude:          data_marcador['longitude'],
+          address:            data_marcador['address']
+      )
+    end
+
     # Ejecutamos el algoritmo evolutivo
     IO.popen("bin/genetic_algorithm #{ archivo_de_configuracion } #{ archivo_de_parametros } #{ archivo_de_solucion } | grep ^Solution: > #{ archivo_simplificado }")
 
@@ -37,7 +49,6 @@ class DataController < ApplicationController
 
   def show_data
     query = Query.find(params[:query_id])
-    raise query.inspect
   end
 
   private

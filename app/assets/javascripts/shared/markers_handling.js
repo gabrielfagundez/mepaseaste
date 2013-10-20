@@ -30,6 +30,8 @@ function createMarker(event) {
         icon: icon,
         start: start,
 
+        address: '',
+
         // Esta sección se usa para la parte estándar
         distancias_anteriores_raw: new Array(),
         distancias_anteriores_string: new Array(),
@@ -92,6 +94,7 @@ function createMarker(event) {
         if (status == google.maps.GeocoderStatus.OK) {
             if (results[0]) {
                 $('#geocode_' + marker.markerId).html("<p>" + results[0].formatted_address + "</p>");
+                markers[markerId].address = results[0].formatted_address;
 
                 // Redimensionamos el mapa si es necesario
                 redimensionMap();
