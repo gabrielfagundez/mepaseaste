@@ -1,3 +1,32 @@
+function fileExists(file_name){
+    $.ajax({
+        url: file_name,
+        type:'HEAD',
+        error: function() {
+            setTimeout(function() {
+                // Llamar a esta funcion nuevamente despues de 20 milisegundos
+                fileExists(file_name);
+            }, 20);
+        },
+        success: function() {
+            $.ajax({
+                url: file_name,
+                success: function(data) {
+                    if(data.match(/Solution/)){
+                        llenar_con_datos(data);
+                    } else {
+                        setTimeout(function() {
+                            // Llamar a esta funcion nuevamente despues de 20 milisegundos
+                            fileExists(file_name);
+                        }, 100);
+                    }
+                }
+            })
+        }
+    });
+}
+
+
 function llenar_con_datos(data){
     string = data.substr(11);
     var arreglo_numeros = new Array();
