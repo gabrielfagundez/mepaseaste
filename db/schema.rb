@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20131020165115) do
     t.string   "tipo_tarifa",         default: "diurna", null: false
     t.text     "distancias"
     t.text     "costos"
+    t.boolean  "shared",              default: false,    null: false
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"

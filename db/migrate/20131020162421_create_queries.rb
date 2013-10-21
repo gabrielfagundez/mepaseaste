@@ -5,6 +5,7 @@ class CreateQueries < ActiveRecord::Migration
       t.string  :tipo_tarifa,                       :null => false, :default => 'diurna'
       t.text    :distancias
       t.text    :costos
+      t.boolean :shared,                            :null => false, :default => false
 
 
       t.integer :user_id
