@@ -71,6 +71,8 @@ class DataController < ApplicationController
     query.solution = params[:solution]
     query.costo_total = params[:costo]
     query.save!
+
+    render nothing: true
   end
 
   private
