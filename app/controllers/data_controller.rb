@@ -68,7 +68,9 @@ class DataController < ApplicationController
   #
   def save_query
     query = Query.find(params[:query_id])
-    query.update_attributes(solution: params[:solution], costo_total: params[:costo])
+    query.solution = params[:solution]
+    query.costo_total = params[:costo]
+    query.save!
   end
 
   private
