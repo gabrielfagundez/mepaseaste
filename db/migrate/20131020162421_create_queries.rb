@@ -6,7 +6,8 @@ class CreateQueries < ActiveRecord::Migration
       t.text    :distancias
       t.text    :costos
       t.boolean :shared,                            :null => false, :default => false
-
+      t.text    :solution
+      t.integer :costo_total
 
       t.integer :user_id
 

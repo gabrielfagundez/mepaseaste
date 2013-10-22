@@ -21,5 +21,13 @@
             .taxi
               .imagen-taxi
               .texto-taxi Este taxi es estático y es de prueba.
+          - if @query.solution
+            - @query.solution.each do |taxi|
+              %br
+              %br
+              .panel.yellow-background
+                .taxi
+                  .imagen-taxi
+                  .texto-taxi Este taxi es dinámico desde la base SQL.
 
 

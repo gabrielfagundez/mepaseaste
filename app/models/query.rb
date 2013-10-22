@@ -4,5 +4,6 @@ class Query < ActiveRecord::Base
 
   serialize :distancias
   serialize :costos
+  serialize :solution
 
 end

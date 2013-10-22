@@ -1,11 +1,11 @@
-function fileExists(file_name){
+function fileExists(file_name, query_id){
     $.ajax({
         url: file_name,
         type:'HEAD',
         error: function() {
             setTimeout(function() {
                 // Llamar a esta funcion nuevamente despues de 20 milisegundos
-                fileExists(file_name);
+                fileExists(file_name, query_id);
             }, 20);
         },
         success: function() {
@@ -13,11 +13,11 @@ function fileExists(file_name){
                 url: file_name,
                 success: function(data) {
                     if(data.match(/Solution/)){
-                        llenar_con_datos(data);
+                        llenar_con_datos(data, query_id);
                     } else {
                         setTimeout(function() {
                             // Llamar a esta funcion nuevamente despues de 20 milisegundos
-                            fileExists(file_name);
+                            fileExists(file_name, query_id);
                         }, 100);
                     }
                 }
@@ -27,7 +27,7 @@ function fileExists(file_name){
 }
 
 
-function llenar_con_datos(data){
+function llenar_con_datos(data, query_id){
     string = data.substr(11);
     var arreglo_numeros = new Array();
 
@@ -60,6 +60,11 @@ function llenar_con_datos(data){
     var nuevo_taxi = true;
     var taxi;
 
+    var obj = new Object();
+    obj.query_id = query_id;
+    obj.solution = new Array();
+
+
     for(var iterador=0; iterador<arreglo_numeros.length; iterador++){
         if(nuevo_taxi){
             taxi = new Array();
@@ -70,12 +75,14 @@ function llenar_con_datos(data){
             taxi.push(arreglo_numeros[iterador]);
             if(iterador == (arreglo_numeros.length - 1)){
                 taxis.push(taxi);
+                obj.solution.push(taxi);
             }
         };
 
         if(arreglo_numeros[iterador] == '0'){
             if(taxi.length > 0){
                 taxis.push(taxi);
+                obj.solution.push(taxi);
             }
 
             // Seteo esta variable el true para crear un nuevo taxi
@@ -85,6 +92,18 @@ function llenar_con_datos(data){
 
     // Parseo el costo total
     var costo = data.substr(11);
+
+    // Convertimos a JSON
+    obj.costo = costo;
+    var json = JSON.stringify(obj);
+
+    // Guardo los taxis
+    $.ajax({
+        contentType: 'application/json',
+        data: json,
+        type: 'POST',
+        url: '/save_query'
+    });
 
     // Obtengo la posicion de la 'F'
     var pos_F = 0;

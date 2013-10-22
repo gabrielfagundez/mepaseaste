@@ -1,5 +1,5 @@
 class DataController < ApplicationController
-  skip_before_filter :verify_authenticity_token,  only: [ :process_data ]
+  skip_before_filter :verify_authenticity_token,  only: [ :process_data, :save_query ]
 
   before_filter :crear_matriz_de_distancias,      only: [ :process_data ]
   append_before_filter :crear_matriz_de_costos,   only: [ :process_data ]
@@ -23,7 +23,7 @@ class DataController < ApplicationController
         tipo_tarifa:          tipo_tarifa,
         user:                 current_user,
         distancias:           @matriz_distancias,
-        costos:               @matriz_costos
+        costos:               @matriz_costos,
     )
 
     # Almacenamos la información de los marcadores
@@ -52,9 +52,23 @@ class DataController < ApplicationController
     end
   end
 
+  #
+  # Esta acción muestra la información para una determinada query. En caso que no tenga solución
+  # la levanta de un archivo de texto, y la muestra en pantalla. Además, almacena dicha información
+  # para futuros accesos.
+  #
   def show_data
     @query = Query.find(params[:query_id])
     @marcadores = @query.locations
+  end
+
+  #
+  # Esta acción almacena la solución del algoritmos en la query, para poder
+  # acceder más tarde sin los archivos.
+  #
+  def save_query
+    query = Query.find(params[:query_id])
+    query.update_attributes(solution: params[:solution], costo_total: params[:costo])
   end
 
   private

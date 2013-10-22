@@ -10,6 +10,7 @@ Mepaseaste::Application.routes.draw do
   resources :destinos
 
   post '/sending_data'  => 'data#process_data'
+  post '/save_query'     => 'data#save_query'
   get '/show_data'      => 'data#show_data'
 
   namespace :international do

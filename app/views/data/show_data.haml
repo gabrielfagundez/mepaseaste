@@ -24,7 +24,9 @@
 
 :javascript
   initialize(false);
-  fileExists('/#{ @query.id }/raw_results.txt')
+- if @query.solution.nil?
+  :javascript
+    fileExists('/#{ @query.id }/raw_results.txt', #{ @query.id })
 - @marcadores.each do |marcador|
   :javascript
     addMarkerToResultPage('#{ marcador.latitude }', '#{ marcador.longitude }', '#{ marcador.icon }');
