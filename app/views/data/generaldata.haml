@@ -11,3 +11,13 @@
         %p Además, los cálculos se hicieron en base a #{ @query.cantidad_marcadores } marcadores.
       %li
         %p Finalmente, la consulta fue realizada en la fecha #{ @query.created_at.to_s }.
+      %br
+
+      .full-grey-line
+
+      %br
+      %br
+      .row
+        .large-4.large-offset-4.columns
+          .panel.radius.center.grey-background
+            = link_to 'Compartir', share_query_path( query_id: @query.id )

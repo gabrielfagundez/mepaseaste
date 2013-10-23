@@ -24,6 +24,7 @@ class DataController < ApplicationController
         user:                 current_user,
         distancias:           @matriz_distancias,
         costos:               @matriz_costos,
+        shared:               false
     )
 
     # Almacenamos la información de los marcadores
@@ -73,6 +74,12 @@ class DataController < ApplicationController
     query.save!
 
     render nothing: true
+  end
+
+  def share_query
+    @query = Query.find(params[:query_id])
+    @query.shared = true
+    @query.save!
   end
 
   private
