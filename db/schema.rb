@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20131020165115) do
     t.text     "costos"
     t.boolean  "shared",              default: false,    null: false
     t.text     "solution"
+    t.integer  "costo_total"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
