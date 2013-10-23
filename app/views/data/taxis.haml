@@ -10,7 +10,7 @@
           - if @query.solution.nil?
             %li El costo total del viaje es de $
           - else
-            %li #{ 'El costo total del viaje es de $' + @query.costo_total }
+            %li #{ 'El costo total del viaje es de $' + @query.costo_total.to_s }
 
       %br
 
