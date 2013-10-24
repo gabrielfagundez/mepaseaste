@@ -19,12 +19,8 @@ function addNewPoint(marker, cant_markers) {
         url = url + dests;
         url = url + '&mode=driving&language=es&sensor=false';
 
-        console.log(url);
-
         getDistance(marker, url);
     }
-
-
 }
 
 

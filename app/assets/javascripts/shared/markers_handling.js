@@ -20,7 +20,7 @@ function createMarker(event) {
     }
 
     marker = new google.maps.Marker({
-        draggable: true,
+        draggable: false,
         position: event.latLng,
         map: map,
 
