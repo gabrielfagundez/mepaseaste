@@ -59,8 +59,13 @@ class DataController < ApplicationController
   # para futuros accesos.
   #
   def show_data
-    @query = Query.find(params[:query_id])
-    @marcadores = @query.locations
+    if @query.shared? || @query.user == current_user
+      @query = Query.find(params[:query_id])
+      @marcadores = @query.locations
+    else
+      flash[:alert] = 'No puedes ingresar a esta consulta ya que no fue compartida por su dueño.'
+      redirect_to :root
+    end
   end
 
   #
