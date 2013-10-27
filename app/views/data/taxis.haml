@@ -2,20 +2,10 @@
   .large-12.columns
     .panel.radius
       %h3
-        Formación de taxis:
+        Para la consulta que has realizado, se #{ @query.solution.length == 1 ? 'formó' : 'formaron   ' } #{ @query.solution.length } taxis.
+        El costo total del viaje es de $#{ @query.costo_total.to_s }. La mejor distribución de personas y taxis, es la siguiente:
       %br
-
       %h3
-        #costo_total
-          - if @query.solution.nil?
-            %li El costo total del viaje es de $
-          - else
-            %li #{ 'El costo total del viaje es de $' + @query.costo_total.to_s }
-
-      %br
-
-      %h3
-        %li Taxis formados:
         #formacion_taxis
           - if @query.solution
             - @query.solution.each_with_index do |taxi, index|
@@ -32,51 +22,3 @@
                           = ubicacion
           - else
             Calculando.. Por favor espere.
-
-
-- # Si la solución proviene de la base, creamos la estructura javascript de los taxis
-- if @query.solution
-  - @query.solution.each do |taxi|
-    :javascript
-       t = new Array();
-    - taxi.each do |pasajero|
-      :javascript
-        t.push(#{ pasajero });
-    :javascript
-      taxis.push(t);
-
-- # Agregamos los marcadores al arreglo global
-- if @query.solution
-  - @query.locations.each do |location|
-    :javascript
-      marker = new google.maps.Marker({
-              draggable: false,
-              position: new google.maps.LatLng('#{ location.latitude.to_s }', '#{ location.longitude.to_s }'),
-              map: map,
-
-              // App Variables
-              markerId: #{ location.location_query_pos },
-              nombre: 'nombre',
-              icon: "#{ location.icon }",
-
-              address: "#{ location.address }",
-
-              // Esta sección se usa para la parte estándar
-              distancias_anteriores_raw: new Array(),
-              distancias_anteriores_string: new Array(),
-
-              tiempos_anteriores_raw: new Array(),
-              tiempos_anteriores_string: new Array(),
-
-              // Esta sección se usa para la parte internacional
-              costos_anteriores: new Array()
-          });
-      markers.push(marker);
-
-- # Movemos la pantalla al mapa
-:javascript
-  $(".imagen-taxi").click(function() {
-    $('html, body').animate({
-      scrollTop: $("#map").offset().top - 100
-    }, 800);
-  });
