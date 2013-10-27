@@ -17,24 +17,14 @@
       %h3
         %li Taxis formados:
         #formacion_taxis
-
-          - # Esto corresponde con un taxi
-          %br
-          %br
-          .panel.yellow-background
-            .taxi
-              %a
-                .imagen-taxi{ onclick: 'calcRoute(1)' }
-              .texto-taxi Este taxi es estático y es de prueba.
-
-
           - if @query.solution
-            - @query.solution.each do |taxi|
+            - @query.solution.each_with_index do |taxi, index|
               %br
               %br
               .panel.yellow-background
                 .taxi
-                  .imagen-taxi
+                  %a
+                    .imagen-taxi{ onclick: "calcRoute(#{ index })" }
                   .texto-taxi
                     - taxi.each do |ubicacion|
                       .row
@@ -83,3 +73,10 @@
           });
       markers.push(marker);
 
+- # Movemos la pantalla al mapa
+:javascript
+  $(".imagen-taxi").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#map").offset().top - 100
+    }, 800);
+  });
