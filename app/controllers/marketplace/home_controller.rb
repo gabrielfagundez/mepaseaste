@@ -1,5 +1,5 @@
 class International::HomeController < ApplicationController
-  layout 'international'
+  #layout 'marketplace'
 
   def index
 

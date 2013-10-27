@@ -14,6 +14,11 @@ Mepaseaste::Application.routes.draw do
     get '/'             => 'home#index'
   end
 
+  # Sección marketplace
+  namespace :marketplace do
+    get '/'             => 'home#index'
+  end
+
   # Páginas estáticas
   get '/contacto'       => 'contact#contacto'
   get '/about'          => 'contact#about'
