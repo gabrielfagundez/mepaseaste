@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d959abbd-3f32-4983-b8e2-126a1e8a8577" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/data/share_query.haml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/profile/show.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/data_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/data_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/data/generaldata.haml" afterPath="$PROJECT_DIR$/app/views/data/generaldata.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/mainpage/home.css.sass" afterPath="$PROJECT_DIR$/app/assets/stylesheets/mainpage/home.css.sass" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/data/taxis.haml" afterPath="$PROJECT_DIR$/app/views/data/taxis.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mepaseaste.iws" />
@@ -16,35 +14,35 @@
     <file path="$PROJECT_DIR$/../mepaseaste-proximamente/Gemfile" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377478228846" ignored="false" />
     <file path="$PROJECT_DIR$/../mepaseaste-proximamente/config/database.yml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377478320158" ignored="false" />
     <file path="/database.yml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1380899521133" ignored="false" />
-    <file path="/Dummy.txt" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382523068715" ignored="false" />
+    <file path="/Dummy.txt" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382898329119" ignored="false" />
     <file path="/test.html" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377561047079" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/controllers/cas_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377615608740" ignored="false" />
     <file path="/cas_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377615338211" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/integration/v1/cas_account_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377613931560" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-ServingHeadendTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377607887291" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CasBadRequestTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377607887291" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-AccountTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377607887291" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CameraClaimTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377607887291" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CameraTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377607887291" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CameraMovementTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377607887291" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-MobileDeviceTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377607887291" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-MobileHelperTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377607887291" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CameraOutputPortTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377607887291" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CustomerTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377607887291" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-DefaultHeadendTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377607887291" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CasAccountTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377607887291" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CameraLiveTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377607887291" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CameraLightTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377607887292" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CameraArchiveTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377607887292" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CamerAlertsTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377607887292" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-ServingHeadendTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282706" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CasBadRequestTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282706" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-AccountTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CameraClaimTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CameraTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382553495174" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CameraMovementTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-MobileDeviceTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-MobileHelperTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282706" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CameraOutputPortTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CustomerTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-DefaultHeadendTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CasAccountTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CameraLiveTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CameraLightTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CameraArchiveTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CamerAlertsTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
     <file path="/cas_account_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377613603485" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/models/customer.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377613931560" ignored="false" />
     <file path="/customer.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377612864053" ignored="false" />
-    <file path="/a.dummy" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382488178737" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/coverage/index.html" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377612309107" ignored="false" />
+    <file path="/a.dummy" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382642899399" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/coverage/index.html" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382553495174" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/unit/customer_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377612316832" ignored="false" />
     <file path="/customer_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377612211948" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/db/structure.sql" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377613924940" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/db/structure.sql" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382537625056" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/Gemfile" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381853549955" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/brakeman.html" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377617722461" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/config/initializers/secret_token.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1377617806231" ignored="false" />
@@ -62,7 +60,7 @@
     <file path="/shared.css.sass" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381785894200" ignored="false" />
     <file path="/android.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378691631224" ignored="false" />
     <file path="/foundation.css" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378623099813" ignored="false" />
-    <file path="/routes.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382474264320" ignored="false" />
+    <file path="/routes.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382898491614" ignored="false" />
     <file path="/contact_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378645759922" ignored="false" />
     <file path="/contacto.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378654773033" ignored="false" />
     <file path="/map.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378648983982" ignored="false" />
@@ -87,11 +85,11 @@
     <file path="/destinos.css.sass" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378773444112" ignored="false" />
     <file path="/barralogin.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1378774381397" ignored="false" />
     <file path="/index.html" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1380896432929" ignored="false" />
-    <file path="/markers_handling.js" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382306988062" ignored="false" />
+    <file path="/markers_handling.js" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382642977078" ignored="false" />
     <file path="/enviardatos.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1380918562625" ignored="false" />
     <file path="/opciones.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1380911558546" ignored="false" />
     <file path="/send_data_from_map.js" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382438965651" ignored="false" />
-    <file path="/data_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382474890279" ignored="false" />
+    <file path="/data_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382644391658" ignored="false" />
     <file path="/international.html.erb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381784771553" ignored="false" />
     <file path="/application.css" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382314805900" ignored="false" />
     <file path="/international.css" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381785217104" ignored="false" />
@@ -100,19 +98,19 @@
     <file path="/production.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381787916928" ignored="false" />
     <file path="/get_cost.js" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382045670619" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/models/camera/lghd100.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382384369835" ignored="false" />
-    <file path="/remote_logger_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381841614383" ignored="false" />
+    <file path="/remote_logger_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382551356423" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/numerex_common/app/controllers/remote_logger_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381841616647" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/numerex_common/app/controllers/up_check_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381841629491" ignored="false" />
     <file path="/up_check_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381841626940" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/unit/lghd100_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382383212226" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/unit/lghd100_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544544160" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/config/lg_camera_settings.yml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381842484659" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/lib/cameras/lghd100/proxy.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382383460271" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/lib/cameras/lghd100/proxy.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382536928254" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/models/client.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381842546764" ignored="false" />
     <file path="/client.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381842513530" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/models/ability.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381848990809" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/models/ability.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382554428280" ignored="false" />
     <file path="/ability.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381842538630" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/unit/ability_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381848937591" ignored="false" />
-    <file path="/ability_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381844785062" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/unit/ability_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382554428280" ignored="false" />
+    <file path="/ability_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382552671163" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/test_helper.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381849204611" ignored="false" />
     <file path="/test_helper.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381849197257" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/unit/client_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381845573115" ignored="false" />
@@ -124,28 +122,84 @@
     <file path="/cas-authorization.gemspec" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381853693955" ignored="false" />
     <file path="/authorization.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381854809007" ignored="false" />
     <file path="$USER_HOME$/MooveIT/Numerex/cas-authorization/lib/cas/authorization.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381854809655" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/Gemfile.lock" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381853555548" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/controllers/application_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381854487945" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/Gemfile.lock" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382552106540" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/controllers/application_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382555369909" ignored="false" />
     <file path="/application_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1381854485463" ignored="false" />
     <file path="/ae_config.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382206421919" ignored="false" />
     <file path="/ae_config.yml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382207835970" ignored="false" />
     <file path="/20131020162421_create_queries.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382438813988" ignored="false" />
-    <file path="/query.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382390964748" ignored="false" />
+    <file path="/query.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382644410254" ignored="false" />
     <file path="/location.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382287887613" ignored="false" />
     <file path="/20131020165115_create_locations.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382305958758" ignored="false" />
     <file path="/show_data.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382391100491" ignored="false" />
-    <file path="/taxis.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382488192972" ignored="false" />
-    <file path="/generaldata.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382475283343" ignored="false" />
+    <file path="/taxis.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382525320552" ignored="false" />
+    <file path="/generaldata.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382699622789" ignored="false" />
     <file path="/data.css.sass" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382316987205" ignored="false" />
     <file path="/filling_with_data.js" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382438794869" ignored="false" />
     <file path="/lghd100.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382383385735" ignored="false" />
-    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/integration/v1/lg_camera_request_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382389320135" ignored="false" />
-    <file path="/lg_camera_request_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382388578981" ignored="false" />
-    <file path="/proxy.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382383413400" ignored="false" />
-    <file path="/lghd100_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382383212226" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/integration/v1/lg_camera_request_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382541705454" ignored="false" />
+    <file path="/lg_camera_request_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382541220890" ignored="false" />
+    <file path="/proxy.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382537392424" ignored="false" />
+    <file path="/lghd100_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382539095806" ignored="false" />
     <file path="/calisto_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382390253960" ignored="false" />
-    <file path="$PROJECT_DIR$/log/development.log" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382439810930" ignored="false" />
     <file path="/share_query.haml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382475447070" ignored="false" />
+    <file path="$PROJECT_DIR$/log/development.log" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382524367334" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/controllers/api/v1/cameras_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544544160" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/models/camera_behavior/lghd100_behavior.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382551924054" ignored="false" />
+    <file path="/lghd100_behavior.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382551887361" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/models/camera.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382554218995" ignored="false" />
+    <file path="/camera.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382553644656" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-ClientTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-GetAccountInfoTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-TableSetupTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-Lghd100Test.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-InventorysTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-AbilityTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282706" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-MotionTriggerTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-AffiliateTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CreateAccountTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-AuthorizeRequestsTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CameraRegisterTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CasCameraRegistrationTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/lib/cameras/proxy.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382536980642" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/lib/cms/proxy.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382536200627" ignored="false" />
+    <file path="/cameras_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382541470338" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/models/proxies/cameras/lghd100_proxy.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382642012392" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/models/proxies/cameras/base_proxy.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544544160" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/models/proxies/cms_proxy.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382554218995" ignored="false" />
+    <file path="/cms_proxy.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544303839" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/controllers/api/v1/camera/light_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382554218995" ignored="false" />
+    <file path="/base_proxy.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382541492514" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CasCameraActionTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382553495174" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CasCameraWifiStatusTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382553495174" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-RegisterDeviceTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282706" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-FirstTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282706" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-InventoryHelperTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-CasHelperTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/reports/TEST-DeviceTest.xml" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544282707" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/unit/camera_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382554218995" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/models/camera_behavior/sercomm_behavior.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544544160" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/unit/cms_proxy_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382546022746" ignored="false" />
+    <file path="/cms_proxy_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382546016912" ignored="false" />
+    <file path="/camera_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382544790443" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/controllers/api/v1/camera/movement_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382554218995" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/controllers/api/v1/camera/output_port_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382554218995" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/integration/camera_movement_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382554218995" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/integration/camera_live_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382554218995" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/integration/v1/cas_camera_wifi_status_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382554218995" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/integration/v1/camera_claim_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382554218995" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/integration/v1/camera_light_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382554218995" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/integration/v1/camera_output_port_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382554218995" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/integration/v1/cas_camera_action_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382554218995" ignored="false" />
+    <file path="$USER_HOME$/.rvm/gems/ruby-1.9.3-p448@nextview/bundler/gems/numerex_common-11ea3f51e42e/app/controllers/remote_logger_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382551372716" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/test/integration/v1/authorize_requests_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382554428280" ignored="false" />
+    <file path="/authorize_requests_test.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382552787813" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/controllers/api/v1/inventory_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382558423910" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/config/routes.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382613509016" ignored="false" />
+    <file path="$USER_HOME$/MooveIT/Numerex/NextView-CAS/app/controllers/motion_trigger_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382557199088" ignored="false" />
+    <file path="/motion_trigger_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382557198185" ignored="false" />
+    <file path="/lghd100_proxy.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382641992761" ignored="false" />
+    <file path="/profile_controller.rb" changelist="d959abbd-3f32-4983-b8e2-126a1e8a8577" time="1382898555286" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,61 +227,16 @@
       <file leaf-file-name="data_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/data_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="5" selection-start="2747" selection-end="2747" vertical-scroll-proportion="0.0">
+            <state line="64" column="25" selection-start="2365" selection-end="2365" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="taxis.haml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/data/taxis.haml">
+      <file leaf-file-name="query.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/query.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="35" selection-start="158" selection-end="158" vertical-scroll-proportion="0.256654">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/schema.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="21" selection-start="1395" selection-end="1395" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show_data.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/data/show_data.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="67" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="generaldata.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/data/generaldata.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="9" selection-start="426" selection-end="426" vertical-scroll-proportion="-11.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="share_query.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/data/share_query.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="60" selection-start="238" selection-end="238" vertical-scroll-proportion="-5.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.css.sass" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/international/home.css.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="5" selection-start="331" selection-end="347" vertical-scroll-proportion="0.0">
+            <state line="7" column="0" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -236,7 +245,43 @@
       <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="44" selection-start="428" selection-end="439" vertical-scroll-proportion="0.0">
+            <state line="17" column="35" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/profile_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="2" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.haml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/profile/show.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show_data.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/data/show_data.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="32" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generaldata.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/data/generaldata.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="88" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -265,22 +310,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/international/home.css.sass" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/mainpage/data.css.sass" />
-        <option value="$PROJECT_DIR$/app/controllers/calisto_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/calisto/index.haml" />
-        <option value="$PROJECT_DIR$/app/models/query.rb" />
         <option value="$PROJECT_DIR$/app/views/data/show_data.haml" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/shared/filling_with_data.js" />
         <option value="$PROJECT_DIR$/db/migrate/20131020162421_create_queries.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application/send_data_from_map.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/mainpage/home.css.sass" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/data/generaldata.haml" />
-        <option value="$PROJECT_DIR$/app/controllers/data_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/data/share_query.haml" />
+        <option value="$PROJECT_DIR$/db/schema.rb" />
         <option value="$PROJECT_DIR$/app/views/data/taxis.haml" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application/get_distance.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/shared/markers_handling.js" />
+        <option value="$PROJECT_DIR$/app/models/query.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/data_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/data/generaldata.haml" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/profile_controller.rb" />
       </list>
     </option>
   </component>
@@ -315,7 +360,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -370,7 +414,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
+              <option name="myItemId" value="profile" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -388,8 +432,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mepaseaste" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mepaseaste" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="RailsProjectView" />
     </panes>
   </component>
@@ -679,18 +742,18 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293944" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25611326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.42599744" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.34648493" sideWeight="0.6705277" order="3" side_tool="false" content_ui="combo" x="528" y="70" width="384" height="777" />
+      <window_info id="Project" active="true" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="true" weight="0.34648493" sideWeight="0.6705277" order="3" side_tool="false" content_ui="combo" x="528" y="70" width="384" height="777" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.5727156" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32947233" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25611326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33024693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -760,117 +823,96 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/home/index.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/enviardatos.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="29" selection-start="224" selection-end="232" vertical-scroll-proportion="0.18620689">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/shared/filling_with_data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="22" selection-start="2856" selection-end="2856" vertical-scroll-proportion="0.020026702">
-          <folding>
-            <marker date="1382438817000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1382438817000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application/send_data_from_map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="16" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.74098796">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20131020162421_create_queries.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="31" selection-start="516" selection-end="516" vertical-scroll-proportion="0.30040053">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="21" selection-start="1395" selection-end="1395" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/international/shared.css.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="21" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.31909212">
-          <folding />
-        </state>
+        <state line="107" column="21" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.31909212" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/mainpage/home.css.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="16" selection-start="1219" selection-end="1234" vertical-scroll-proportion="0.60545456">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="44" selection-start="428" selection-end="439" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/data/show_data.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="67" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
+        <state line="73" column="16" selection-start="1219" selection-end="1234" vertical-scroll-proportion="0.60545456" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_view/helpers/url_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="173" column="10" selection-start="7894" selection-end="7894" vertical-scroll-proportion="0.33272728">
-          <folding />
-        </state>
+        <state line="173" column="10" selection-start="7894" selection-end="7894" vertical-scroll-proportion="0.33272728" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="53" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.57272726" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/data/taxis.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="57" selection-start="224" selection-end="224" vertical-scroll-proportion="0.22758621" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/data/share_query.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="60" selection-start="238" selection-end="238" vertical-scroll-proportion="0.18620689" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/international/home.css.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="5" selection-start="331" selection-end="347" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="24" column="5" selection-start="331" selection-end="347" vertical-scroll-proportion="0.020026702" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/data/generaldata.haml">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/shared/markers_handling.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="9" selection-start="426" selection-end="426" vertical-scroll-proportion="-11.25">
+        <state line="26" column="48" selection-start="536" selection-end="536" vertical-scroll-proportion="0.4909091" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application/get_distance.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="31" selection-start="666" selection-end="666" vertical-scroll-proportion="-0.43636364" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/query.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/data_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="5" selection-start="2747" selection-end="2747" vertical-scroll-proportion="0.0">
+        <state line="64" column="25" selection-start="2365" selection-end="2365" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/data/share_query.haml">
+    <entry file="file://$PROJECT_DIR$/app/views/data/show_data.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="60" selection-start="238" selection-end="238" vertical-scroll-proportion="-5.625">
+        <state line="9" column="32" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/data/taxis.haml">
+    <entry file="file://$PROJECT_DIR$/app/views/data/generaldata.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="35" selection-start="158" selection-end="158" vertical-scroll-proportion="0.256654">
+        <state line="5" column="88" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="35" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/profile_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="2" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/profile/show.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

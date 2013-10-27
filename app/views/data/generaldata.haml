@@ -19,5 +19,20 @@
       %br
       .row
         .large-4.large-offset-4.columns
-          .panel.radius.center.grey-background
-            = link_to 'Compartir', share_query_path( query_id: @query.id )
+          #buttonForModal.panel.radius.center.grey-background
+            %div
+            'Compartir'
+
+:javascript
+  $(document).ready(function() {
+      $("#buttonForModal").click(function() {
+        $("#confirmacion").reveal();
+      });
+    });
+
+
+- # Modal para confirmación del share
+#confirmacion.reveal-modal
+  Lo tengo!
+  .close-reveal-modal
+    Aceptar
