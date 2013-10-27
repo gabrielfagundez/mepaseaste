@@ -23,8 +23,11 @@
           %br
           .panel.yellow-background
             .taxi
-              .imagen-taxi
+              %a
+                .imagen-taxi{ onclick: 'calcRoute(1)' }
               .texto-taxi Este taxi es estático y es de prueba.
+
+
           - if @query.solution
             - @query.solution.each do |taxi|
               %br
@@ -32,6 +35,23 @@
               .panel.yellow-background
                 .taxi
                   .imagen-taxi
-                  .texto-taxi Este taxi es dinámico desde la base SQL.
+                  .texto-taxi
+                    - taxi.each do |ubicacion|
+                      .row
+                        .small-3.columns
+                          = ubicacion
+          - else
+            Calculando.. Por favor espere.
 
+
+- # Si la solución proviene de la base, creamos la estructura javascript de los taxis
+- if @query.solution
+  - @query.solution.each do |taxi|
+    :javascript
+       t = new Array();
+    - taxi.each do |pasajero|
+      :javascript
+        t.push(#{ pasajero });
+    :javascript
+      taxis.push(t)
 

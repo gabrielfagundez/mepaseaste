@@ -1,10 +1,6 @@
 .row
   .large-12.columns
     .panel.radius
-      %h3
-        Información general:
-      %br
-
       %li
         %p Ha seleccionado la tarifa #{ @query.tipo_tarifa }.
       %li
@@ -22,17 +18,3 @@
           #buttonForModal.panel.radius.center.grey-background
             %div
             'Compartir'
-
-:javascript
-  $(document).ready(function() {
-      $("#buttonForModal").click(function() {
-        $("#confirmacion").reveal();
-      });
-    });
-
-
-- # Modal para confirmación del share
-#confirmacion.reveal-modal
-  Lo tengo!
-  .close-reveal-modal
-    Aceptar
