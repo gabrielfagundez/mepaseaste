@@ -1,9 +1,13 @@
 .row
   .large-12.columns
     .panel.radius
-      %li
-        %p Ha seleccionado la tarifa #{ @query.tipo_tarifa }.
-      %li
-        %p Además, los cálculos se hicieron en base a #{ @query.cantidad_marcadores } marcadores.
-      %li
-        %p Finalmente, la consulta fue realizada en la fecha #{ @query.created_at.to_s }.
+      .row
+        .small-4.columns
+          .panel.radius
+            %p Para esta consulta, se ha seleccionado la tarifa #{ @query.tipo_tarifa }.
+        .small-4.columns
+          .panel.radius
+            %p Se han contemplado #{ @query.cantidad_marcadores - 1 } destinos, partiendo de 1 origen.
+        .small-4.columns
+          .panel.radius
+            %p La consulta fue realizada en la fecha #{ @query.created_at.to_s }.

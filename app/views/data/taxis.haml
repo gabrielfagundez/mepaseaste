@@ -9,16 +9,14 @@
         #formacion_taxis
           - if @query.solution
             - @query.solution.each_with_index do |taxi, index|
-              %br
-              %br
               .panel.yellow-background
                 .taxi
                   %a
                     .imagen-taxi{ onclick: "calcRoute(#{ index })" }
                   .texto-taxi
-                    - taxi.each do |ubicacion|
-                      .row
-                        .small-3.columns
-                          = ubicacion
+                    -#- taxi.each do |ubicacion|
+                    -#  .row
+                    -#    .small-3.columns
+                    -#      = ubicacion
           - else
             Calculando.. Por favor espere.
