@@ -53,5 +53,33 @@
       :javascript
         t.push(#{ pasajero });
     :javascript
-      taxis.push(t)
+      taxis.push(t);
+
+- # Agregamos los marcadores al arreglo global
+- if @query.solution
+  - @query.locations.each do |location|
+    :javascript
+      marker = new google.maps.Marker({
+              draggable: false,
+              position: new google.maps.LatLng('#{ location.latitude.to_s }', '#{ location.longitude.to_s }'),
+              map: map,
+
+              // App Variables
+              markerId: #{ location.location_query_pos },
+              nombre: 'nombre',
+              icon: "#{ location.icon }",
+
+              address: "#{ location.address }",
+
+              // Esta sección se usa para la parte estándar
+              distancias_anteriores_raw: new Array(),
+              distancias_anteriores_string: new Array(),
+
+              tiempos_anteriores_raw: new Array(),
+              tiempos_anteriores_string: new Array(),
+
+              // Esta sección se usa para la parte internacional
+              costos_anteriores: new Array()
+          });
+      markers.push(marker);
 

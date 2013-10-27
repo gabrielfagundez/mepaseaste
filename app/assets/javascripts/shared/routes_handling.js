@@ -15,23 +15,21 @@ function calcRoute(t) {
 
     for(var it=0; it<taxi.length; it++){
         if(it == 0){
-            start = new google.maps.LatLng(getMarkerByID(0).position.jb, getMarkerByID(0).position.kb);
-            end = new google.maps.LatLng(getMarkerByID(taxi[0]).position.jb, getMarkerByID(taxi[0]).position.kb);
+            start = new google.maps.LatLng(getMarkerByID(1).position.lat(), getMarkerByID(1).position.lng());
+            end = new google.maps.LatLng(getMarkerByID(taxi[0]).position.lat(), getMarkerByID(taxi[0]).position.lng());
         } else {
-            start = new google.maps.LatLng(getMarkerByID(taxi[it-1]).position.jb, getMarkerByID(taxi[it-1]).position.kb);
-            end = new google.maps.LatLng(getMarkerByID(taxi[it]).position.jb, getMarkerByID(taxi[it]).position.kb);
+            start = new google.maps.LatLng(getMarkerByID(taxi[it-1]).position.lat(), getMarkerByID(taxi[it-1]).position.lng());
+            end = new google.maps.LatLng(getMarkerByID(taxi[it]).position.lat(), getMarkerByID(taxi[it]).position.lng());
         }
 
-        // Retrieve the start and end locations and create
-        // a DirectionsRequest using WALKING directions.
+        // Obtenemos el inicio y el fin y la ruta.
         var request = {
             origin: start,
             destination: end,
             travelMode: google.maps.TravelMode.DRIVING
         };
 
-        // Route the directions and pass the response to a
-        // function to create markers for each step.
+        // Dibujamos las rutas y las mostramos en el mapa
         directionsService.route(request, function(response, status) {
             if (status == google.maps.DirectionsStatus.OK) {
                 directionsDisplays[iter].setDirections(response);
