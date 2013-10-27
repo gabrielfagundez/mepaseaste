@@ -9,6 +9,10 @@
 
 = render template: 'data/generaldata'
 
+.px10-separator
+
+= render template: 'data/taxis'
+
 .row
   .large-12.columns
     .panel.radius
@@ -17,10 +21,7 @@
         .px10-separator
       = render template: 'shared/map'
 
-.px10-separator
-
-= render template: 'data/taxis'
-
+= render template: 'data/share'
 
 :javascript
   initialize(false);
