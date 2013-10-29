@@ -32,15 +32,4 @@ class User < ActiveRecord::Base
     has_role('user')
   end
 
-  def get_most_visited_locations
-    locations = []
-
-    queries.each do |query|
-      query.locations.each do |location|
-        locations.push(location)
-      end
-    end
-
-    locations
-  end
 end
