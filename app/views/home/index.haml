@@ -26,8 +26,33 @@
 .grey-background
   .px20-separator
   .row
-    .small-10.small-centered.columns
-      = render template: 'home/opciones'
+    .small-4.columns
+      .full-yellow-upper-line
+      -# Opciones
+      .panel.radius
+        .row
+          .small-12.columns.center
+            %p
+              Selecciona el tipo de viaje
+            .switch.round
+              %input{id: 'tarifa_diurna', name: 'switch_accurance', type: 'radio', checked: 'true'}
+              %label{for: 'tarifa_diurna', onclick: ''}
+                Dia
+              %input{id: 'tarifa_nocturna', name: 'switch_accurance', type: 'radio'}
+              %label{for: 'tarifa_nocturna', onclick: ''}
+                Noche
+              %span
+
+    .small-8.columns
+      .full-red-upper-line
+      .panel.radius
+        .row
+          .small-4.columns.center
+            = image_tag '/img/query.png'
+          .small-4.columns.center
+            = image_tag '/img/target.png'
+          .small-4.columns.center
+            = image_tag '/img/imac.png'
 
   .row
     .small-10.small-centered.columns
