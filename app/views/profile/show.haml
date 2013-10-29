@@ -50,6 +50,8 @@
       %br
       - Query.recent_queries(current_user.id).each do |query|
         .panel.round
+          %div
+            = image_tag '/img/pin.png', width: '40px', height: '40px'
           %p
             = query.cantidad_marcadores
           %p
