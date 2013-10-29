@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
 
   has_and_belongs_to_many :roles
   has_many :queries
+  has_many :locations
 
   VALID_EMAIL_PATTERN = /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i
 

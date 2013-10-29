@@ -6,6 +6,7 @@
 - # Barra superior con imagen
 .row
   .small-12.columns
+    .full-blue-upper-line-super
     .panel.radius.sidebar
       .row
         .large-4.columns
@@ -23,6 +24,7 @@
   - # Primer sidebar con ubicaciones recientes
   .large-6.columns
     - # Botones para crear
+    .full-green-upper-line
     .panel.radius.box-crear
       %h3
         Crear nueva
@@ -36,6 +38,7 @@
           = image_tag '/img/target.png'
 
     - # Ubicaciones recientes
+    .full-yellow-upper-line
     .panel.radius.box-ubicaciones
       %h3
         Ubicaciones más consultadas
@@ -48,6 +51,7 @@
         %br
 
     - # Estadísticas de uso
+    .full-blue-upper-line
     .panel.radius.box-estadisticas
       %h3
         Estadísiticas de uso
@@ -70,6 +74,8 @@
 
   - # Segundo sidebar con consultas recientes
   .large-6.columns
+    - # Panel de consultas
+    .full-red-upper-line
     .panel.radius.box-consultas
       %h3
         Consultas recientes
