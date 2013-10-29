@@ -9,11 +9,11 @@
     .panel.radius.sidebar
       .row
         .large-4.columns
-          = image_tag '/img/circle.jpg'
+          = image_tag '/img/user.png'
 
         .large-8.columns
           .px20-separator
-          .nombre-sidebar
+          .nombre-sidebar.centered
             Gabriel Fagúndez de los Reyes
           .px20-separator
           .full-grey-line
@@ -27,10 +27,12 @@
         Crear nueva
       %br
       .full-grey-line
-      %p
-        Consulta
-      %p
-        Ubicación usual
+      .px20-separator
+      .row
+        .small-6.columns.centered
+          = image_tag '/img/query.png'
+        .small-6.columns.centered
+          = image_tag '/img/target.png'
 
     .panel.radius.box-ubicaciones
       %h3
