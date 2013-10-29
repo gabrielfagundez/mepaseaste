@@ -22,6 +22,7 @@
 .px20-separator
 .px10-separator
 
+.full-green-upper-line
 .grey-background
   .px20-separator
   .row
@@ -30,9 +31,12 @@
 
   .row
     .small-10.small-centered.columns
-      .button.round.center.full-space
-        %a{onclick: 'sendData();'}
-          Enviar Datos
+      %a{ onclick: 'sendData();' }
+        .enviar-datos.panel
+          Realizar la consulta
+          .texto-chico
+            Ten paciencia, según la cantidad de marcadores la consulta puede demorar entre 5 y 10 segundos.
+
 
 .px50-separator
 
