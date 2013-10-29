@@ -22,6 +22,7 @@
 .row
   - # Primer sidebar con ubicaciones recientes
   .large-6.columns
+    - # Botones para crear
     .panel.radius.box-crear
       %h3
         Crear nueva
@@ -34,13 +35,40 @@
         .small-6.columns.centered
           = image_tag '/img/target.png'
 
+    - # Ubicaciones recientes
     .panel.radius.box-ubicaciones
       %h3
-        Ubicaciones recientes
+        Ubicaciones más consultadas
       %br
       .full-grey-line
+      .px10-separator
+      - current_user.get_most_visited_locations.each do |location|
+        = image_tag '/img/pin.png', width: '40px', height: '40px'
+        = location.address
+        %br
 
-  - # Primer sidebar con ubicaciones recientes
+    - # Estadísticas de uso
+    .panel.radius.box-estadisticas
+      %h3
+        Estadísiticas de uso
+      %br
+      .full-grey-line
+      .px10-separator
+      .row
+        .small-2.columns.centered
+          = image_tag '/img/graph.png'
+        .small-10.columns
+          .texto-estadisticas
+            En total, has realizado #{ current_user.queries.count } consultas.
+      .px10-separator
+      .row
+        .small-2.columns.centered
+          = image_tag '/img/clock.png'
+        .small-10.columns
+          .texto-estadisticas
+            Te uniste a MePaseaste.UY el día #{ current_user.created_at }.
+
+  - # Segundo sidebar con consultas recientes
   .large-6.columns
     .panel.radius.box-consultas
       %h3
@@ -51,7 +79,7 @@
       - Query.recent_queries(current_user.id).each do |query|
         .panel.round
           %div
-            = image_tag '/img/pin.png', width: '40px', height: '40px'
+
           %p
             = query.cantidad_marcadores
           %p
