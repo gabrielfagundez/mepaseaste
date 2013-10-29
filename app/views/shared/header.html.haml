@@ -2,17 +2,12 @@
 .barra_superior
   .row
     .small-12.columns.right-centered-text
-      %a{href: contacto_path}
-        .text-sup
-          Contacto
-      &nbsp &nbsp &nbsp
-      %a{href: about_path}
-        .text-sup
-          Acerca De
-      &nbsp &nbsp &nbsp
       .img-sup
-        = image_tag 'home/logo_grande.png', size: '30x30'
-
+        = image_tag '/img/man.png', size: '30x30'
+      %a{ href: profile_path }
+        .text-sup
+          Mi Perfil
+      &nbsp &nbsp &nbsp
 
 .row
   .small-12.columns.free-space

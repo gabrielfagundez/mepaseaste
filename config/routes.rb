@@ -23,6 +23,7 @@ Mepaseaste::Application.routes.draw do
   get '/contacto'       => 'contact#contacto'
   get '/about'          => 'contact#about'
 
-  resources :profile, only: [ :show ]
+  get '/profile'        => 'profile#show'
+
 
 end
