@@ -1,5 +1,6 @@
 .row
   .large-12.columns
+    .full-yellow-upper-line
     .panel.radius
       %h3
         Para la consulta que has realizado, se #{ @query.solution.try(:length) == 1 ? 'formó' : 'formaron' } #{ @query.solution.try(:length) } #{ @query.solution.try(:length) == 1 ? 'taxi' : 'taxis' }.

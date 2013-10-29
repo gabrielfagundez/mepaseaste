@@ -1,5 +1,6 @@
 .px20-separator
 
+-# Titulo superior
 .row
   .large-12.columns
     %h2
@@ -7,21 +8,72 @@
 
 .px10-separator
 
-= render template: 'data/generaldata'
+-# Datos generales
+.row
+  .large-12.columns
+    .full-red-upper-line
+    .panel.radius
+      .row
+        .small-4.columns
+          .panel.radius
+            .row
+              .large-4.columns
+                = image_tag '/img/costo.png'
+              .large-8.columns
+                %p El costo total del viaje es de $#{ @query.costo_total }. Para la solución has utilizado la tarifa #{ @query.tipo_tarifa }. Recuerda que puedes cambiar esto al momento de realizar la consulta.
+
+        .small-4.columns
+          .panel.radius
+            .row
+              .large-4.columns
+                = image_tag '/img/cohete.png'
+              .large-8.columns
+                %p Partes de 1 lugar hacia #{ @query.cantidad_marcadores - 1 } destinos. La mejor opción requiere de tan solo #{ @query.try(:solution).count } taxis. Utilizando esta solución lograrán el menor costo.
+
+        .small-4.columns
+          .panel.radius
+            .row
+              .large-4.columns
+                = image_tag '/img/share.png'
+              .large-8.columns
+                %p Puedes compartir esta consulta con tus amigos si lo deseas, así ellos también podrán saber cual es el recorrido que realizarán.
+
 
 .px10-separator
 
+-# Sección de los taxis
 = render template: 'data/taxis'
 
 .row
   .large-12.columns
+    .full-blue-upper-line
     .panel.radius
       %h3
         Marcadores ingresados en el mapa:
         .px10-separator
       = render template: 'shared/map'
 
-= render template: 'data/share'
+
+-# Sección compartir
+.row
+  .large-12.columns
+    .full-green-upper-line
+    .panel.radius
+      .center-text
+        Puedes compartir con tus amigos la consulta.. (Completar)
+
+      %br
+      .row
+        .large-4.large-offset-4.columns
+          #buttonForModal.panel.radius.center.grey-background
+            %div
+            'Compartir'
+
+
+
+
+
+
 
 - # Inicializamos el mapa
 :javascript
