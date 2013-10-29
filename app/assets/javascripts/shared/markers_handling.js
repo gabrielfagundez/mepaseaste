@@ -95,19 +95,11 @@ function createMarker(event) {
             if (results[0]) {
                 $('#geocode_' + marker.markerId).html("<p>" + results[0].formatted_address + "</p>");
                 getMarkerByID(marker.markerId).address = results[0].formatted_address;
-
-                // Redimensionamos el mapa si es necesario
-                redimensionMap();
-                google.maps.event.trigger(map, 'resize');
             }
         } else {
             alert("Geocoder failed due to: " + status);
         }
     });
-
-    // Resize map
-    redimensionMap();
-    google.maps.event.trigger(map, 'resize');
 
     return marker;
 }
