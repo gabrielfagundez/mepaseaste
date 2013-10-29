@@ -3,7 +3,7 @@
   .row
     .small-12.columns.right-centered-text
       .img-sup
-        = image_tag '/img/man.png', size: '30x30'
+        = image_tag '/img/man.png', size: '25x25'
       %a{ href: profile_path }
         .text-sup
           Mi Perfil
@@ -18,6 +18,57 @@
       = image_tag 'home/logo.png'
 
 .px20-separator
+.px10-separator
 
-.row
-  .full-grey-line
+.barra-navegacion
+  .row
+    .small-12.small-centered.columns
+      #query.boton-navegacion
+        .inner-boton-navegacion
+          .img-sup
+            = image_tag '/img/query.png', size: '25x25'
+          %a{ href: root_path }
+            Nueva Consulta
+      #market.boton-navegacion
+        .inner-boton-navegacion
+          .img-sup
+            = image_tag '/img/market.png', size: '25x25'
+          %a{ href: marketplace_path }
+            Marketplace
+      #profile.boton-navegacion
+        .inner-boton-navegacion
+          .img-sup
+            = image_tag '/img/man.png', size: '25x25'
+          %a{ href: profile_path }
+            Mi Perfil
+
+.menu-navegacion
+
+.menu-ampliado.hide
+
+
+
+:javascript
+  $('#query').mouseover(function(){
+    $('.menu-ampliado').show();
+  });
+
+  $('#query').mouseout(function(){
+      $('.menu-ampliado').hide();
+  });
+
+  //$('#market').mouseover(function(){
+  //  $('.menu-ampliado').show();
+  //});
+  //
+  //$('#market').mouseout(function(){
+  //    $('.menu-ampliado').hide();
+  //});
+  //
+  //$('#profile').mouseover(function(){
+  //  $('.menu-ampliado').show();
+  //});
+  //
+  //$('#profile').mouseout(function(){
+  //    $('.menu-ampliado').hide();
+  //});
