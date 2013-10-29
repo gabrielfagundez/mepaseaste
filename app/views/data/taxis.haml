@@ -2,7 +2,7 @@
   .large-12.columns
     .panel.radius
       %h3
-        Para la consulta que has realizado, se #{ @query.solution.try(:length) == 1 ? 'formó' : 'formaron   ' } #{ @query.solution.length } taxis.
+        Para la consulta que has realizado, se #{ @query.solution.try(:length) == 1 ? 'formó' : 'formaron' } #{ @query.solution.try(:length) } #{ @query.solution.try(:length) == 1 ? 'taxi' : 'taxis' }.
         El costo total del viaje es de $#{ @query.costo_total.to_s }. La mejor distribución de personas y taxis, es la siguiente:
       %br
       %h3
@@ -11,12 +11,18 @@
             - @query.solution.each_with_index do |taxi, index|
               .panel.yellow-background
                 .taxi
-                  %a
-                    .imagen-taxi{ onclick: "calcRoute(#{ index })" }
+                  .imagen-taxi{ onclick: "calcRoute(#{ index })" }
+                    = image_tag '/img/taxi.png'
                   .texto-taxi
-                    -#- taxi.each do |ubicacion|
-                    -#  .row
-                    -#    .small-3.columns
-                    -#      = ubicacion
+                    .taxi-interno-1
+                      s
+                    .taxi-interno-2
+                      s
+                    .taxi-interno-3
+                      s
+                    .taxi-interno-4
+                      s
+
+
           - else
             Calculando.. Por favor espere.
