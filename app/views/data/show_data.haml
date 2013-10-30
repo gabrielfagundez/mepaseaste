@@ -44,14 +44,10 @@
 -# Sección de los taxis
 = render template: 'data/taxis'
 
+
 .row
-  .large-12.columns
-    .full-blue-upper-line
-    .panel.radius
-      %h3
-        Marcadores ingresados en el mapa:
-        .px10-separator
-      = render template: 'shared/map'
+  .small-12.columns
+    = render template: 'shared/map'
 
 
 -# Sección compartir
