@@ -69,11 +69,9 @@
 
 
 
-
-
 - # Inicializamos el mapa
 :javascript
-  initialize(false);
+  initialize(false, #{ @query.solution.blank? });
 - if @query.solution.nil?
   :javascript
     fileExists('/#{ @query.id }/raw_results.txt', #{ @query.id })
@@ -127,4 +125,3 @@
       scrollTop: $("#map").offset().top - 100
     }, 800);
   });
-

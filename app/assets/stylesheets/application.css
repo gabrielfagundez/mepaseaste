@@ -4,4 +4,5 @@
  *= require mainpage/shared
  *= require mainpage/data
  *= require mainpage/profile
+ *= require mainpage/loading_overlay
  */

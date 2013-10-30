@@ -18,8 +18,14 @@
 <% if controller_name == 'data' %>
     <body onload="">
 <% else %>
-    <body onload="initialize(true)">
+    <body onload="initialize(true, false)">
 <% end %>
+
+
+    <div class="progress-indicator hide">
+      <img src="/img/icon_loading_75x75.gif">
+    </div>
+
     <%= render template: 'shared/header' %>
     <%= yield %>
     <%= render template: 'shared/footer' %>

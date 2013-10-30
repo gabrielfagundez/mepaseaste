@@ -13,6 +13,10 @@ function fileExists(file_name, query_id){
                 url: file_name,
                 success: function(data) {
                     if(data.match(/Solution/)){
+
+                        // Quitamos el div de cargando una vez tenemos datos
+                        $('.progress-indicator').show();
+
                         llenar_con_datos(data, query_id);
                     } else {
                         setTimeout(function() {
