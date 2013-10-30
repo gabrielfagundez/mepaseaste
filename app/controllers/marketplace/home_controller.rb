@@ -1,4 +1,4 @@
-class International::HomeController < ApplicationController
+class Marketplace::HomeController < ApplicationController
   #layout 'marketplace'
 
   def index
