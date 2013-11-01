@@ -24,34 +24,35 @@
 .px20-separator
 .px10-separator
 
-.barra-navegacion
-  .row
-    .small-12.small-centered.columns
-      #query.boton-navegacion
-        .inner-boton-navegacion
-          .img-sup
-            = image_tag '/img/query.png', size: '25x25'
-          %a{ href: root_path }
-            .text-sup-menu
-              Nueva Consulta
-      #market.boton-navegacion
-        .inner-boton-navegacion
-          .img-sup
-            = image_tag '/img/market.png', size: '25x25'
-          %a{ href: marketplace_path }
-            .text-sup-menu
-              Marketplace
-      #profile.boton-navegacion
-        .inner-boton-navegacion
-          .img-sup
-            = image_tag '/img/man.png', size: '25x25'
-          %a{ href: profile_path }
-            .text-sup-menu
-              Mi Perfil
+- if current_user.present?
+  .barra-navegacion
+    .row
+      .small-12.small-centered.columns
+        #query.boton-navegacion
+          .inner-boton-navegacion
+            .img-sup
+              = image_tag '/img/query.png', size: '25x25'
+            %a{ href: root_path }
+              .text-sup-menu
+                Nueva Consulta
+        #market.boton-navegacion
+          .inner-boton-navegacion
+            .img-sup
+              = image_tag '/img/market.png', size: '25x25'
+            %a{ href: marketplace_path }
+              .text-sup-menu
+                Marketplace
+        #profile.boton-navegacion
+          .inner-boton-navegacion
+            .img-sup
+              = image_tag '/img/man.png', size: '25x25'
+            %a{ href: profile_path }
+              .text-sup-menu
+                Mi Perfil
 
-.menu-navegacion
+  .menu-navegacion
 
-.menu-ampliado.hide
+  .menu-ampliado.hide
 
 
 
