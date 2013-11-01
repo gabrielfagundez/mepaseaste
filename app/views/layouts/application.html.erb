@@ -15,10 +15,10 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<% if controller_name == 'data' %>
-    <body onload="">
-<% else %>
+<% if controller_name == 'home' %>
     <body onload="initialize(true, false)">
+<% else %>
+    <body onload="">
 <% end %>
 
 
