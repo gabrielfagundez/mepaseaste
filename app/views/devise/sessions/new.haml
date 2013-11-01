@@ -2,6 +2,7 @@
 
 .row
   .small-10.columns.small-centered
+    .full-red-upper-line
     .panel.radius.center
       %h2
         Aun no tienes cuenta?
@@ -15,6 +16,7 @@
 
 .row
   .small-10.columns.small-centered
+    .full-yellow-upper-line
     - if devise_error_messages! != ''
       .alert-box.radius
         %p
@@ -39,8 +41,8 @@
 
         .px20-separator
         %div
-          = f.submit 'Iniciar Sesion', class: 'button'
+          = f.submit 'Iniciar Sesion', class: 'boton-verde panel'
 
         .panel
-          %a{href: new_user_password_path}
+          %a{ href: new_user_password_path }
             Olvidaste tu contrasena?
