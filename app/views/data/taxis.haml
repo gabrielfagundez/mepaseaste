@@ -12,6 +12,7 @@
             - @query.solution.each_with_index do |taxi, index|
               .panel.light-grey.full-radius
                 .taxi.centered
+                  %img{ src: '/img/nsuparrow.png' }
                   %a
                     .imagen-taxi{ onclick: "calcRoute(#{ index })" }
                       = image_tag '/img/taxi.png'
