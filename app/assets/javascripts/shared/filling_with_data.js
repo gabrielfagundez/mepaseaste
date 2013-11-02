@@ -15,7 +15,7 @@ function fileExists(file_name, query_id){
                     if(data.match(/Solution/)){
 
                         // Quitamos el div de cargando una vez tenemos datos
-                        $('.progress-indicator').show();
+                        $('.progress-indicator').hide();
 
                         llenar_con_datos(data, query_id);
                     } else {
