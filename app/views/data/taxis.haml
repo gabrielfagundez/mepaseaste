@@ -10,19 +10,35 @@
         #formacion_taxis
           - if @query.solution
             - @query.solution.each_with_index do |taxi, index|
-              .panel.yellow-background
+              .panel.light-yellow.full-radius
                 .taxi
                   .imagen-taxi{ onclick: "calcRoute(#{ index })" }
                     = image_tag '/img/taxi.png'
                   .texto-taxi
                     .taxi-interno-1
-                      s
+                      %img{ src: '/img/place.png', width: '30%' }
+                      .text-bold
+                        = @query.taxi_name(taxi[0])
+                      %p
+                        = @query.taxi_address(taxi[0])
                     .taxi-interno-2
-                      s
+                      %img{ src: '/img/place.png', width: '30%' }
+                      .text-bold
+                        = @query.taxi_name(taxi[1])
+                      %p
+                        = @query.taxi_address(taxi[1])
                     .taxi-interno-3
-                      s
+                      %img{ src: '/img/place.png', width: '30%' }
+                      .text-bold
+                        = @query.taxi_name(taxi[2])
+                      %p
+                        = @query.taxi_address(taxi[2])
                     .taxi-interno-4
-                      s
+                      %img{ src: '/img/place.png', width: '30%' }
+                      .text-bold
+                        = @query.taxi_name(taxi[3])
+                      %p
+                        = @query.taxi_address(taxi[3])
 
 
           - else

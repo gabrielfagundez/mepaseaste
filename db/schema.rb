@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131029213843) do
+ActiveRecord::Schema.define(version: 20131102161701) do
 
   create_table "locations", force: true do |t|
     t.integer  "query_id"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20131029213843) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.integer  "quantity",           default: 0
+    t.string   "name",               default: ""
   end
 
   create_table "queries", force: true do |t|
