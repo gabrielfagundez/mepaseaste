@@ -1,25 +1,17 @@
 location_entity = '';
 
-function hola_mundo(json){
-    console.log('json');
-}
-
 function addNewPoint(marker, cant_markers) {
 
     if(cant_markers == 0){
 
         // Busquemos la entidad más cercana
-        url = 'http://api.taxifarefinder.com/entity?callback=hola_mundo&key=' + apikey + '&';
-        url = url + 'location=' + marker.position.lat() + ',' + marker.position.lng();
-
-        console.log(url);
-
         $.ajax({
-            url: url,
+            url: '/tff_get_location_entity?latitude=' + marker.position.lat() + '&longitude=' + marker.position.lng(),
             type: "GET",
-            dataType: "jsonp",
             success: function(data){
-                console.log(data);
+                if(data.status == 'OK'){
+                    location_entity = data.handle;
+                }
             },
             error: function(data){
                 alert('Ocurrió un error en la funcion de obtener entity.');
@@ -30,7 +22,7 @@ function addNewPoint(marker, cant_markers) {
 
     if(cant_markers != 0){
 
-//        // Calculamos la distancia a los demas marcadores ingresados
+        // Calculamos la distancia a los demas marcadores ingresados
 //        url = 'http://maps.googleapis.com/maps/api/distancematrix/json?';
 //        url = url + 'origins=' + marker.position.lat() + ',' + marker.position.lng();
 //        url = url + '&destinations=';

@@ -15,7 +15,11 @@
   <%= javascript_include_tag 'international' %>
   <%= csrf_meta_tags %>
 </head>
-<body onload="initialize(true)">
+<% if controller_name == 'home' %>
+    <body onload="initialize(true, false)">
+<% else %>
+    <body onload="">
+<% end %>
     <%= render template: 'shared/header' %>
     <%= yield %>
     <%= render template: 'shared/footer' %>

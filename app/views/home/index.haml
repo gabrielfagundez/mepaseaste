@@ -48,7 +48,8 @@
       .panel.radius
         .row
           .small-4.columns.center
-            = image_tag '/img/query.png'
+            #query-img
+              = image_tag '/img/query.png'
           .small-4.columns.center
             = image_tag '/img/target.png'
           .small-4.columns.center
@@ -82,5 +83,13 @@
 
 
 
+:javascript
+  $('#query-img').mouseenter(function(){
+    $('#query-img').html("<img src='/img/query-on.png'>")
+  });
+
+  $('#query-img').mouseout(function(){
+    $('#query-img').html("<img src='/img/query.png'>")
+  });
 
 

@@ -26,4 +26,8 @@ Mepaseaste::Application.routes.draw do
   get '/profile'        => 'profile#show'
 
 
+
+  # Para TFF
+  get '/tff_get_location_entity' => 'tff#get_location_entity'
+
 end

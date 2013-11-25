@@ -1,16 +1,19 @@
-$blue: #12406f
+// Colores principales
+$green: #45b39c
+$yellow: #f0c94a
+$red: #bd3e25
+$blue: #76a7fa
 $grey: #e6e6e6
+$blue-osc: #12406f
 
 // Estilos principales
-// *******************
 body
-  background-image: url("/img/intlgrain_100x100.png")
+  background-image: url("/img/grain_200x200.png")
   font-family: 'Fauna One', serif
   color: #252525
 
 p
   font-size: 12px
-
 
 h1
   font-family: 'Fauna One', serif
@@ -34,21 +37,107 @@ h3
 
 
 // Estilos Foundation
-// *******************
 .row
-  max-width: 1024px
+  max-width: 1100px
 
 .button
   background: $blue
 
 // Estilos mapa
-// *******************
 #map
   height: 400px
 
+// Lineas superiores
+.green
+  background-color: #45b39c
+
+.yellow
+  background-color: #f0c94a
+
+.light-grey
+  background-color: #e6e6e8
+
+.red
+  background-color: #bd3e25
+
+.blue
+  background-color: #76a7fa
+
+.text-bold
+  text-align: center
+  margin-bottom: 10px
+
+
+.full-radius
+  -webkit-border-radius: 25px 25px   /* Safari  */
+  -moz-border-radius: 25px 25px      /* Firefox */
+
+.full-green-upper-line
+  width: 100%
+  height: 5px
+  background-color: #45b39c
+  -webkit-border-radius: 10px 10px  /* Safari  */
+  -moz-border-radius: 5px 10px      /* Firefox */
+
+.full-yellow-upper-line
+  width: 100%
+  height: 5px
+  background-color: #f0c94a
+  -webkit-border-radius: 10px 10px  /* Safari  */
+  -moz-border-radius: 5px 10px      /* Firefox */
+
+.full-red-upper-line
+  width: 100%
+  height: 5px
+  background-color: #bd3e25
+  -webkit-border-radius: 10px 10px  /* Safari  */
+  -moz-border-radius: 5px 10px      /* Firefox */
+
+.full-blue-upper-line
+  width: 100%
+  height: 5px
+  background-color: #76a7fa
+  -webkit-border-radius: 10px 10px  /* Safari  */
+  -moz-border-radius: 5px 10px      /* Firefox */
+
+// Botones
+.boton-azul
+  background-color: $blue
+  font-size: 15px
+  -webkit-border-radius: 25px 25px   /* Safari  */
+  -moz-border-radius: 25px 25px      /* Firefox */
+  color: #ffffff
+  text-align: center
+  padding: 10px 10px 10px 10px
+
+.boton-verde
+  background-color: $green
+  font-size: 15px
+  -webkit-border-radius: 25px 25px   /* Safari  */
+  -moz-border-radius: 25px 25px      /* Firefox */
+  color: #ffffff
+  text-align: center
+  padding: 10px 10px 10px 10px
+
+.boton-rojo
+  background-color: $red
+  font-size: 15px
+  -webkit-border-radius: 25px 25px   /* Safari  */
+  -moz-border-radius: 25px 25px      /* Firefox */
+  color: #ffffff
+  text-align: center
+  padding: 10px 10px 10px 10px
+
+.boton-amarillo
+  background-color: $yellow
+  font-size: 15px
+  -webkit-border-radius: 25px 25px   /* Safari  */
+  -moz-border-radius: 25px 25px      /* Firefox */
+  color: #ffffff
+  text-align: center
+  padding: 10px 10px 10px 10px
 
 // Estilos compartidos
-// *******************
 .blue-text
   color: $blue
 
@@ -95,7 +184,7 @@ h3
 .barra_superior
   width: 100%
   height: 40px
-  background-color: #585858
+  background-color: #333333
   position: fixed
   top: 0
   left: 0
@@ -105,7 +194,7 @@ h3
 .barra_superior-azul
   width: 100%
   height: 4px
-  background-color: $blue
+  background-color: $blue-osc
   position: fixed
   top: 0
   left: 0
@@ -127,6 +216,12 @@ h3
   color: $grey
   font-size: 12px
 
+.text-sup-menu
+  border-top: 5px
+  display: inline
+  color: $grey
+  font-size: 14px
+
 .img-sup
   display: inline
   width: 40px
@@ -134,3 +229,12 @@ h3
 
 .full-space
   width: 100%
+
+.working
+  text-align: center
+  font-size: 20px
+  color: #ffffff
+
+.circle
+  border-radius: 50%
+  background-color: $yellow
