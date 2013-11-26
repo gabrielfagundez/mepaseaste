@@ -2,19 +2,29 @@
 <html>
 <head>
   <title>MePaseaste.UY</title>
+
+  <!--Favicon-->
+  <link rel="icon" type="image/ico" href="favicon.ico" />
+
+  <!--Foundation-->
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/css/foundation.css">
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/custom.modernizr.js"></script>
+  <script src="/js/foundation/foundation.js"></script>
+  <script src="/js/foundation/foundation.reveal.js"></script>
+
+  <!--Google API-->
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
   <link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
 
-  <link rel="icon" type="image/ico" href="favicon.ico" />
-
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="/css/foundation.css">
-  <script src="js/vendor/custom.modernizr.js"></script>
-
+  <!--Rails-->
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+
 </head>
+
 <% if controller_name == 'home' %>
     <body onload="initialize(true, false)">
 <% else %>
@@ -26,8 +36,18 @@
       <img src="/img/loading.gif">
     </div>
 
+    <!--Header-->
     <%= render template: 'shared/header' %>
+
+    <!--Body-->
     <%= yield %>
+
+    <!--Footer-->
     <%= render template: 'shared/footer' %>
+
+    <!--Foundation-->
+    <script>
+        $(document).foundation();
+    </script>
 </body>
 </html>
