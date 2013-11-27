@@ -44,14 +44,13 @@
       .panel.radius
         .row
           .small-4.columns.center
-            #query-img
-              %a{ href: '#', 'data-reveal-id' => 'modalDestinosIngresados' }
-                = image_tag '/img/query.png'
+            %a.has-tip{ href: '#', 'data-reveal-id' => 'modalDestinosIngresados', title: 'Has click para ver los destinos ingresados', 'data-tooltip' => '' }
+              = image_tag '/img/query.png'
           .small-4.columns.center
-            %a{ href: '#', 'data-reveal-id' => 'modalDestinosUsuales' }
+            %a.has-tip{ href: '#', 'data-reveal-id' => 'modalDestinosUsuales', title: 'Has click para ver los destinos usuales', 'data-tooltip' => '' }
               = image_tag '/img/target.png'
           .small-4.columns.center
-            %a{ href: '#', 'data-reveal-id' => 'modalTBD' }
+            %a.has-tip{ href: '#', 'data-reveal-id' => 'modalTBD', title: 'Has click para ver...', 'data-tooltip' => '' }
               = image_tag '/img/imac.png'
 
   .row
