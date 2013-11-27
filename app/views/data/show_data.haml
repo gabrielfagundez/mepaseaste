@@ -63,10 +63,11 @@
       %br
       .row
         .large-4.large-offset-4.columns
-          .boton-verde.panel
-            Compartir
+          %a
+            .boton-verde.panel{ 'data-reveal-id' => 'modalCompartir' }
+              Compartir
 
-
+= render partial: 'data/modals'
 
 
 

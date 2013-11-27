@@ -8,6 +8,8 @@
 .px20-separator
 .px10-separator
 
-.menu-navegacion
 
-= render partial: 'shared/botones'
+.full-green-upper-line
+.px10-separator
+  - if current_user.present?
+    = render partial: 'shared/botones'
