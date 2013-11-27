@@ -86,20 +86,24 @@
       %br
       - Query.recent_queries(current_user.id).each do |query|
         %a{ href: show_data_path(query_id: query.id) }
-          %a.has-tip{ class: 'tip-top', title: 'Has click ingresar a la consulta', 'data-tooltip' => '' }
+          %a.has-tip{ href: "/show_data?query_id=#{query.id}", class: 'tip-top', title: 'Has click ingresar a la consulta', 'data-tooltip' => '' }
             .panel.radius
-              %p
-                Cantidad de marcadores ingresados:
-                = "#{ query.cantidad_marcadores}"
-              %p
-                Tipo de la tarifa:
-                = "#{ query.tipo_tarifa}"
-              %p
-                - if query.shared
-                  Esta consulta es pública. Puedes compartirla con tus amigos ingresando aquí:
-                - else
-                  No has compartido esta consulta.
-              .panel.radius
+              .row
+                .small-3.columns
+                  = image_tag '/img/box.png'
+                .small-9.columns
+                  %p
+                    Cantidad de marcadores ingresados:
+                    = "#{ query.cantidad_marcadores}"
+                  %p
+                    Tipo de la tarifa:
+                    = "#{ query.tipo_tarifa}"
+                  %p
+                    - if query.shared
+                      Esta consulta es pública. Puedes compartirla con tus amigos ingresando aquí:
+                    - else
+                      No has compartido esta consulta.
+              .panel.radius.center-text
                 Costo total del viaje:
                 = "$#{ query.costo_total}"
 
