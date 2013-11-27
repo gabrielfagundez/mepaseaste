@@ -84,17 +84,17 @@
       %br
       - Query.recent_queries(current_user.id).each do |query|
         %a{ href: show_data_path(query_id: query.id) }
-          .panel.round
-            %div
-
-            %p
-              = query.cantidad_marcadores
-            %p
-              = query.tipo_tarifa
-            %p
-              = query.shared
-            %p
-              = query.costo_total
+          %a.has-tip{ class: 'tip-top', title: 'Has click ingresar a la consulta', 'data-tooltip' => '' }
+            .panel.round
+              %div
+              %p
+                = query.cantidad_marcadores
+              %p
+                = query.tipo_tarifa
+              %p
+                = query.shared
+              %p
+                = query.costo_total
 
 
 
