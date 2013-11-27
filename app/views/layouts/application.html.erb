@@ -29,12 +29,20 @@
 
   <!--Google API-->
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-  <link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 
   <!--Rails-->
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+
+  <%- if controller_name == 'sessions' || controller_name == 'registrations' || controller_name == 'passwords' %>
+      <style>
+          body{
+              background-image: url("/img/hp_background.jpg");
+          }
+      </style>
+  <%- end %>
 
 </head>
 
@@ -44,19 +52,25 @@
     <body onload="">
 <% end %>
 
-
     <div class="progress-indicator hide">
       <img src="/img/loading.gif">
     </div>
 
     <!--Header-->
-    <%= render template: 'shared/header' %>
+    <%- if controller_name != 'sessions' && controller_name != 'registrations' && controller_name != 'passwords' %>
+        <%= render partial: 'shared/header' %>
+    <%- else %>
+        <%= render partial: 'shared/login_header' %>
+    <%- end %>
 
     <!--Body-->
     <%= yield %>
 
     <!--Footer-->
-    <%= render template: 'shared/footer' %>
+    <%- if controller_name != 'sessions' && controller_name != 'registrations' && controller_name != 'passwords' %>
+        <%= render partial: 'shared/footer' %>
+    <%- end %>
+
 
     <!--Foundation-->
     <script>

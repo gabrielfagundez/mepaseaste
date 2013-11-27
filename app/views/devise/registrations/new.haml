@@ -6,9 +6,10 @@
     .panel.radius.center
       %h2
         Ya estas registrado?
-        %br
+      %br
+      .texto-secundario
         %a{href:new_user_session_path}
-          Inicia Sesion
+          Inicia Sesión
         y empieza a disfrutar de todas las funciones que
         %a{href: root_url}
           MePaseaste.UY
@@ -23,7 +24,7 @@
           = devise_error_messages!
 
     .panel.radius.center
-      %h2 Registrate
+      %h2 Regístrate
       .px10-separator
 
       = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
@@ -47,7 +48,7 @@
 
         .px20-separator
         %div
-          = f.submit 'Registrate', class: 'button'
+          = f.submit 'Regístrate', class: 'boton-signup panel'
 
         .panel
           %a{href: new_user_session_path}

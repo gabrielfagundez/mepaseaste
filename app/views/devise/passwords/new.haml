@@ -2,13 +2,14 @@
 
 .row
   .small-10.columns.small-centered
+    .full-yellow-upper-line
     - if devise_error_messages! != ''
       .alert-box.radius
         %p
           = devise_error_messages!
 
     .panel.radius.center
-      %h2 Olvide mi contrasena
+      %h2 Olvidé mi contrasena
       .px10-separator
 
       = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
@@ -33,4 +34,4 @@
 
         .px20-separator
         %div
-          = f.submit 'Resetear mi contrasena', class: 'button'
+          = f.submit 'Resetear mi contrasena', class: 'boton-password panel'

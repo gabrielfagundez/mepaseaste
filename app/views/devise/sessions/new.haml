@@ -6,9 +6,10 @@
     .panel.radius.center
       %h2
         Aun no tienes cuenta?
-        %br
+      %br
+      .texto-secundario
         %a{href:new_user_registration_path}
-          Registrate
+          Regístrate
         y empieza a disfrutar de todas las funciones que
         %a{href: root_url}
           MePaseaste.UY
@@ -23,7 +24,7 @@
           = devise_error_messages!
 
     .panel.radius.center
-      %h2 Iniciar Sesion
+      %h2 Iniciar Sesión
       .px10-separator
 
       = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
@@ -41,7 +42,7 @@
 
         .px20-separator
         %div
-          = f.submit 'Iniciar Sesion', class: 'boton-verde panel'
+          = f.submit 'Iniciar Sesión', class: 'boton-verde panel'
 
         .panel
           %a{ href: new_user_password_path }
