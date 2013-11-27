@@ -33,9 +33,11 @@
       .px20-separator
       .row
         .small-6.columns.centered
-          = image_tag '/img/query.png'
+          %a.has-tip{ href: root_path, title: 'Realiza una nueva consulta', 'data-tooltip' => '' }
+            = image_tag '/img/query.png'
         .small-6.columns.centered
-          = image_tag '/img/target.png'
+          %a.has-tip{ href: '#', 'data-reveal-id' => 'modalHistorial', title: 'Revisa el historial de tus consultas', 'data-tooltip' => '' }
+            = image_tag '/img/browser.png'
 
     - # Ubicaciones recientes
     .full-yellow-upper-line
@@ -85,19 +87,23 @@
       - Query.recent_queries(current_user.id).each do |query|
         %a{ href: show_data_path(query_id: query.id) }
           %a.has-tip{ class: 'tip-top', title: 'Has click ingresar a la consulta', 'data-tooltip' => '' }
-            .panel.round
-              %div
+            .panel.radius
               %p
-                = query.cantidad_marcadores
+                Cantidad de marcadores ingresados:
+                = "#{ query.cantidad_marcadores}"
               %p
-                = query.tipo_tarifa
+                Tipo de la tarifa:
+                = "#{ query.tipo_tarifa}"
               %p
-                = query.shared
-              %p
-                = query.costo_total
-
-
-
-
+                - if query.shared
+                  Esta consulta es pública. Puedes compartirla con tus amigos ingresando aquí:
+                - else
+                  No has compartido esta consulta.
+              .panel.radius
+                Costo total del viaje:
+                = "$#{ query.costo_total}"
 
   .large-6.columns
+
+
+= render partial: 'data/modals'

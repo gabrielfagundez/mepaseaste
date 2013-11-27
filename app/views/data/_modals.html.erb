@@ -16,3 +16,47 @@
 
   <a class="close-reveal-modal">&#215;</a>
 </div>
+
+<!--Modal Historial-->
+<div id="modalHistorial" class="reveal-modal" data-reveal>
+  <h1>
+    Historial de consultas
+  </h1>
+
+  <%- if current_user.present? %>
+      <table style="width: 100%; text-align: left">
+        <thead>
+        <tr>
+          <th style="width: 25%">Cantidad de destinos</th>
+          <th style="width: 25%">Tipo de la tarifa</th>
+          <th style="width: 25%">Costo total</th>
+          <th style="width: 25%">Pública?</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <%- current_user.recent_queries(10).each do |query| %>
+            <tr>
+              <th style="width: 25%"><%= query.cantidad_marcadores %></th>
+              <th style="width: 25%"><%= query.tipo_tarifa.capitalize %></th>
+              <th style="width: 25%">$<%= query.costo_total %></th>
+              <th style="width: 25%"><%= query.shared? ? 'Sí' : 'No' %></th>
+            </tr>
+        <%- end %>
+        </tbody>
+      </table>
+
+  <%- else %>
+      <h3>Debes iniciar sesión para acceder al historial de consultas.</h3>
+  <%- end %>
+
+  <div class="row">
+    <div class="small-12 columns">
+      <div class="boton-verde panel">
+        Ver Más
+      </div>
+    </div>
+  </div>
+
+  <a class="close-reveal-modal">&#215;</a>
+</div>

@@ -19,6 +19,10 @@ class User < ActiveRecord::Base
     roles << role unless roles.include?(role)
   end
 
+  def recent_queries(quantity)
+    queries.limit(quantity)
+  end
+
   def remove_role(role_name)
     role = Role.where(name: role_name).first
     roles.delete(role)
