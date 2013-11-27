@@ -1,20 +1,4 @@
-.barra_superior-azul
-.barra_superior
-  .row
-    .small-12.columns.right-centered-text
-      %a{href: contacto_path}
-        .text-sup
-          Contacto
-      &nbsp &nbsp &nbsp
-      %a{href: about_path}
-        .text-sup
-          Acerca De
-      &nbsp &nbsp &nbsp
-      .img-sup
-        = image_tag 'home/logo_grande.png', size: '30x30'
-
-.row
-  .small-12.columns.free-space
+= render partial: 'shared/top_bar'
 
 .row
   .large-4.columns
@@ -24,59 +8,6 @@
 .px20-separator
 .px10-separator
 
-- if current_user.present?
-  .barra-navegacion
-    .row
-      .small-12.small-centered.columns
-        #query.boton-navegacion
-          .inner-boton-navegacion
-            .img-sup
-              = image_tag '/img/query.png', size: '25x25'
-            %a{ href: root_path }
-              .text-sup-menu
-                Nueva Consulta
-        #market.boton-navegacion
-          .inner-boton-navegacion
-            .img-sup
-              = image_tag '/img/market.png', size: '25x25'
-            %a{ href: marketplace_path }
-              .text-sup-menu
-                Marketplace
-        #profile.boton-navegacion
-          .inner-boton-navegacion
-            .img-sup
-              = image_tag '/img/man.png', size: '25x25'
-            %a{ href: profile_path }
-              .text-sup-menu
-                Mi Perfil
+.menu-navegacion
 
-  .menu-navegacion
-
-  .menu-ampliado.hide
-
-
-
-:javascript
-  //$('#query').mouseover(function(){
-  //  $('.menu-ampliado').show();
-  //});
-  //
-  //$('#query').mouseout(function(){
-  //    $('.menu-ampliado').hide();
-  //});
-  //
-  //$('#market').mouseover(function(){
-  //  $('.menu-ampliado').show();
-  //});
-  //
-  //$('#market').mouseout(function(){
-  //    $('.menu-ampliado').hide();
-  //});
-  //
-  //$('#profile').mouseover(function(){
-  //  $('.menu-ampliado').show();
-  //});
-  //
-  //$('#profile').mouseout(function(){
-  //    $('.menu-ampliado').hide();
-  //});
+= render partial: 'shared/botones'
