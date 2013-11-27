@@ -1,4 +1,5 @@
 /*
+ *= require mainpage/shared
  *= require mainpage/contact
  *= require mainpage/data
  *= require mainpage/destinos
@@ -6,6 +7,5 @@
  *= require mainpage/loading_overlay
  *= require mainpage/login
  *= require mainpage/profile
- *= require mainpage/shared
  *= require mainpage/tff
  */

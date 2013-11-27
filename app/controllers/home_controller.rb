@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
   def index
-
     # Borramos ejecucion previa del algoritmo si existe
     #begin
     #  FileUtils.rm('public/raw_results.txt')
@@ -17,10 +16,6 @@ class HomeController < ApplicationController
     begin
       FileUtils.rm('public/costos.txt')
     rescue
-    end
-
-    unless current_user
-      redirect_to '/presentacion.html'
     end
   end
 end
