@@ -1,11 +1,6 @@
-var current_marker;
-
 function addNewPoint(marker, cant_markers) {
 
     if(cant_markers != 0){
-
-        // Seteamos la variable global de marcadores
-        current_marker = marker;
 
         // Variables de consulta
         origin = new google.maps.LatLng(marker.position.lat(), marker.position.lng());
@@ -24,7 +19,7 @@ function addNewPoint(marker, cant_markers) {
                 avoidHighways: false,
                 avoidTolls: false
             },
-            processDistances
+            function(response, status) { processDistances(response, status, marker) }
         );
     }
 }
@@ -34,9 +29,7 @@ function addNewPoint(marker, cant_markers) {
 // Cada marcador posee información relativa a todos los anteriores marcadores
 // ingresados en el sistema. De esta forma, se alivia la carga a Google una vez que
 // se envía la información final.
-function processDistances(response, status){
-
-    console.log(response);
+function processDistances(response, status, marker){
 
     if (status == google.maps.DistanceMatrixStatus.OK) {
 
@@ -52,8 +45,6 @@ function processDistances(response, status){
         // Almacenamos las distancias de cada uno
         for(var iter_res = 0; iter_res < distancias.length; iter_res++){
 
-            console.log(distancias[iter_res]);
-
             // Verificamos que no haya error en la distancia puntual
             if(distancias[iter_res]['status'] == google.maps.DistanceMatrixStatus.OK) {
 
@@ -62,10 +53,10 @@ function processDistances(response, status){
                 tiempo = distancias[iter_res]['duration'];
 
                 // Actualizamos el marker con los datos de Google
-                current_marker.distancias_anteriores_string.push(distancia['text']);
-                current_marker.distancias_anteriores_raw.push(distancia['value']);
-                current_marker.tiempos_anteriores_string.push(tiempo['text']);
-                current_marker.tiempos_anteriores_raw.push(tiempo['value']);
+                marker.distancias_anteriores_string.push(distancia['text']);
+                marker.distancias_anteriores_raw.push(distancia['value']);
+                marker.tiempos_anteriores_string.push(tiempo['text']);
+                marker.tiempos_anteriores_raw.push(tiempo['value']);
 
             } else {
                 alert('Ocurrió un error en la funcion de obtener distacia - La llamada a Google dio error en un punto específico');
