@@ -154,7 +154,7 @@ function formar_html(taxis){
 
         for(var i=0; i<taxis[t].length; i++){
             html = html +
-                '<div class="taxi-interno-' + i + 1 + '">' +
+                '<div class="taxi-interno-' + (i+1) + '">' +
                     '<img src="/img/place.png" width="30%">' +
                         '<div class="bold">' +
                             'Este lugar aun no tiene un nombre.' +
