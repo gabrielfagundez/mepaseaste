@@ -141,8 +141,12 @@ function formar_html(taxis){
                 '<div class="panel light-grey full-radius">' +
                     '<div class="taxi centered">' +
                         '<img src="/img/nsuparrow.png">' +
-                            '<a><div class="imagen-taxi" onclick="calcRoute(0)">' +
-                                '<img alt="Taxi" src="/img/taxi.png"><br><br><h2>Taxi ' + t + '</h2>' +
+                            '<a>' +
+                                '<div class="imagen-taxi" onclick="calcRoute(0)">' +
+                                    '<img alt="Taxi" src="/img/taxi.png">' +
+                                        '<br>' +
+                                        '<br>' +
+                                        '<h2>Taxi ' + t + '</h2>' +
                                 '</div>' +
                             '</a><div class="texto-taxi">'
 
@@ -150,7 +154,7 @@ function formar_html(taxis){
 
         for(var i=0; i<taxis[t].length; i++){
             html = html +
-                '<div class="taxi-interno-' + i + '">' +
+                '<div class="taxi-interno-' + i + 1 + '">' +
                     '<img src="/img/place.png" width="30%">' +
                         '<div class="bold">' +
                             'Este lugar aun no tiene un nombre.' +
