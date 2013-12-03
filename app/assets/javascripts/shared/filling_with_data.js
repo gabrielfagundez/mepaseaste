@@ -125,33 +125,46 @@ function llenar_con_datos(data, query_id){
     $('#costo_total_calculando').hide();
     $('#costo_total').show();
 
+    html = formar_html(taxis)
+
+    $('#formacion_taxis').append(html);
+
+}
+
+function formar_html(taxis){
 
     // Mostramos en pantalla cada taxi
     var html = ''
     for(var t=0; t<taxis.length; t++){
+        var html = html +
+            '<div id="formacion_taxis">' +
+                '<div class="panel light-grey full-radius">' +
+                    '<div class="taxi centered">' +
+                        '<img src="/img/nsuparrow.png">' +
+                            '<a><div class="imagen-taxi" onclick="calcRoute(0)">' +
+                                '<img alt="Taxi" src="/img/taxi.png"><br><br><h2>Taxi ' + t + '</h2>' +
+                                '</div>' +
+                            '</a><div class="texto-taxi">'
 
-//        html = "<div class='taxi'><div class='imagen_taxi'><a onclick='calcRoute("
-//            + t + ")'><img src='taxi.png' height='50px'></a></div><div class='taxi_interno'>[";
-//
-//        // Iteramos en los pasajeros
-//        for(var p=0; p<taxis[t].length - 1;p++){
-//            m = getMarkerById(taxis[t][p]);
-//            html = html + "<a onclick='centerMarker(" + taxis[t][p] + ")' class='link_center_results'>" + m.nombre + "</a>" + ' => ';
-//        }
-//
-//        // Agregamos el ultimo pasajero
-//        m = getMarkerById(taxis[t][(taxis[t].length-1)]);
-//        html = html + "<a onclick='centerMarker(" + taxis[t][(taxis[t].length-1)] + ")' class='link_center_results'>" + m.nombre + "</a>" + ']';
+        var taxi = taxis[t]
 
-        html = "<div class='panel yellow-background'>\
-            <div class='taxi'>\
-                <div class='imagen-taxi'></div>\
-                <div class='texto-taxi'>Este taxi es dinámico, falta rellenar con datos.</div>\
-            </div>\
-        </div>"
+        for(var i=0; i<taxis[t].length; i++){
+            html = html +
+                '<div class="taxi-interno-' + i + '">' +
+                    '<img src="/img/place.png" width="30%">' +
+                        '<div class="bold">' +
+                            'Este lugar aun no tiene un nombre.' +
+                        '</div>' +
+                        '<p>' +
+                            '' +
+                        '</p>' +
+                '</div>'
 
-        $('#formacion_taxis').append(html);
+        }
+
+        html = html + '</div></div></div></div>'
 
     }
 
+    return html;
 }
