@@ -21,30 +21,36 @@
                       %h2
                         = "Taxi #{ index + 1 }"
                   .texto-taxi
-                    .taxi-interno-1
-                      %img{ src: '/img/place.png', width: '30%' }
-                      .bold
-                        = @query.taxi_name(taxi[0])
-                      %p
-                        = @query.taxi_address(taxi[0])
-                    .taxi-interno-2
-                      %img{ src: '/img/place.png', width: '30%' }
-                      .bold
-                        = @query.taxi_name(taxi[1])
-                      %p
-                        = @query.taxi_address(taxi[1])
-                    .taxi-interno-3
-                      %img{ src: '/img/place.png', width: '30%' }
-                      .bold
-                        = @query.taxi_name(taxi[2])
-                      %p
-                        = @query.taxi_address(taxi[2])
-                    .taxi-interno-4
-                      %img{ src: '/img/place.png', width: '30%' }
-                      .bold
-                        = @query.taxi_name(taxi[3])
-                      %p
-                        = @query.taxi_address(taxi[3])
+                    - if @query.taxi_name(taxi[0])
+                      .taxi-interno-1
+                        %img{ src: '/img/place.png', width: '30%' }
+                        .bold
+                          = @query.taxi_name(taxi[0])
+                        %p
+                          = @query.taxi_address(taxi[0])
+
+                    - if @query.taxi_name(taxi[1])
+                      .taxi-interno-2
+                        %img{ src: '/img/place.png', width: '30%' }
+                        .bold
+                          = @query.taxi_name(taxi[1])
+                        %p
+                          = @query.taxi_address(taxi[1])
+                    - if @query.taxi_name(taxi[2])
+                      .taxi-interno-3
+                        %img{ src: '/img/place.png', width: '30%' }
+                        .bold
+                          = @query.taxi_name(taxi[2])
+                        %p
+                          = @query.taxi_address(taxi[2])
+
+                    - if @query.taxi_name(taxi[3])
+                      .taxi-interno-4
+                        %img{ src: '/img/place.png', width: '30%' }
+                        .bold
+                          = @query.taxi_name(taxi[3])
+                        %p
+                          = @query.taxi_address(taxi[3])
 
 
           - else
