@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131102161701) do
+ActiveRecord::Schema.define(version: 20140128150617) do
+
+  create_table "favourite_locations", force: true do |t|
+    t.integer  "user_id"
+    t.string   "latitude"
+    t.string   "longitude"
+    t.string   "icon"
+    t.string   "name"
+    t.string   "address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "locations", force: true do |t|
     t.integer  "query_id"
