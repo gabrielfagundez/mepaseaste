@@ -16,9 +16,37 @@
     Destinos Favoritos
   </h1>
 
+  <div class="row">
+    <% @favourite_locations.each do |location| %>
+        <div class="small-12">
+          <div class="panel radius">
+            <div class="row">
 
+              <div class="small-1 columns">
+                <%= image_tag '/img/target.png', width: '50px', height: '50px' %>
+              </div>
 
+              <div class="small-4 columns">
+                <br>
+                <%= location.name %>
+              </div>
 
+              <div class="small-5 columns">
+                <br>
+                <p><%= location.address %></p>
+              </div>
+
+              <div class="small-2 columns">
+                <div class="panel full-radius agregar-marcador" id="agregar_marcador" data-latitude="<%= location.latitude %>" data-longitude="<%= location.longitude %>">
+                  Agregar marcador en esta ubicación
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+    <% end %>
+  </div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
 
@@ -59,7 +87,9 @@
   <div class="row">
     <div class="small-12 columns">
       <div class="boton-verde panel">
-        Ver Más
+        <a href="<%= queries_path %>" style="color: white" >
+          Ver Más
+        </a>
       </div>
     </div>
   </div>
