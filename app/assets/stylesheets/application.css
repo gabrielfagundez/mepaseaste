@@ -7,5 +7,6 @@
  *= require mainpage/loading_overlay
  *= require mainpage/login
  *= require mainpage/profile
+ *= require mainpage/queries
  *= require mainpage/tff
  */

@@ -20,13 +20,16 @@ Mepaseaste::Application.routes.draw do
 
   get '/profile'        => 'profile#show'
 
+  # Consultas
+  resources :queries, only: [ :index, :destroy, :show ]
+
 
 
   # Para TFF
   get '/tff_get_location_entity' => 'tff#get_location_entity'
 
   namespace :api do
-    get '/mobile/handle_request' => 'mobile#handle_request'
+    resources :queries
   end
 
 
