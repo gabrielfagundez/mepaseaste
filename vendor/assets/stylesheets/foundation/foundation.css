@@ -2812,7 +2812,7 @@ label.error {
   height: 45px;
   line-height: 45px;
   position: relative;
-  background: $grey;
+  /*background: $grey;*/
   margin-bottom: 1.875em; }
   .top-bar ul {
     margin-bottom: 0;
