@@ -1,4 +1,4 @@
-<!--Modal de destinos usuales-->
+<!--Modal de compartir consulta-->
 <div id="modalCompartir" class="reveal-modal" data-reveal>
   <h1>
     Comparte esta consulta
@@ -47,13 +47,15 @@
       </table>
 
   <%- else %>
-      <h3>Debes iniciar sesión para acceder al historial de consultas.</h3>
+      <h3>Debes <a href="/users/sign_in">iniciar sesión</a> para acceder al historial de consultas.</h3>
   <%- end %>
 
   <div class="row">
     <div class="small-12 columns">
       <div class="boton-verde panel">
-        Ver Más
+        <a href="<%= queries_path %>" style="color: white" >
+          Ver Más
+        </a>
       </div>
     </div>
   </div>

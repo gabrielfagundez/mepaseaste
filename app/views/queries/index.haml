@@ -34,6 +34,15 @@
     .panel.radius
       %h2
         Ubicaciones preferidas
+        - if @favourite_locations.empty?
+          %br
+          %br
+          .panel.radius
+            %h3
+              Aún no tienes ninguna ubicación preferida.
+              Ingresa una #{ link_to 'aquí', new_favourite_location_path }.
+        - else
+
 
 
 

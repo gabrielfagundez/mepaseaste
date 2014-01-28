@@ -23,6 +23,9 @@ Mepaseaste::Application.routes.draw do
   # Consultas
   resources :queries, only: [ :index, :destroy, :show ]
 
+  # Ubicaciones preferidas
+  resources :favourite_locations, only: [ :new, :create, :destroy, :show ]
+
 
 
   # Para TFF

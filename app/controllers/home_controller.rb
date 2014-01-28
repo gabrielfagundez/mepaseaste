@@ -17,5 +17,7 @@ class HomeController < ApplicationController
       FileUtils.rm('public/costos.txt')
     rescue
     end
+
+    @favourite_locations = current_user.try(:favourite_locations) || []
   end
 end
