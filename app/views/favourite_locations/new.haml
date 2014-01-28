@@ -1,0 +1,9 @@
+.row
+  .small-12.columns
+    %h1 Create a new favourite location
+
+    - if @favourite_location.errors.any?
+      = content_tag(:div, @favourite_location.errors.full_messages.join('<br>'), class: 'panel radius callout text-center')
+
+    .panel.radius
+      = render 'form'

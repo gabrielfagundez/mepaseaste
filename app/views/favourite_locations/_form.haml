@@ -1,0 +1,13 @@
+.row
+  .large-12.columns
+    = render template: 'shared/_map'
+
+= form_for @favourite_location do |f|
+  .row.collapse
+    .small-3.columns
+      = f.label :name, class: 'prefix'
+    .small-9.columns
+      = f.text_field :name
+
+    = f.hidden_field :user_id, value: current_user.id
+    = f.submit class: 'panel radius'
