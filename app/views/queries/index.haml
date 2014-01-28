@@ -60,10 +60,11 @@
               .panel.radius.center-text.ver_marcador
                 Ver marcador en el mapa
 
-      - if @favourite_locations.size < 10 && @favourite_locations.size > 1
-        %a{ href: new_favourite_location_path }
-          .panel.radius.add_new_location.center.boton_add_location
-            Agrega una nueva ubicación favorita aquí.
+      - if @favourite_locations.size < 10
+        -if @favourite_locations.size > 0
+          %a{ href: new_favourite_location_path }
+            .panel.radius.add_new_location.center.boton_add_location
+              Agrega una nueva ubicación favorita aquí.
       - else
         .panel.radius.add_new_location.center
           Has alcanzado el máximo de ubicaciones favoritas. Borra una existente antes
