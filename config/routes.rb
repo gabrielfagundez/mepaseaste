@@ -9,11 +9,6 @@ Mepaseaste::Application.routes.draw do
   post '/save_query'    => 'data#save_query'
   get '/show_data'      => 'data#show_data'
 
-  # Sección internacional
-  namespace :international do
-    get '/'             => 'home#index'
-  end
-
   # Sección marketplace
   namespace :marketplace do
     get '/'             => 'home#index'
