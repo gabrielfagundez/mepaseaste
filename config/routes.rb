@@ -30,4 +30,9 @@ Mepaseaste::Application.routes.draw do
   # Para TFF
   get '/tff_get_location_entity' => 'tff#get_location_entity'
 
+  namespace :api do
+    get '/mobile/handle_request' => 'mobile#handle_request'
+  end
+
+
 end

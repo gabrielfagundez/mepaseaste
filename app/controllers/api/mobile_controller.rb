@@ -1,9 +1,9 @@
-class DataController < ApplicationController
-  skip_before_filter :verify_authenticity_token,  only: [ :process_data, :save_query ]
+class Api::MobileController < ApplicationController
 
-  before_filter :crear_matriz_de_distancias,      only: [ :process_data ]
-  append_before_filter :crear_matriz_de_costos,   only: [ :process_data ]
+  skip_before_filter :verify_authenticity_token,  only: [ :handle_request ]
 
+  before_filter :crear_matriz_de_distancias,      only: [ :handle_request ]
+  append_before_filter :crear_matriz_de_costos,   only: [ :handle_request ]
 
   #
   # El algoritmo evolutivo necesita de 4 parametros para funcionar.
@@ -15,7 +15,7 @@ class DataController < ApplicationController
   # Además, utilizamos un comando para filtrar resultados y brindamos los
   # mismos de forma amigable.
   #
-  def process_data
+  def handle_request
 
     # Creamos y almacenamos la entidad de query
     @query = Query.create(
@@ -44,48 +44,11 @@ class DataController < ApplicationController
     FileUtils.mkdir_p('public/' + @query.id.to_s)
     IO.popen("bin/genetic_algorithm #{ archivo_de_configuracion } #{ archivo_de_parametros } #{ archivo_de_solucion } | grep ^Solution: > #{ archivo_simplificado }")
 
-
-    # Renderizamos la nueva pagina
-    respond_to do |format|
-      format.js {
-        render text: "window.location.replace('/show_data?query_id=#{ @query.id }');"
-      }
-    end
+    render status: 201, json: { status: 'Tu consulta esta siendo procesada' }.to_json
   end
 
-  #
-  # Esta acción muestra la información para una determinada query. En caso que no tenga solución
-  # la levanta de un archivo de texto, y la muestra en pantalla. Además, almacena dicha información
-  # para futuros accesos.
-  #
-  def show_data
-    @query = Query.find(params[:query_id])
-    @marcadores = @query.locations
 
-    if !@query.shared? && @query.user != current_user
-      flash[:alert] = 'No puedes ingresar a esta consulta.'
-      redirect_to :root
-    end
-  end
-
-  #
-  # Esta acción almacena la solución del algoritmos en la query, para poder
-  # acceder más tarde sin los archivos.
-  #
-  def save_query
-    query = Query.find(params[:query_id])
-    query.solution = params[:solution]
-    query.costo_total = params[:costo]
-    query.save!
-
-    render nothing: true
-  end
-
-  def share_query
-    @query = Query.find(params[:query_id])
-    @query.shared = true
-    @query.save!
-  end
+  private
 
   private
   def archivo_de_configuracion
