@@ -56,9 +56,9 @@
                   = location.address
                 %p
                   Delete
-            %a{ href: '#' }
+            %a{ href: favourite_location_path(location) }
               .panel.radius.center-text.ver_marcador
-                Ver marcador en un mapa
+                Ver marcador en el mapa
 
       - if @favourite_locations.size < 10
         %a{ href: new_favourite_location_path }
