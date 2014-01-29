@@ -1,7 +1,7 @@
 function sendData() {
 
     // Mostramos en div de cargando cuando se presiona el botón
-    $('.progress-indicator').show();
+//    $('.progress-indicator').show();
 
     var obj = new Object();
 
