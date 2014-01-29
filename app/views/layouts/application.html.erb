@@ -39,24 +39,13 @@
     </div>
 
     <!--Header-->
-    <%- if controller_name != 'sessions' && controller_name != 'registrations' && controller_name != 'passwords' %>
-        <%= render partial: 'shared/header' %>
-    <%- else %>
-        <%= render partial: 'shared/login_header' %>
-    <%- end %>
+    <%= render partial: 'shared/header' %>
 
     <!--Body-->
     <%= yield %>
 
     <!--Footer-->
-    <%- if controller_name != 'sessions' && controller_name != 'registrations' && controller_name != 'passwords' %>
-        <%= render partial: 'shared/footer' %>
-    <%- end %>
+    <%= render partial: 'shared/footer' %>
 
-
-    <!--Foundation-->
-    <script>
-        $(document).foundation();
-    </script>
 </body>
 </html>
