@@ -1,0 +1,53 @@
+.px50-separator
+
+-# Content
+
+.row
+  .small-12
+    .panel.radius
+      .row
+        .large-9.columns.center
+          -# Red Line
+          .row
+            .small-4.columns.not-visible-line
+            .small-4.columns.red-line
+            .small-4.columns.not-visible-line
+
+          -# Text Inside Blue Lines
+          .row
+            .small-12.columns
+              .px10-separator
+              %h1
+                .center.android-header
+                  Proximamente..
+                  %br
+                  MePaseaste.UY para teléfonos iOS
+              .px10-separator
+
+          -# Red Line
+          .row
+            .small-4.columns.not-visible-line
+            .small-4.columns.red-line
+            .small-4.columns.not-visible-line
+          .row
+            .large-7.small-centered.columns
+              .px50-separator
+              .px50-separator
+              %h3
+                .panel.radius
+                  Apuntate ya mismo a la lista de espera para descargar la aplicacion gratis
+
+          .px20-separator
+
+          .row
+            .large-7.small-centered.columns
+              .row
+                .small-12.columns.small-centered
+                  .full-grey-line
+                  .px10-separator
+                  %a{ onclick: '' }
+                    .enviar-reserva.panel
+                      Reservar
+
+        .large-3.columns.center
+          = image_tag 'home/iphone.png'
