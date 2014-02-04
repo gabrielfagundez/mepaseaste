@@ -149,19 +149,18 @@ function formar_html(taxis){
   for(var t=0; t<taxis.length; t++){
     var html = html +
         '<div class="without_bottom_space panel light-grey full-radius">' +
-          '<div class="without_bottom_space panel light-grey full-radius">' +
-            '<div class="row">' +
-              '<div class="small-4 columns">' +
-                '<a onclick="calcRoute(' + t + ')"></a>' +
-                '<div class="panel full-radius center"><a onclick="calcRoute(' + t + ')"></a>' +
-                  '<a class="has-tip" data-tooltip="" href="#" title="Has click dibujar la ruta de este taxi en el mapa" onclick="calcRoute(' + t + ')>' +
-                    '<img height="130px" src="/img/taxi-icon.png" width="130px">' +
-                  '</a>' +
-                '</div>' +
-                '<div class="taxi_cost">' +
-                  'TBD' +
-                '</div>' +
-              '</div>'
+          '<div class="row">' +
+            '<div class="small-4 columns">' +
+              '<a onclick="calcRoute(' + t + ')"></a>' +
+              '<div class="panel full-radius center"><a onclick="calcRoute(' + t + ')"></a>' +
+                '<a class="has-tip" data-tooltip="" href="#" title="Has click dibujar la ruta de este taxi en el mapa" onclick="calcRoute(' + t + ')>' +
+                  '<img height="130px" src="/img/taxi-icon.png" width="130px">' +
+                '</a>' +
+              '</div>' +
+              '<div class="taxi_cost">' +
+                'TBD' +
+              '</div>' +
+            '</div>'
 
     var taxi = taxis[t]
 
@@ -182,7 +181,7 @@ function formar_html(taxis){
           '</div>'
     }
 
-    html = html + '</div></div></div>';
+    html = html + '</div></div>';
   }
 
   return html;
