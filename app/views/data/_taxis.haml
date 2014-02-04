@@ -2,9 +2,6 @@
   .large-12.columns
     .full-yellow-upper-line
     .panel.radius
-      %h3
-        Para la consulta que has realizado, se #{ @query.solution.try(:length) == 1 ? 'formó' : 'formaron' } #{ @query.solution.try(:length) } #{ @query.solution.try(:length) == 1 ? 'taxi' : 'taxis' }.
-        El costo total del viaje es de $#{ @query.costo_total.to_s }. La mejor distribución de personas y taxis, es la siguiente:
       %br
       %h3
         #formacion_taxis
