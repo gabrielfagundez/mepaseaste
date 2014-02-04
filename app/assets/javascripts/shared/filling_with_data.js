@@ -181,6 +181,14 @@ function formar_html(taxis){
           '</div>'
     }
 
+    if (taxi.length == 1) {
+      html = html + '<div class="small-2 columns hide">Empty</div><div class="small-2 columns hide">Empty</div><div class="small-2 columns hide">Empty</div>';
+    } else if (taxi.length == 2) {
+      html = html + '<div class="small-2 columns hide">Empty</div><div class="small-2 columns hide">Empty</div>';
+    } else if (taxi.length == 3) {
+      html = html + '<div class="small-2 columns hide">Empty</div>';
+    }
+
     html = html + '</div></div>';
   }
 
