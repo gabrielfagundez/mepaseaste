@@ -12,13 +12,14 @@
 
                   -# DIV de información compartida
                   .small-4.columns
-                    %a{ onclick: "calcRoute(#{ index })" }
+                    %a
                       .panel.full-radius.center
-                        %a.has-tip{ href: '#', title: 'Has click dibujar la ruta de este taxi en el mapa', 'data-tooltip' => '' }
+                        %a.has-tip{ title: 'Has click dibujar la ruta de este taxi en el mapa', 'data-tooltip' => '', onclick: "calcRoute(#{ index })" }
                           %img{ src: '/img/taxi-icon.png', width: '130px', height: '130px' }
                       .taxi_cost
-                        $20
+                        TBD
 
+                  -# Taxis
                   .small-2.columns
                     - if @query.taxi_name(taxi[0])
                       .panel.radius.center
@@ -26,7 +27,7 @@
                         %br
                         %br
                         .panel.full-radius
-                          %a.has-tip.tip-bottom{ href: '#', title: 'Ubicar este pasajero en el mapa', 'data-tooltip' => '' }
+                          .has-tip.tip-bottom{ href: '#', title: 'Ubicar este pasajero en el mapa', 'data-tooltip' => '', onclick: "centerMap('#{ @query.taxi_latitude(taxi[0]) }', '#{ @query.taxi_longitude(taxi[0]) }')" }
                             %img{ src: '/img/passenger.png', width: '40px', height: '40px' }
                         .taxi_address
                           = @query.taxi_address(taxi[0])
@@ -37,7 +38,7 @@
                         %br
                         %br
                         .panel.full-radius
-                          %a.has-tip.tip-bottom{ href: '#', title: 'Ubicar este pasajero en el mapa', 'data-tooltip' => '' }
+                          .has-tip.tip-bottom{ href: '#', title: 'Ubicar este pasajero en el mapa', 'data-tooltip' => '', onclick: "centerMap('#{ @query.taxi_latitude(taxi[1]) }', '#{ @query.taxi_longitude(taxi[1]) }')" }
                             %img{ src: '/img/passenger.png', width: '40px', height: '40px' }
                         .taxi_address
                           = @query.taxi_address(taxi[1])
@@ -48,7 +49,7 @@
                         %br
                         %br
                         .panel.full-radius
-                          %a.has-tip.tip-bottom{ href: '#', title: 'Ubicar este pasajero en el mapa', 'data-tooltip' => '' }
+                          .has-tip.tip-bottom{ href: '#', title: 'Ubicar este pasajero en el mapa', 'data-tooltip' => '', onclick: "centerMap('#{ @query.taxi_latitude(taxi[2]) }', '#{ @query.taxi_longitude(taxi[2]) }')" }
                             %img{ src: '/img/passenger.png', width: '40px', height: '40px' }
                         .taxi_address
                           = @query.taxi_address(taxi[2])
@@ -59,7 +60,7 @@
                         %br
                         %br
                         .panel.full-radius
-                          %a.has-tip.tip-bottom{ href: '#', title: 'Ubicar este pasajero en el mapa', 'data-tooltip' => '' }
+                          .has-tip.tip-bottom{ title: 'Ubicar este pasajero en el mapa', 'data-tooltip' => '', onclick: "centerMap('#{ @query.taxi_latitude(taxi[3]) }', '#{ @query.taxi_longitude(taxi[3]) }')" }
                             %img{ src: '/img/passenger.png', width: '40px', height: '40px' }
                         .taxi_address
                           = @query.taxi_address(taxi[3])

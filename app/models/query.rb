@@ -24,4 +24,18 @@ class Query < ActiveRecord::Base
     location.name.present? ? location.name : 'Este lugar aun no tiene un nombre.'
   end
 
+  def taxi_latitude(location_query_id)
+    location = Location.find_by_query_id_and_location_query_pos(self.id, location_query_id)
+    return nil unless location
+
+    location.latitude
+  end
+
+  def taxi_longitude(location_query_id)
+    location = Location.find_by_query_id_and_location_query_pos(self.id, location_query_id)
+    return nil unless location
+
+    location.longitude
+  end
+
 end

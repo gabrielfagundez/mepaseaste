@@ -39,3 +39,9 @@ function calcRoute(t) {
         });
     }
 }
+
+function centerMap(latitude, longitude){
+  position = new google.maps.LatLng(latitude, longitude);
+  map.panTo(position);
+  map.setZoom(16);
+}
