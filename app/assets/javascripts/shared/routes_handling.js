@@ -44,4 +44,8 @@ function centerMap(latitude, longitude){
   position = new google.maps.LatLng(latitude, longitude);
   map.panTo(position);
   map.setZoom(16);
+
+  $('html, body').animate({
+    scrollTop: $("#map").offset().top - 50
+  }, 800);
 }
