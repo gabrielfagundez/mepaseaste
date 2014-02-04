@@ -64,9 +64,5 @@
 
 .px50-separator
 
-- if current_user.blank?
-  = render partial: 'home/ios'
-- else
-  = render template: 'shared/destinosusuales'
-
+= render partial: 'home/ios'
 = render partial: 'home/modals'
