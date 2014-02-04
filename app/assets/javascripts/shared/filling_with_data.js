@@ -142,41 +142,47 @@ function llenar_con_datos(data, query_id){
 
 function formar_html(taxis){
 
+  console.log(taxis);
+
   // Mostramos en pantalla cada taxi
   var html = ''
   for(var t=0; t<taxis.length; t++){
     var html = html +
-        '<div id="formacion_taxis">' +
-        '<div class="panel light-grey full-radius">' +
-        '<div class="taxi centered">' +
-        '<img src="/img/nsuparrow.png">' +
-        '<a>' +
-        '<div class="imagen-taxi" onclick="calcRoute(0)">' +
-        '<img alt="Taxi" src="/img/taxi.png">' +
-        '<br>' +
-        '<br>' +
-        '<h2>Taxi ' + t + '</h2>' +
-        '</div>' +
-        '</a><div class="texto-taxi">'
+        '<div class="without_bottom_space panel light-grey full-radius">' +
+          '<div class="without_bottom_space panel light-grey full-radius">' +
+            '<div class="row">' +
+              '<div class="small-4 columns">' +
+                '<a onclick="calcRoute(' + t + ')"></a>' +
+                '<div class="panel full-radius center"><a onclick="calcRoute(' + t + ')"></a>' +
+                  '<a class="has-tip" data-tooltip="" href="#" title="Has click dibujar la ruta de este taxi en el mapa" onclick="calcRoute(' + t + ')>' +
+                    '<img height="130px" src="/img/taxi-icon.png" width="130px">' +
+                  '</a>' +
+                '</div>' +
+                '<div class="taxi_cost">' +
+                  'TBD' +
+                '</div>' +
+              '</div>'
 
     var taxi = taxis[t]
 
     for(var i=0; i<taxis[t].length; i++){
       html = html +
-          '<div class="taxi-interno-' + (i+1) + '">' +
-          '<img src="/img/place.png" width="30%">' +
-          '<div class="bold">' +
-          'Este lugar aun no tiene un nombre.' +
-          '</div>' +
-          '<p>' +
-          '' +
-          '</p>' +
+          '<div class="small-2 columns">' +
+            '<div class="panel radius center">' +
+              'Pasajero ' + i + '<br><br>' +
+              '<div class="panel full-radius">' +
+                '<a class="has-tip tip-bottom" data-tooltip="" href="#" data-selector="tooltipo3e7w91wcdi" title="">' +
+                  '<img height="40px" src="/img/passenger.png" width="40px">' +
+                '</a>' +
+              '</div>' +
+              '<div class="taxi_address">' +
+                'Taxi Address?' +
+              '</div>' +
+            '</div>' +
           '</div>'
-
     }
 
-    html = html + '</div></div></div></div>'
-
+    html = html + '</div></div></div>';
   }
 
   return html;
