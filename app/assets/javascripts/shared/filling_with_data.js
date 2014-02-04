@@ -153,7 +153,7 @@ function formar_html(taxis){
             '<div class="small-4 columns">' +
               '<a onclick="calcRoute(' + t + ')"></a>' +
               '<div class="panel full-radius center"><a onclick="calcRoute(' + t + ')"></a>' +
-                '<a class="has-tip" data-tooltip="" href="#" title="Has click dibujar la ruta de este taxi en el mapa"' +
+                '<a class="has-tip" data-tooltip="" href="#" title="Has click dibujar la ruta de este taxi en el mapa">' +
                   '<img height="130px" src="/img/taxi-icon.png" width="130px">' +
                 '</a>' +
               '</div>' +
