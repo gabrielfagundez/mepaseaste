@@ -12,12 +12,11 @@ function fileExists(file_name, query_id){
       $.ajax({
         url: file_name,
         success: function(data) {
-          console.log('JS Debug - Solution of the AE :');
-          console.log(data);
-          console.log('JS Debug - END :');
-
-
           if(data.match(/Solution/)){
+
+            console.log('JS Debug - Solution of the AE :');
+            console.log(data);
+            console.log('JS Debug - END :');
 
             // Quitamos el div de cargando una vez tenemos datos
             $('.progress-indicator').hide();
