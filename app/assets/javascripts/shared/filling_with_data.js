@@ -12,7 +12,7 @@ function fileExists(file_name, query_id){
       $.ajax({
         url: file_name,
         success: function(data) {
-          console.log('JS Debug - Data :');
+          console.log('JS Debug - Solution of the AE :');
           console.log(data);
           console.log('JS Debug - END :');
 
@@ -37,10 +37,16 @@ function fileExists(file_name, query_id){
 
 
 function llenar_con_datos(data, query_id){
+
+  // Quitamos el inicio
+  //  Ej:
+  //    data = "Solution:  0 1 3 2 0 Fitness: 518.76"
+  //    string = data.substr(11);
+  //    string = "0 1 3 2 0 Fitness: 518.76"
   string = data.substr(11);
-  var arreglo_numeros = new Array();
 
   // Obtengo la posicion de la 'F'
+  //  En este caso la respuesta sera 10
   var pos_F = 0;
   for(var letra=0; letra<string.length; letra++){
     if(string.substr(letra, 1) == 'F'){
@@ -49,7 +55,13 @@ function llenar_con_datos(data, query_id){
   };
 
   // Obtenemos el string
+  //  Ej:
+  //    string = string.substr(0, pos_F);
+  //    string = "0 1 3 2 0 "
   string = string.substr(0, pos_F);
+
+  // Inicializamos el arreglo de numeros
+  var arreglo_numeros = new Array();
 
   // Recorro el string y obtengo los numeros
   for(var letra=0; letra<string.length; letra++){
@@ -100,7 +112,11 @@ function llenar_con_datos(data, query_id){
   }
 
   // Parseo el costo total
-  var costo = data.substr(11);
+  //  Ej:
+  //    data = "Solution:  0 1 3 2 0 Fitness: 518.76"
+  //    costo = data.substr(11).substr(pos_F + 9);
+  //    costo = "518.76"
+  var costo = data.substr(11).substr(pos_F + 9);
 
   // Convertimos a JSON
   obj.costo = costo;
@@ -113,17 +129,6 @@ function llenar_con_datos(data, query_id){
     type: 'POST',
     url: '/save_query'
   });
-
-  // Obtengo la posicion de la 'F'
-  var pos_F = 0;
-  for(var letra=0; letra<costo.length; letra++){
-    if(costo.substr(letra, 1) == 'F'){
-      pos_F = letra;
-    }
-  };
-
-  // Obtenemos el costo
-  costo = costo.substr(pos_F + 9);
 
   // Mostramos el costo
   $('#costo_total').append(costo);
