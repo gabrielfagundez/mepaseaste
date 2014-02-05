@@ -2,7 +2,7 @@ function initialize(allow_markers, show_loading) {
 
     // Si estamos en la página de mostrar resultados mostramos el div de loading
     if(show_loading){
-//        $('.progress-indicator').show();
+        $('.progress-indicator').show();
     }
 
     // Servicio de Direcciones
