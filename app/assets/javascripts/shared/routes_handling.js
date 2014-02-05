@@ -25,12 +25,12 @@ function calcRoute(t) {
     // Si el taxi va desde el origen al primer marcador
     if(it == 0){
       start = new google.maps.LatLng(getMarkerByID(1).position.lat(), getMarkerByID(1).position.lng());
-      end = new google.maps.LatLng(getMarkerByID(taxi[0]).position.lat(), getMarkerByID(taxi[0]).position.lng());
+      end = new google.maps.LatLng(getMarkerByID(taxi[0] + 1).position.lat(), getMarkerByID(taxi[0] + 1).position.lng());
     }
 
     if (it > 0 && it < taxi.length ) {
-      start = new google.maps.LatLng(getMarkerByID(taxi[it-1]).position.lat(), getMarkerByID(taxi[it-1]).position.lng());
-      end = new google.maps.LatLng(getMarkerByID(taxi[it]).position.lat(), getMarkerByID(taxi[it]).position.lng());
+      start = new google.maps.LatLng(getMarkerByID(taxi[it-1]  + 1).position.lat(), getMarkerByID(taxi[it-1] + 1).position.lng());
+      end = new google.maps.LatLng(getMarkerByID(taxi[it] + 1).position.lat(), getMarkerByID(taxi[it] + 1).position.lng());
     }
 
     if(it < taxi.length){
