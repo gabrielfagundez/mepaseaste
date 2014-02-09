@@ -167,15 +167,12 @@ function formar_html(taxis){
     console.log(taxi);
 
     for(var i=0; i<taxis[t].length; i++){
-      console.log(taxis[t][i]);
-      console.log(taxis[t][i] + 1);
-
       html = html +
           '<div class="small-2 columns">' +
             '<div class="panel radius center">' +
               'Pasajero ' + i + '<br><br>' +
               '<div class="panel full-radius">' +
-                '<a class="has-tip tip-bottom" data-tooltip="" href="#" data-selector="tooltipo3e7w91wcdi" title="" onclick="centerMap(' + getMarkerByID(taxis[t][i]+1).position.lat() + ',' + getMarkerByID(taxis[t][i]+1).position.lng() + ')" >' +
+                '<a class="has-tip tip-bottom" data-tooltip="" href="#" data-selector="tooltipo3e7w91wcdi" title="" onclick="centerMap(' + getMarkerByID(parseInt(taxis[t][i]) + 1).position.lat() + ',' + getMarkerByID(parseInt(taxis[t][i]) + 1).position.lng() + ')" >' +
                   '<img height="40px" src="/img/passenger.png" width="40px">' +
                 '</a>' +
               '</div>' +
