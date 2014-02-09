@@ -138,6 +138,7 @@ function llenar_con_datos(data, query_id){
 
   $('#formacion_taxis').append(html);
   $('.costo_total').html(costo);
+  $('.cant_taxis').html(taxis.length);
 
 }
 
