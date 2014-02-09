@@ -142,6 +142,8 @@ function llenar_con_datos(data, query_id){
 
 function formar_html(taxis){
 
+  $('.calculando_div').hide();
+
   console.log(taxis);
 
   // Mostramos en pantalla cada taxi
