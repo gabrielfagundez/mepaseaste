@@ -1,12 +1,26 @@
 <div class="contain-to-grid">
   <nav class="top-bar" data-topbar>
-    <section class="top-bar-section">
+    <section class="header-text top-bar-section">
+
+      <!-- Left Nav Section -->
+      <ul class="left">
+            <li><%= link_to 'Home', root_path %></li>
+        <% if current_user %>
+            <li><%= link_to 'Perfil', '/profile' %></li>
+        <% end %>
+      </ul>
+
       <!-- Right Nav Section -->
       <ul class="right">
-
+            <li><%= link_to 'Ayuda', '#', method: :delete %></li>
+            <li><%= link_to 'Marketplace', '#', method: :delete %></li>
+            <li><%= link_to 'Acerca De', '#', method: :delete %></li>
+            <li><%= link_to 'Más', '#', method: :delete %></li>
         <% if current_user %>
             <li>
-              <%= link_to 'Cerrar Sesión', destroy_user_session_path, method: :delete %>
+              <a data-method="delete" href="/users/sign_out" rel="nofollow">
+                <img src="icon/signout.png" width="15px" height="15px" style="background-color: #333333">
+              </a>
             </li>
         <% end %>
 
