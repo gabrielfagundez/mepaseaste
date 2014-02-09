@@ -1,4 +1,4 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
+// This is a manifest file that'll be compiled into application, which will include all the files
 // listed below.
 //
 // Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
@@ -13,30 +13,31 @@
 //= require jquery
 //= require jquery_ujs
 
-//= require vendor/custom.modernizr.js
-//= require foundation/foundation.js
-//= require foundation/foundation.abide.js
-//= require foundation/foundation.clearing.js
-//= require foundation/foundation.cookie.js
-//= require foundation/foundation.dropdown.js
-//= require foundation/foundation.forms.js
-//= require foundation/foundation.interchange.js
-//= require foundation/foundation.joyride.js
-//= require foundation/foundation.magellan.js
-//= require foundation/foundation.orbit.js
-//= require foundation/foundation.reveal.js
-//= require foundation/foundation.section.js
-//= require foundation/foundation.tooltips.js
-//= require foundation/foundation.topbar.js
+//= require vendor/custom.modernizr
+//= require foundation/foundation
+//= require foundation/foundation.abide
+//= require foundation/foundation.clearing
+//= require foundation/foundation.cookie
+//= require foundation/foundation.dropdown
+//= require foundation/foundation.forms
+//= require foundation/foundation.interchange
+//= require foundation/foundation.joyride
+//= require foundation/foundation.magellan
+//= require foundation/foundation.orbit
+//= require foundation/foundation.reveal
+//= require foundation/foundation.section
+//= require foundation/foundation.tooltips
+//= require foundation/foundation.topbar
 
-//= require shared/main.js
-//= require shared/map.js
+//= require shared/main
+//= require shared/map
 //= require shared/markers_handling
-//= require shared/filling_with_data.js
-//= require shared/routes_handling.js
-//= require application/send_data_from_map.js
-//= require application/get_distance.js
-//= require home.js
+//= require shared/filling_with_data
+//= require shared/routes_handling
+//= require application/send_data_from_map
+//= require application/get_distance
+//= require home
+//= require data
 
 
 $(document).foundation();

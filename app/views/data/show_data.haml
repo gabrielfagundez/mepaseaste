@@ -50,8 +50,12 @@
             .row
               .large-4.columns
                 = image_tag '/img/share.png'
-              .large-8.columns
-                %p Puedes compartir esta consulta con tus amigos si lo deseas, así ellos también podrán saber cual es el recorrido que realizarán.
+              .sup_text.large-8.columns
+                Puedes compartir esta consulta con tus amigos si lo deseas, así ellos también podrán saber cual es el recorrido que realizarán.
+                .right
+                  %br
+                  %a{ onclick: 'animate_to_share()' }
+                    Compartir
 
 
 .px10-separator
@@ -66,21 +70,22 @@
 
 
 -# Sección compartir
-.row
-  .large-12.columns
-    .full-green-upper-line
-    .panel.radius
-      %br
-      .center-text
-        Comparte esta consulta con tus amigos, muéstrales el recorrido y el dinero que gastarán en el viaje.
+#share_div
+  .row
+    .large-12.columns
+      .full-green-upper-line
+      .panel.radius
+        %br
+        .center-text
+          Comparte esta consulta con tus amigos, muéstrales el recorrido y el dinero que gastarán en el viaje.
 
-      %br
-      %br
-      .row
-        .large-4.large-offset-4.columns
-          %a
-            .boton-verde.panel{ 'data-reveal-id' => 'modalCompartir' }
-              Compartir
+        %br
+        %br
+        .row
+          .large-4.large-offset-4.columns
+            %a
+              .boton-verde.panel{ 'data-reveal-id' => 'modalCompartir' }
+                Compartir
 
 = render partial: 'data/modals'
 
