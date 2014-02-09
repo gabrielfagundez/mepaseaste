@@ -159,6 +159,7 @@ function formar_html(taxis){
               '</div>' +
               '<div class="taxi_cost">' +
                 'TBD' +
+                '<br>' +
               '</div>' +
             '</div>'
 
@@ -172,12 +173,12 @@ function formar_html(taxis){
             '<div class="panel radius center">' +
               'Pasajero ' + i + '<br><br>' +
               '<div class="panel full-radius">' +
-                '<a class="has-tip tip-bottom" data-tooltip="" href="#" data-selector="tooltipo3e7w91wcdi" title="" onclick="centerMap(' + getMarkerByID(parseInt(taxis[t][i]) + 1).position.lat() + ',' + getMarkerByID(parseInt(taxis[t][i]) + 1).position.lng() + ')" >' +
+                '<a class="has-tip tip-bottom" data-tooltip="" href="#" title="Ubicar este pasajero en el mapa" onclick="centerMap(' + getMarkerByID(parseInt(taxis[t][i]) + 1).position.lat() + ',' + getMarkerByID(parseInt(taxis[t][i]) + 1).position.lng() + ')" >' +
                   '<img height="40px" src="/img/passenger.png" width="40px">' +
                 '</a>' +
               '</div>' +
               '<div class="taxi_address">' +
-                'Taxi Address?' +
+                getMarkerByID(parseInt(taxis[t][i]) + 1).address +
               '</div>' +
             '</div>' +
           '</div>'
