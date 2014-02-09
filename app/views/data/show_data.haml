@@ -89,7 +89,7 @@
     fileExists('/#{ @query.id }/raw_results.txt', #{ @query.id })
 - @marcadores.each do |marcador|
   :javascript
-    addMarkerToResultPage('#{ marcador.latitude }', '#{ marcador.longitude }', '#{ marcador.icon }', '#{ marcador.address }');
+    addMarkerToResultPage('#{ marcador.latitude }', '#{ marcador.longitude }', '#{ marcador.icon }', '#{ marcador.address }, #{ marcador.location_query_pos }');
 
 - # Si la solución proviene de la base, creamos la estructura javascript de los taxis
 - if @query.solution

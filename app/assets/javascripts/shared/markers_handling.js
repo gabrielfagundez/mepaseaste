@@ -222,7 +222,7 @@ function getMarkerByID(id) {
   }
 }
 
-function addMarkerToResultPage(latitude, longitude, icon, address){
+function addMarkerToResultPage(latitude, longitude, icon, address, location_query_pos){
   position = new google.maps.LatLng(latitude, longitude)
 
   marker = new google.maps.Marker({
@@ -230,7 +230,8 @@ function addMarkerToResultPage(latitude, longitude, icon, address){
     position: position,
     map: map,
     icon: icon,
-    address: address
+    address: address,
+    markerId: location_query_pos
   });
 
   markers.push(marker);
