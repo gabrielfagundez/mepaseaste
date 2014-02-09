@@ -65,3 +65,11 @@ function centerMap(latitude, longitude){
     scrollTop: $("#map").offset().top - 50
   }, 800);
 }
+
+function autoCenter(){
+  var limits = new google.maps.LatLngBounds();
+  $.each(markers, function (index, marker){
+    limits.extend(marker.position);
+  });
+  map.fitBounds(limits);
+}
