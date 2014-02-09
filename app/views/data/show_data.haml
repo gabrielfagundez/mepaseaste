@@ -13,7 +13,9 @@
   .small-12
     .panel.radius.center
       %h2
-        El costo total del viaje es de $#{ @query.costo_total }
+        El costo total del viaje es de
+        .costo_total
+          $#{ @query.costo_total ? @query.costo_total : "[calculando..]" }
 
 -# Datos generales
 .row
