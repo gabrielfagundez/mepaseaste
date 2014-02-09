@@ -167,6 +167,9 @@ function formar_html(taxis){
     console.log(taxi);
 
     for(var i=0; i<taxis[t].length; i++){
+      console.log(taxis[t][i]);
+      console.log(taxis[t][i] + 1);
+
       html = html +
           '<div class="small-2 columns">' +
             '<div class="panel radius center">' +
