@@ -153,7 +153,7 @@ function formar_html(taxis){
             '<div class="small-4 columns">' +
               '<a></a>' +
               '<div class="panel full-radius center"><a></a>' +
-                '<a class="has-tip" data-tooltip="" href="#" title="Has click dibujar la ruta de este taxi en el mapa" onclick="calcRoute(' + t+1 + ')" >' +
+                '<a class="has-tip" data-tooltip="" href="#" title="Has click dibujar la ruta de este taxi en el mapa" onclick="calcRoute(' + (parseInt(t) + 1) + ')" >' +
                   '<img height="130px" src="/img/taxi-icon.png" width="130px">' +
                 '</a>' +
               '</div>' +
@@ -171,7 +171,7 @@ function formar_html(taxis){
       html = html +
           '<div class="small-2 columns">' +
             '<div class="panel radius center">' +
-              'Pasajero ' + i + '<br><br>' +
+              'Pasajero ' + (parseInt(i) + 1) + '<br><br>' +
               '<div class="panel full-radius">' +
                 '<a class="has-tip tip-bottom" data-tooltip="" href="#" title="Ubicar este pasajero en el mapa" onclick="centerMap(' + getMarkerByID(parseInt(taxis[t][i]) + 1).position.lat() + ',' + getMarkerByID(parseInt(taxis[t][i]) + 1).position.lng() + ')" >' +
                   '<img height="40px" src="/img/passenger.png" width="40px">' +
