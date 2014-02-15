@@ -1,4 +1,4 @@
-class QueriesController < ApplicationController
+class Api::QueriesController < Api::ApiController
 
   def create
     puts params.inspect
