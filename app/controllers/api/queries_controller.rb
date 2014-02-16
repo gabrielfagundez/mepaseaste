@@ -7,7 +7,7 @@ class Api::QueriesController < Api::ApiController
         tipo_tarifa: 'diurna',
         costo_total: '20',
         cant_taxis: 2,
-        cant_marcadores: 3
+        cant_destinos: 3
     }
 
     render json: fake_json_response.to_json
