@@ -56,6 +56,7 @@ class Api::QueriesController < Api::ApiController
     render json: fake_json_response.to_json
   end
 
+
   private
 
   def query_end?
