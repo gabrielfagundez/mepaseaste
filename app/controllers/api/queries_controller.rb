@@ -6,7 +6,8 @@ class Api::QueriesController < Api::ApiController
     fake_json_response = {
         tipo_tarifa: 'diurna',
         costo_total: '20',
-        cantidad_marcadores: 3
+        cant_taxis: 2,
+        cant_marcadores: 3
     }
 
     render json: fake_json_response.to_json
