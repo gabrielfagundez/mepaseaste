@@ -47,7 +47,7 @@ class Api::QueriesController < Api::ApiController
     fake_json_response = {
         tipo_tarifa: @query.tipo_tarifa,
         costo_total: costo_total(solucion),
-        cant_taxis: taxis.length,
+        cant_taxis: taxis.length.to_s,
         cant_destinos: (@query.cantidad_marcadores - 1).to_s,
         query_id: @query.id.to_s,
         taxis: taxis
