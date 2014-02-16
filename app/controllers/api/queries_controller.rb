@@ -97,7 +97,7 @@ class Api::QueriesController < Api::ApiController
   end
 
   def costo_total(solucion)
-    solucion.split(': ')[2]
+    solucion.split(': ')[2].gsub("\n", '')
   end
 
   def archivo_de_configuracion
