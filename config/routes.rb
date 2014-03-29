@@ -2,13 +2,13 @@ Mepaseaste::Application.routes.draw do
   root to: 'home#index'
 
   devise_for :users
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   # Manejo de consultas
   post '/sending_data'  => 'data#process_data'
   post '/save_query'    => 'data#save_query'
   get '/show_data'      => 'data#show_data'
 
+  # Manejo del perfil
   get '/profile'        => 'profile#show'
 
   # Consultas
@@ -17,8 +17,7 @@ Mepaseaste::Application.routes.draw do
   # Ubicaciones preferidas
   resources :favourite_locations, only: [ :new, :create, :destroy, :show ]
 
-  # Para TFF
-  get '/tff_get_location_entity' => 'tff#get_location_entity'
+  resources :about, only: :index
 
   # API para desarrollo mobile
   namespace :api do
