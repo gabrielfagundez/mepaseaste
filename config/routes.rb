@@ -17,7 +17,12 @@ Mepaseaste::Application.routes.draw do
   # Ubicaciones preferidas
   resources :favourite_locations, only: [ :new, :create, :destroy, :show ]
 
-  resources :about, only: :index
+  # Acerca De
+  resources :about, only: :index do
+    collection do
+      get 'ga'
+    end
+  end
 
   # API para desarrollo mobile
   namespace :api do
