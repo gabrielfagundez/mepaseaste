@@ -5,4 +5,8 @@ class AboutController < ActionController::Base
 
   end
 
+  def malva
+
+  end
+
 end
