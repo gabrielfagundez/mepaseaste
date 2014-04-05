@@ -16,6 +16,11 @@
   <!--Rails-->
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+
+  <% if controller_name == 'favourite_locations' %>
+    <%= javascript_include_tag 'favourite_locations' %>
+  <% end %>
+
   <%= csrf_meta_tags %>
 
 </head>
