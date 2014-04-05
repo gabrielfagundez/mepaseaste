@@ -3,6 +3,8 @@ Mepaseaste::Application.routes.draw do
 
   devise_for :users
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
   # Manejo de consultas
   post '/sending_data'  => 'data#process_data'
   post '/save_query'    => 'data#save_query'
