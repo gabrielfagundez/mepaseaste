@@ -1,0 +1,43 @@
+.px100-separator
+
+.row
+  .small-12.columns
+    .full-blue-upper-line
+    .panel.radius
+      %h2
+        Ubicaciones preferidas
+      - if @favourite_locations.empty?
+        %br
+        %br
+        .panel.radius
+          %h3
+            Aún no tienes ninguna ubicación preferida.
+            Ingresa una #{ link_to 'aquí', new_favourite_location_path }.
+      - else
+        - @favourite_locations.each do |location|
+          .panel.radius
+            .row
+              .small-3.columns
+                = image_tag '/img/target.png'
+              .small-9.columns
+                .title_of_location
+                  = location.name
+                %br
+                .address_of_location
+                %p
+                  = location.address
+                %p
+                  Delete
+            %a{ href: favourite_location_path(location) }
+              .panel.radius.center-text.ver_marcador
+                Ver marcador en el mapa
+
+      - if @favourite_locations.size < 10
+        -if @favourite_locations.size > 0
+          %a{ href: new_favourite_location_path }
+            .panel.radius.add_new_location.center.boton_add_location
+              Agrega una nueva ubicación favorita aquí.
+      - else
+        .panel.radius.add_new_location.center
+          Has alcanzado el máximo de ubicaciones favoritas. Borra una existente antes
+          de añadir una nueva.

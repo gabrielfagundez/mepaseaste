@@ -15,7 +15,7 @@ Mepaseaste::Application.routes.draw do
   resources :queries, only: [ :index, :destroy, :show ]
 
   # Ubicaciones preferidas
-  resources :favourite_locations, only: [ :new, :create, :destroy, :show ]
+  resources :favourite_locations
 
   # Acerca De
   resources :about, only: :index do

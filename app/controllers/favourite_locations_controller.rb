@@ -1,13 +1,19 @@
 class FavouriteLocationsController < ApplicationController
 
+  def index
+    @favourite_locations = current_user.favourite_locations
+  end
+
   def new
     @favourite_location = FavouriteLocation.new
   end
 
-  def create
-    raise params.inspect
+  def show
+    @favourite_location = FavouriteLocation.find(params[:id])
+  end
 
-    @favourite_location = FavouriteLocation.new(params[:favourite_location])
+  def create
+    @favourite_location = FavouriteLocation.new(favourite_location_params)
 
     if @favourite_location.save
       redirect_to queries_path
@@ -35,6 +41,12 @@ class FavouriteLocationsController < ApplicationController
     @favourite_location.destroy
 
     redirect_to queries_path
+  end
+
+  private
+
+  def favourite_location_params
+    params.require(:favourite_location).permit(:name, :latitude, :longitude, :user_id, :address)
   end
   
 

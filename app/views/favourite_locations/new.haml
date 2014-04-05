@@ -1,9 +1,18 @@
 .row
   .small-12.columns
-    %h1 Crear una ubicación favorita
+    .full-yellow-upper-line
+    .panel.radius.text-center
+      %h2 Crear una ubicación favorita
 
     - if @favourite_location.errors.any?
       = content_tag(:div, @favourite_location.errors.full_messages.join('<br>'), class: 'panel radius callout text-center')
 
     .panel.radius
       = render 'form'
+
+= javascript_include_tag 'pages/favourite_locations'
+
+:javascript
+  $(function(){
+    FavouriteLocations.init(true);
+  })

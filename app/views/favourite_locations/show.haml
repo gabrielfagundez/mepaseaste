@@ -2,3 +2,11 @@
   .small-12.columns
     .panel.radius
       = render partial: 'shared/map'
+
+= javascript_include_tag 'pages/favourite_locations'
+
+:javascript
+  $(function(){
+    FavouriteLocations.init(false);
+    FavouriteLocations.addMarker(#{@favourite_location.latitude}, #{@favourite_location.longitude});
+  })

@@ -2,9 +2,9 @@ function createMarker(event) {
   infoWindow.close();
 
   if(markerId == 1) {
-    icon = 'icon/start_marker.png';
+    icon = '/icon/start_marker.png';
   } else {
-    icon = 'icon/end_marker.png';
+    icon = '/icon/end_marker.png';
   }
 
   if(markerId == 1) {

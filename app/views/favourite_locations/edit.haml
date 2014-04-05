@@ -7,3 +7,10 @@
 
     .panel.radius
       = render 'form'
+
+= javascript_include_tag 'pages/favourite_locations'
+
+:javascript
+  $(function(){
+    FavouriteLocations.init(true);
+  })
