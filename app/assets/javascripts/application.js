@@ -39,6 +39,7 @@
 //= require application/get_distance
 //= require home
 //= require data
+//= require pages/favourite_locations
 
 
 $(document).foundation();
