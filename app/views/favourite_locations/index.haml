@@ -1,7 +1,7 @@
 .px100-separator
 
 .row
-  .small-12.columns
+  .small-10.small-offset-1.columns
     .full-blue-upper-line
     .panel.radius
       %h2
@@ -18,7 +18,8 @@
           .panel.radius
             .row
               .small-3.columns
-                = image_tag '/img/target.png'
+                %a{ href: favourite_location_path(location) }
+                  = image_tag '/img/target.png'
               .small-9.columns
                 .title_of_location
                   = location.name
@@ -26,11 +27,7 @@
                 .address_of_location
                 %p
                   = location.address
-                %p
-                  Delete
-            %a{ href: favourite_location_path(location) }
-              .panel.radius.center-text.ver_marcador
-                Ver marcador en el mapa
+                = link_to('Borrar', favourite_location_path(location), :method => :delete, :confirm => 'Estas seguro?')
 
       - if @favourite_locations.size < 10
         -if @favourite_locations.size > 0

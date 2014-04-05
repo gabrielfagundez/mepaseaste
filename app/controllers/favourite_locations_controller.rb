@@ -40,7 +40,7 @@ class FavouriteLocationsController < ApplicationController
     @favourite_location = FavouriteLocation.find(params[:id])
     @favourite_location.destroy
 
-    redirect_to queries_path
+    redirect_to favourite_locations_path
   end
 
   private
