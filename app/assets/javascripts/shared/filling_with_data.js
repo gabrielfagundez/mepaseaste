@@ -49,11 +49,11 @@ function llenar_datos(data_greedy, data_ae, query_id){
 
   if(parseInt(costo_ae) < parseInt(costo_greedy)){
     console.log('Llenando con datos del AE');
-    llenar_con_datos(data_ae);
+    llenar_con_datos(data_ae, query_id);
   }
   else {
     console.log('Llenando con datos del Greedy');
-    llenar_con_datos_greedy(data_greedy);
+    llenar_con_datos_greedy(data_greedy, query_id);
   }
 }
 
