@@ -114,7 +114,7 @@ class DataController < ApplicationController
   end
 
   def archivo_simplificado_greedy
-    @archivo_simplificado ||= 'public/' + @query.id.to_s + AE_CONFIG['archivo_simplificado_greedy']
+    @archivo_simplificado_greedy ||= 'public/' + @query.id.to_s + AE_CONFIG['archivo_simplificado_greedy']
   end
 
   def tipo_tarifa
