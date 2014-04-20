@@ -46,16 +46,15 @@ class DataController < ApplicationController
     a_parametros = archivo_de_parametros
 
     puts '### ### ### ###'
+    puts 'Running AE'
+    puts "Command: bin/genetic_algorithm #{ archivo_de_configuracion } #{ a_parametros } #{ archivo_de_solucion } | grep ^Solution: > #{ archivo_simplificado }"
+    IO.popen("bin/genetic_algorithm #{ archivo_de_configuracion } #{ a_parametros } #{ archivo_de_solucion } | grep ^Solution: > #{ archivo_simplificado }")
+    puts 'AE end'
 
     puts 'Running Greedy'
     puts "Command: bin/greedy #{ a_parametros } #{ @archivo_costos } > #{ archivo_simplificado_greedy }"
     IO.popen("bin/greedy #{ a_parametros } #{ @archivo_costos } > #{ archivo_simplificado_greedy }")
     puts 'Greedy end'
-
-    puts 'Running AE'
-    IO.popen("bin/genetic_algorithm #{ archivo_de_configuracion } #{ a_parametros } #{ archivo_de_solucion } | grep ^Solution: > #{ archivo_simplificado }")
-    puts 'AE end'
-
     puts '### ### ### ###'
 
 
