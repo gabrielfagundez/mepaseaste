@@ -1,3 +1,5 @@
+var data_ae;
+
 function fileExists(file_name, query_id){
   $.ajax({
     url: file_name,
@@ -18,10 +20,17 @@ function fileExists(file_name, query_id){
             console.log(data);
             console.log('JS Debug - END :');
 
-            // Quitamos el div de cargando una vez tenemos datos
-            $('.progress-indicator').hide();
+            data_ae = data;
 
-            llenar_con_datos(data, query_id);
+            $.ajax({
+              url: '/raw_greedy_results.txt',
+              success: function(data_greedy) {
+                // Quitamos el div de cargando una vez tenemos datos
+                $('.progress-indicator').hide();
+
+                llenar_datos(data_greedy, data_ae, query_id);
+              }
+            })
           } else {
             setTimeout(function() {
               // Llamar a esta funcion nuevamente despues de 20 milisegundos
@@ -34,6 +43,50 @@ function fileExists(file_name, query_id){
   });
 }
 
+function llenar_datos(data_greedy, data_ae, query_id){
+  var costo_ae = costo_viaje(data_ae);
+  var costo_greedy = costo_viaje(data_greedy);
+
+  if(parseInt(costo_ae) < parseInt(costo_greedy)){
+    console.log('Llenando con datos del AE');
+    llenar_con_datos(data_ae);
+  }
+  else {
+    console.log('Llenando con datos del Greedy');
+    llenar_con_datos_greedy(data_greedy);
+  }
+}
+
+function costo_viaje(data) {
+
+  // Quitamos el inicio
+  //  Ej:
+  //    data = "Solution: 0 1 3 2 0 Fitness: 518.76"
+  //    string = data.substr(11);
+  //    string = "0 1 3 2 0 Fitness: 518.76"
+  string = data.substr(10);
+
+  // Obtengo la posicion de la 'F'
+  //  En este caso la respuesta sera 10
+  var pos_F = 0;
+  for(var letra=0; letra<string.length; letra++){
+    if(string.substr(letra, 1) == 'F'){
+      pos_F = letra;
+    }
+  };
+
+  // Parseo el costo total
+  //  Ej:
+  //    data = "Solution:  0 1 3 2 0 Fitness: 518.76"
+  //    costo = data.substr(11).substr(pos_F + 9);
+  //    costo = "518.76"
+  var costo = data.substr(10).substr(pos_F + 9);
+
+  console.log('El costo del viaje es de: ')
+  console.log(costo);
+
+  return costo;
+}
 
 function llenar_con_datos(data, query_id){
 
@@ -141,6 +194,114 @@ function llenar_con_datos(data, query_id){
   $('.cant_taxis').html(taxis.length);
 
 }
+
+function llenar_con_datos_greedy(data, query_id){
+
+  // Quitamos el inicio
+  //  Ej:
+  //    data = "Solution: 0 1 3 2 0 Fitness: 518.76"
+  //    string = data.substr(11);
+  //    string = "0 1 3 2 0 Fitness: 518.76"
+  string = data.substr(10);
+
+  // Obtengo la posicion de la 'F'
+  //  En este caso la respuesta sera 10
+  var pos_F = 0;
+  for(var letra=0; letra<string.length; letra++){
+    if(string.substr(letra, 1) == 'F'){
+      pos_F = letra;
+    }
+  };
+
+  // Obtenemos el string
+  //  Ej:
+  //    string = string.substr(0, pos_F);
+  //    string = "0 1 3 2 0 "
+  string = string.substr(0, pos_F);
+
+  // Inicializamos el arreglo de numeros
+  var arreglo_numeros = new Array();
+
+  // Recorro el string y obtengo los numeros
+  for(var letra=0; letra<string.length; letra++){
+    if(string.substr(letra, 1) != ' '){
+      if(string.substr(letra, 1) <= '9' && string.substr(letra, 1) >= '0'){
+        if(string.substr(letra+1, 1) <= '9' && string.substr(letra+1, 1) >= '0'){
+          arreglo_numeros.push(string.substr(letra, 2));
+          letra = letra + 1;
+        } else {
+          arreglo_numeros.push(string.substr(letra, 1));
+        }
+      }
+    }
+  }
+
+  // Armamos un arreglo de taxis
+  var nuevo_taxi = true;
+  var taxi;
+
+  var obj = new Object();
+  obj.query_id = query_id;
+  obj.solution = new Array();
+
+
+  for(var iterador=0; iterador<arreglo_numeros.length; iterador++){
+    if(nuevo_taxi){
+      taxi = new Array();
+      nuevo_taxi = false;
+    };
+
+    if(arreglo_numeros[iterador] != ' ' && arreglo_numeros[iterador] != '0'){
+      taxi.push(arreglo_numeros[iterador]);
+      if(iterador == (arreglo_numeros.length - 1)){
+        taxis.push(taxi);
+        obj.solution.push(taxi);
+      }
+    };
+
+    if(arreglo_numeros[iterador] == '0'){
+      if(taxi.length > 0){
+        taxis.push(taxi);
+        obj.solution.push(taxi);
+      }
+
+      // Seteo esta variable el true para crear un nuevo taxi
+      nuevo_taxi = true;
+    }
+  }
+
+  // Parseo el costo total
+  //  Ej:
+  //    data = "Solution:  0 1 3 2 0 Fitness: 518.76"
+  //    costo = data.substr(11).substr(pos_F + 9);
+  //    costo = "518.76"
+  var costo = data.substr(10).substr(pos_F + 9);
+
+  // Convertimos a JSON
+  obj.costo = costo;
+  var json = JSON.stringify(obj);
+
+  // Guardo los taxis
+  $.ajax({
+    contentType: 'application/json',
+    data: json,
+    type: 'POST',
+    url: '/save_query'
+  });
+
+  // Mostramos el costo
+  $('#costo_total').append(costo);
+  $('#costo_total_calculando').hide();
+  $('#costo_total').show();
+
+  html = formar_html(taxis)
+
+  $('#formacion_taxis').append(html);
+  $('.costo_total').html('$' + costo);
+  $('.cant_taxis').html(taxis.length);
+
+}
+
 
 function formar_html(taxis){
 
