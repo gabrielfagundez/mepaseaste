@@ -42,8 +42,11 @@ class DataController < ApplicationController
 
     # Ejecutamos el algoritmo evolutivo
     FileUtils.mkdir_p('public/' + @query.id.to_s)
-    IO.popen("bin/greedy #{ archivo_de_parametros } #{ @archivo_costos } | grep ^Solution: > #{ archivo_simplificado_greedy }")
-    IO.popen("bin/genetic_algorithm #{ archivo_de_configuracion } #{ archivo_de_parametros } #{ archivo_de_solucion } | grep ^Solution: > #{ archivo_simplificado }")
+
+    a_parametros = archivo_de_parametros
+
+    IO.popen("bin/greedy #{ a_parametros } #{ @archivo_costos } | grep ^Solution: > #{ archivo_simplificado_greedy }")
+    IO.popen("bin/genetic_algorithm #{ archivo_de_configuracion } #{ a_parametros } #{ archivo_de_solucion } | grep ^Solution: > #{ archivo_simplificado }")
 
 
     # Renderizamos la nueva pagina
