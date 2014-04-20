@@ -42,6 +42,7 @@ class DataController < ApplicationController
 
     # Ejecutamos el algoritmo evolutivo
     FileUtils.mkdir_p('public/' + @query.id.to_s)
+    IO.popen("bin/greedy #{ archivo_de_parametros } #{ @archivo_costos } | grep ^Solution: > #{ archivo_simplificado_greedy }")
     IO.popen("bin/genetic_algorithm #{ archivo_de_configuracion } #{ archivo_de_parametros } #{ archivo_de_solucion } | grep ^Solution: > #{ archivo_simplificado }")
 
 
@@ -98,6 +99,10 @@ class DataController < ApplicationController
 
   def archivo_simplificado
     @archivo_simplificado ||= 'public/' + @query.id.to_s + AE_CONFIG['archivo_simplificado']
+  end
+
+  def archivo_simplificado_greedy
+    @archivo_simplificado ||= 'public/' + @query.id.to_s + AE_CONFIG['archivo_simplificado_greedy']
   end
 
   def tipo_tarifa
@@ -169,10 +174,12 @@ class DataController < ApplicationController
       file.write '0'
       file.write "\n"
       file.write 'public/' + @query.id.to_s + AE_CONFIG['archivo_de_costos']
+      file.write "\n"
+      file.write '4'
     end
 
     # Creamos el archivo de costos
-    archivo_de_costos
+    @archivo_costos = archivo_de_costos
 
     'public/' + @query.id.to_s + AE_CONFIG['archivo_de_parametros']
   end
@@ -198,6 +205,8 @@ class DataController < ApplicationController
         file.write "\n"
       end
     end
+
+    'public/' + @query.id.to_s + AE_CONFIG['archivo_de_costos']
   end
 
 end

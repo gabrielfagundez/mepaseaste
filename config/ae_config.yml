@@ -8,4 +8,6 @@ archivo_de_costos:
   '/costos.txt'
 archivo_simplificado:
   '/raw_results.txt'
+archivo_simplificado_greedy:
+  '/raw_greedy_results.txt'
 
