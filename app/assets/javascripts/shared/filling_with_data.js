@@ -23,7 +23,7 @@ function fileExists(file_name, query_id){
             data_ae = data;
 
             $.ajax({
-              url: '/raw_greedy_results.txt',
+              url: '/' + query_id + '/raw_greedy_results.txt',
               success: function(data_greedy) {
                 // Quitamos el div de cargando una vez tenemos datos
                 $('.progress-indicator').hide();
