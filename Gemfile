@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 # We are using the latest version of each technology Yeah!
 gem 'rails', '4.0.0'
-
 gem 'mysql2'
 
 gem 'uglifier', '>= 1.3.0'
