@@ -22,4 +22,5 @@
  *= require mainpage/queries
  *= require mainpage/tff
  *= require mainpage/about
+ *= require shared/header
  */

@@ -2796,7 +2796,7 @@ label.error {
 /* Wrapped around .top-bar to contain to grid width */
 .contain-to-grid {
   width: 100%;
-  background: #333333; }
+  background: #444; }
   .contain-to-grid .top-bar {
     margin-bottom: 1.875em; }
 
@@ -2883,7 +2883,7 @@ label.error {
     height: auto;
     background: transparent; }
     .top-bar.expanded .title-area {
-      background: #333333; }
+      background: #444; }
     .top-bar.expanded .toggle-topbar a {
       color: #888888; }
       .top-bar.expanded .toggle-topbar a span {
@@ -2999,7 +2999,7 @@ label.error {
 
 @media only screen and (min-width: 58.75em) {
   .top-bar {
-    background: #333333;
+    background: #444;
     *zoom: 1;
     overflow: visible; }
     .top-bar:before, .top-bar:after {
@@ -3022,7 +3022,7 @@ label.error {
       position: relative;
       top: 8px; }
     .top-bar.expanded {
-      background: #333333; }
+      background: #444; }
 
   .contain-to-grid .top-bar {
     max-width: 62.5em;
@@ -3045,7 +3045,7 @@ label.error {
     .top-bar-section li a:not(.button) {
       padding: 0 15px;
       line-height: 45px;
-      background: #333333; }
+      background: #444; }
       .top-bar-section li a:not(.button).hover {
         background: black; }
     .top-bar-section .has-dropdown > a {
@@ -3097,7 +3097,7 @@ label.error {
       height: 45px;
       width: 0px; }
     .top-bar-section .has-form {
-      background: #333333;
+      background: #444;
       padding: 0 15px;
       height: 45px; }
     .top-bar-section ul.right li .dropdown {
