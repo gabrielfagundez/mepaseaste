@@ -2,6 +2,8 @@ Mepaseaste::Application.routes.draw do
 
   root to: 'home#index'
 
+  get 'landing' => 'home#landing'
+
   devise_for :users
 
   # Manejo de consultas

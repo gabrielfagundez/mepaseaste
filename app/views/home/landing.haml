@@ -1,0 +1,80 @@
+!!!
+%html
+  %head
+    %title MePaseaste.UY
+    / Favicon
+    %link{ href: 'favicon.ico', rel: 'icon', type: 'image/ico' }
+
+    / Foundation
+    %meta{ content: 'width=device-width', name: 'viewport' }
+
+    %link{ href: 'http://fonts.googleapis.com/css?family=Open+Sans:400,300', rel: 'stylesheet', type: 'text/css' }
+      / Rails
+      = javascript_include_tag 'landing'
+      = stylesheet_link_tag 'landing'
+      = csrf_meta_tags
+
+.header
+  .row
+    .large-12.columns
+      .right.goto
+        = link_to 'Ir a la aplicación', root_path, class: 'goto-button'
+
+.main
+  %section.page1
+    .row
+      .large-12.text-center
+        .cite
+          %a{ href: root_path }
+            = image_tag 'home/logo.png', class: 'logo'
+          %div Los viajes compartidos en taxis,
+          %div nunca fueron tan simples
+
+  %section.page2
+    .row
+      .large-12.text-center
+        .cite
+          = image_tag 'trip.png', class: 'logo'
+          Organiza viajes eficientes utilizando taxis, para grupos de personas que comparten el origen, minimizando el costo total
+
+  %section.page3
+    .row
+      .large-4.text-center.columns
+        .cite
+          = image_tag 'seleccionar.png', class: 'logo'
+          .title
+            Seleccionar
+          Seleccione el origen compartido por los pasajeros, y los destinos de cada uno de ellos en el mapa
+
+      .large-4.text-center.columns
+        .cite
+          = image_tag 'calcular.png', class: 'logo'
+          .title
+            Calcular
+          Calcule cual es la mejor distribución de pasajeros y taxis, y el orden, buscando minimizar el costo total del viaje con técnicas de inteligencia computacional
+
+      .large-4.text-center.columns
+        .cite
+          = image_tag 'viajar.png', class: 'logo'
+          .title
+            Viajar
+          Consiga los vehículos y realice los viajes
+
+  %section.page4
+    .row
+      .large-12.text-center
+        .large-title
+          Empieza!
+        %a{ href: root_path }
+          .large-button
+            Ir a la aplicación
+        .row
+          .large-6.large-offset-3
+            .row
+              .social
+                .large-6.columns
+                  %a{ href: 'https://www.facebook.com/MePaseasteUY' }
+                    = image_tag 'twitter.png', class: 'logo'
+                .large-6.columns
+                  %a{ href: 'https://www.facebook.com/MePaseasteUY' }
+                    = image_tag 'facebook.png', class: 'logo'

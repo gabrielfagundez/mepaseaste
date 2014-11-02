@@ -1,6 +1,17 @@
 class HomeController < ApplicationController
 
+  def landing
+    render layout: false
+  end
+
   def index
+    delete_previous_run
+    @favourite_locations = current_user.try(:favourite_locations) || []
+  end
+
+  private
+
+  def delete_previous_run
     # Borramos ejecucion previa del algoritmo si existe
     #begin
     #  FileUtils.rm('public/raw_results.txt')
@@ -18,10 +29,7 @@ class HomeController < ApplicationController
       FileUtils.rm('public/costos.txt')
     rescue
     end
-
-    @favourite_locations = current_user.try(:favourite_locations) || []
   end
-
 
 
 end
