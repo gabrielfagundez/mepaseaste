@@ -3,6 +3,7 @@ Mepaseaste::Application.routes.draw do
   root to: 'home#index'
 
   get 'landing' => 'home#landing'
+  get 'app'     => 'home#app'
 
   devise_for :users
 

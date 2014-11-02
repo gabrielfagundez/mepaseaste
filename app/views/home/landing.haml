@@ -18,14 +18,14 @@
   .row
     .large-12.columns
       .right.goto
-        = link_to 'Ir a la aplicación', root_path, class: 'goto-button'
+        = link_to 'Ir a la aplicación', app_path, class: 'goto-button'
 
 .main
   %section.page1
     .row
       .large-12.text-center
         .cite
-          %a{ href: root_path }
+          %a{ href: app_path }
             = image_tag 'home/logo.png', class: 'logo'
           %div Los viajes compartidos en taxis,
           %div nunca fueron tan simples
@@ -65,7 +65,7 @@
       .large-12.text-center
         .large-title
           Empieza!
-        %a{ href: root_path }
+        %a{ href: app_path }
           .large-button
             Ir a la aplicación
         .row
