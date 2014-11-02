@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+
   def index
     # Borramos ejecucion previa del algoritmo si existe
     #begin
@@ -20,4 +21,7 @@ class HomeController < ApplicationController
 
     @favourite_locations = current_user.try(:favourite_locations) || []
   end
+
+
+
 end

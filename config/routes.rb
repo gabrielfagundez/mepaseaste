@@ -1,4 +1,5 @@
 Mepaseaste::Application.routes.draw do
+
   root to: 'home#index'
 
   devise_for :users
@@ -28,11 +29,5 @@ Mepaseaste::Application.routes.draw do
   namespace :api do
     resources :queries
   end
-
-  # Sección marketplace
-  namespace :marketplace do
-    get '/'             => 'home#index'
-  end
-
 
 end
