@@ -3,7 +3,7 @@
     %nav.top-bar{ 'data-topbar' => '' }
       %section.header-text.top-bar-section
         %ul
-          %li= link_to 'Home', root_path
+          %li= link_to 'Home', app_path
           - if current_user
             %li= link_to 'Perfil', '/profile'
         %ul
@@ -15,7 +15,7 @@
 
   .row
     .large-12.columns.center
-      %a{href: root_path}
+      %a{href: app_path}
         = image_tag 'home/logo.png', class: 'logo'
 
     - if current_user.present?
