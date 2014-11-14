@@ -40,23 +40,36 @@ class DataController < ApplicationController
       )
     end
 
-    # Ejecutamos el algoritmo evolutivo
     FileUtils.mkdir_p('public/' + @query.id.to_s)
 
-    a_parametros = archivo_de_parametros
+    if cantidad_marcadores == 2
+      # Calculo manual
+      solution_string = "Solution:  0 1 Fitness: #{BANDERA_DIURNA + (@matriz_costos[0][1].to_f.round(2))}"
+      File.open(archivo_simplificado, 'w+') do |f|
+        f.write(solution_string)
+      end
+      File.open(archivo_simplificado_greedy, 'w+') do |f|
+        f.write(solution_string)
+      end
 
-    puts '### ### ### ###'
-    puts 'Running AE'
-    puts "Command: bin/genetic_algorithm #{ archivo_de_configuracion } #{ a_parametros } #{ archivo_de_solucion } | grep ^Solution: > #{ archivo_simplificado }"
-    IO.popen("bin/genetic_algorithm #{ archivo_de_configuracion } #{ a_parametros } #{ archivo_de_solucion } | grep ^Solution: > #{ archivo_simplificado }")
-    puts 'AE end'
+    else
+      # Ejecutamos el algoritmo evolutivo
+      FileUtils.mkdir_p('public/' + @query.id.to_s)
 
-    puts 'Running Greedy'
-    puts "Command: bin/greedy #{ a_parametros } #{ @archivo_costos } > #{ archivo_simplificado_greedy }"
-    IO.popen("bin/greedy #{ a_parametros } #{ @archivo_costos } > #{ archivo_simplificado_greedy }")
-    puts 'Greedy end'
-    puts '### ### ### ###'
+      a_parametros = archivo_de_parametros
 
+      puts '### ### ### ###'
+      puts 'Running AE'
+      puts "Command: bin/genetic_algorithm #{ archivo_de_configuracion } #{ a_parametros } #{ archivo_de_solucion } | grep ^Solution: > #{ archivo_simplificado }"
+      IO.popen("bin/genetic_algorithm #{ archivo_de_configuracion } #{ a_parametros } #{ archivo_de_solucion } | grep ^Solution: > #{ archivo_simplificado }")
+      puts 'AE end'
+
+      puts 'Running Greedy'
+      puts "Command: bin/greedy #{ a_parametros } #{ @archivo_costos } > #{ archivo_simplificado_greedy }"
+      IO.popen("bin/greedy #{ a_parametros } #{ @archivo_costos } > #{ archivo_simplificado_greedy }")
+      puts 'Greedy end'
+      puts '### ### ### ###'
+    end
 
     # Renderizamos la nueva pagina
     respond_to do |format|
