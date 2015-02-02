@@ -1,0 +1,58 @@
+#about
+  .about-section
+    = render partial: 'team'
+
+  .container
+    %hr
+    .about-section
+      .row
+        .col-lg-9
+          .about-text
+            MePaseasteUY surge ante la búsqueda de una solución simple, para una necesidad de la comunidad.
+            Muchas veces, te encuentras con un grupo de amigos en un mismo lugar, y desean compartir taxis hacia sus respectivas
+            casas. Entonces, quién se va con quién a modo de ahorrar dinero y pagar menos?
+        .col-lg-3.center-text
+          %img{ src: 'img/about/sec1.png' }
+      .row
+        .separator
+      .row
+        .col-lg-3.center-text
+          %img{ src: 'img/about/sec2.png' }
+        .col-lg-9
+          .about-text
+            MePaseasteUY es un emprendimiento originado en la Facultad de Ingenería de la Universidad de la República,
+            que utiliza conceptos de computación genética para llegar a una solución óptima al problema en un tiempo razonable.
+            Estas técnicas son de mucha utilidad en problemas de esta índole, con alta complejidad computacional.
+      .row.mt
+        .separator
+      .row
+        .col-lg-9
+          .about-text
+            El algoritmo detrás del motor de MePaseasteUY, está basado en el framework de código abierto
+            = succeed '.' do
+              %a{ href: 'https://themalvaproject.github.io' } Malva
+        .col-lg-3.center-text
+          %img{ src: 'img/about/sec3.png' }/
+      .row
+        .separator
+      .row
+        .col-lg-3.center-text
+          %img{ src: 'img/about/sec4.png' }/
+        .col-lg-9
+          .about-text
+            MePaseasteUY está en continuo desarrollo. Si encuentras bugs, o detalles que pueden mejorar la experiencia de usuario,
+            puedes enviarnos un
+            = succeed '.' do
+              %a{ href: 'mailto:gabriel.fa07@gmail.com' } correo
+      .row
+        .separator
+      .row
+        .col-lg-9
+          .about-text
+            También puedes seguirnos en
+            %a{ href: 'http://twitter.com/MePaseasteUY' } Twitter
+            o en
+            %a{ href: 'http://facebook.com/MePaseasteUY' } Facebook
+            para estar al tanto de las últimas novedades!
+        .col-lg-3.center-text
+          %img{ src: 'img/about/sec5.png' }

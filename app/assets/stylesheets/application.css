@@ -9,4 +9,5 @@
  * App
  *= require 'flatty/main'
  *= require 'mainpage/home'
+ *= require 'mainpage/about'
  */

@@ -1,0 +1,18 @@
+#about {
+  .about-section {
+    padding-top: 50px;
+    .about-text {
+      font-size: 20px;
+      color: #555555;
+      line-height: 1.5em;
+      text-align: center;
+    }
+
+    .separator {
+      width: 100%;
+      background-color: #aaaaaa;
+      height: 1px;
+      margin: 4em 0;
+    }
+  }
+}
