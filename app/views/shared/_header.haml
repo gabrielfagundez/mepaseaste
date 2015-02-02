@@ -1,22 +1,12 @@
-#header
-  .contain-to-grid
-    %nav.top-bar{ 'data-topbar' => '' }
-      %section.header-text.top-bar-section
-        %ul
-          %li= link_to 'Home', app_path
-          - if current_user
-            %li= link_to 'Perfil', '/profile'
-        %ul
-          %li= link_to 'Acerca De', '/about'
-          - if current_user
-            %li
-              %a{'data-method' => 'delete', :href => '/users/sign_out', rel: 'nofollow'}
-                %img{ height: '15px', src: '/icon/signout.png', style: 'background-color: #333333', width: '15px' }
-
-  .row
-    .large-12.columns.center
-      %a{href: app_path}
-        = image_tag 'home/logo.png', class: 'logo'
-
-    - if current_user.present?
-      = render partial: 'shared/botones'
+.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header
+      %button.navbar-toggle{ 'data-target' => '.navbar-collapse', 'data-toggle' => 'collapse', type: 'button' }
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to 'MePaseaste.UY', root_path, class: 'navbar-brand'
+    .navbar-collapse.collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          = link_to 'Acerca De', about_index_path

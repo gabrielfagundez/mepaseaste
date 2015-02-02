@@ -14,6 +14,7 @@ function initialize(allow_markers, show_loading) {
     // Opciones del mapa
     var mapOptions = {
         zoom: zoom,
+        scrollwheel: false,
         center: new google.maps.LatLng(-34.7600432, -56.2019143),
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };

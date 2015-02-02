@@ -1,70 +1,50 @@
-.px20-separator
+#headerwrap
+  .container
+    .row
+      .col-lg-6
+        %h1 Los viajes compartidos en taxis nunca fueron tan fáciles.
+        %form.form-inline{ role: 'form' }
+          .form-group
+          %button.btn.btn-warning.btn-lg{ type: 'submit' } Empezar!
+      .col-lg-6
+        %img.img-responsive{ alt: '', src: asset_path('home/ipad-hand.png') }
 
-- if current_user.blank?
-  .row
-    .small-10.small-centered.columns
-      .panel.radius
-        %p.center
-          %a{href: new_user_session_path}
-            Registrate o Inicia Sesion
-          para almacenar destinos usuales, acceder a nuevas funciones y mas!
+.container
+  .row.mt.centered
+    .col-lg-12
+      %hr
+      %h3
+        Ingresa el origen en el mapa, seguido de los destinos. Luego presiona enviar y MePaseaste.UY calculará la mejor
+        distribución de pasajeros y taxis, de modo de minimizar el gasto total.
+      %hr
 
-.px10-separator
+    .col-lg-12
+      = render template: 'shared/_map'
 
-.row
-  .large-12.columns
-    = render template: 'shared/_map'
+      %p
+      .switch
+        %input{id: 'tarifa_diurna', name: 'switch_accurance', type: 'radio', checked: 'true'}
+        %label{for: 'tarifa_diurna', onclick: ''}
+          Tarifa Diurna
+        %input{id: 'tarifa_nocturna', name: 'switch_accurance', type: 'radio'}
+        %label{for: 'tarifa_nocturna', onclick: ''}
+          Tarifa Nocturna
+        %span
 
-.px20-separator
-.px10-separator
-
-.full-green-upper-line
-.grey-background
-  .px20-separator
-  .row
-    .small-4.columns
-      .full-yellow-upper-line
-      -# Opciones
-      .panel.radius
-        .row
-          .small-12.columns.center
-            %p
-              Selecciona el tipo de viaje
-            .switch.round
-              %input{id: 'tarifa_diurna', name: 'switch_accurance', type: 'radio', checked: 'true'}
-              %label{for: 'tarifa_diurna', onclick: ''}
-                Dia
-              %input{id: 'tarifa_nocturna', name: 'switch_accurance', type: 'radio'}
-              %label{for: 'tarifa_nocturna', onclick: ''}
-                Noche
-              %span
-
-    .small-8.columns
-      .full-red-upper-line
-      .panel.radius
-        .row
-          .small-4.columns.center
-            %a.has-tip{ href: '#', 'data-reveal-id' => 'modalDestinosIngresados', title: 'Has click para ver los destinos ingresados', 'data-tooltip' => '' }
-              = image_tag '/img/query.png'
-          .small-4.columns.center
-            %a.has-tip{ href: '#', 'data-reveal-id' => 'modalDestinosUsuales', title: 'Has click para ver los destinos favoritos', 'data-tooltip' => '' }
-              = image_tag '/img/target.png'
-          .small-4.columns.center
-            %a.has-tip{ href: '#', 'data-reveal-id' => 'modalHistorial', title: 'Revisa el historial de tus consultas', 'data-tooltip' => '' }
-              = image_tag '/img/browser.png'
-
-  .row
-    .small-10.small-centered.columns
       %a{ onclick: 'sendData();' }
-        .enviar-datos.panel
-          Calcular
-          .texto-chico
-            Ten paciencia, la consulta puede demorar
-
-
-.px50-separator
-
-= render partial: 'home/modals'
+        .send-data
+          .big Calcular
+          .small Ten paciencia, la consulta puede demorar
+.container
+  %hr
+  .row.centered
+    .col-lg-6.col-lg-offset-3
+      %form.form-inline{ role: 'form' }
+        .form-group
+          %input#exampleInputEmail1.form-control{ placeholder: 'Ingresa tu dirección de correo', type: 'email' }
+        %button.btn.btn-warning.btn-lg{ type: 'submit' } Suscríbeme a las novedades
+    .col-lg-3
+  %hr
 
 .hide
   = image_tag '/icon/start_marker.png'

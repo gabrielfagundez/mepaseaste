@@ -1,26 +1,12 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require foundation/foundation
- *= require foundation/normalize
- *
- *= require mainpage/shared
- *= require mainpage/contact
- *= require mainpage/data
- *= require mainpage/destinos
- *= require mainpage/home
- *= require mainpage/loading_overlay
- *= require mainpage/login
- *= require mainpage/profile
- *= require mainpage/queries
- *= require mainpage/tff
- *= require mainpage/about
- *= require shared/header
+ * Main
+ *= require 'bootstrap/dist/css/bootstrap'
+ *= require 'ionicons/css/ionicons'
+ *= require 'font-awesome/css/font-awesome'
+ *= require 'shared/bootstrap_overrides'
+ *= require 'shared/devices'
+
+ * App
+ *= require 'flatty/main'
+ *= require 'mainpage/home'
  */

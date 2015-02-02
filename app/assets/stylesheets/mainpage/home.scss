@@ -1,0 +1,16 @@
+#map {
+  height: 700px
+}
+
+.send-data {
+  background-color: #45b39c;
+  radius: 25px 25px;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+  .big, .small { color: #ffffff; }
+  .big {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .small { font-size: 14px }
+}
