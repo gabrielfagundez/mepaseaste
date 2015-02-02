@@ -1,0 +1,11 @@
+{
+  "name": "dsl-generated dependencies",
+  "dependencies": {
+    "jquery": "2.1.1",
+    "jquery-ui": "1.11.2",
+    "jquery-ujs": "1.0.2",
+    "bootstrap": "3.3.1",
+    "ionicons": "1.5.2",
+    "font-awesome": "4.2.0"
+  }
+}
