@@ -26,11 +26,5 @@ group :production do
 end
 
 group :development do
-
+  gem 'bower-rails'
 end
-
-group :test do
-
-end
-
-
