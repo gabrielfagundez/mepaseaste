@@ -1,6 +1,7 @@
 /*
  * Main
  *= require 'bootstrap/dist/css/bootstrap'
+ *= require 'bootstrap-switch/dist/css/bootstrap3/bootstrap-switch'
  *= require 'ionicons/css/ionicons'
  *= require 'font-awesome/css/font-awesome'
  *= require 'shared/bootstrap_overrides'

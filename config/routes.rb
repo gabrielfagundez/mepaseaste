@@ -1,6 +1,6 @@
 Mepaseaste::Application.routes.draw do
 
-  root to: 'home#index'
+  root to: 'home#app'
 
   get 'landing' => 'home#landing'
   get 'app'     => 'home#app'

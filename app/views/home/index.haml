@@ -13,38 +13,28 @@
   .row.mt.centered
     .col-lg-12
       %hr
+      %h1
+        Calcula tu viaje compartido y ahorra dinero
       %h3
         Ingresa el origen en el mapa, seguido de los destinos. Luego presiona enviar y MePaseaste.UY calculará la mejor
-        distribución de pasajeros y taxis, de modo de minimizar el gasto total.
+        distribución de pasajeros y taxis con algoritmos de inteligencia computacional para que ahorres en tu viaje.
       %hr
+    .row.mt.centered
+      %br
+      %br
 
     .col-lg-12
       = render template: 'shared/_map'
 
-      %p
-      .switch
-        %input{id: 'tarifa_diurna', name: 'switch_accurance', type: 'radio', checked: 'true'}
-        %label{for: 'tarifa_diurna', onclick: ''}
-          Tarifa Diurna
-        %input{id: 'tarifa_nocturna', name: 'switch_accurance', type: 'radio'}
-        %label{for: 'tarifa_nocturna', onclick: ''}
-          Tarifa Nocturna
-        %span
 
-      %a{ onclick: 'sendData();' }
-        .send-data
-          .big Calcular
-          .small Ten paciencia, la consulta puede demorar
-.container
-  %hr
-  .row.centered
-    .col-lg-6.col-lg-offset-3
-      %form.form-inline{ role: 'form' }
-        .form-group
-          %input#exampleInputEmail1.form-control{ placeholder: 'Ingresa tu dirección de correo', type: 'email' }
-        %button.btn.btn-warning.btn-lg{ type: 'submit' } Suscríbeme a las novedades
-    .col-lg-3
-  %hr
+      .send-data
+        %a.big{ onclick: 'sendData();' } Calcular
+        %br
+        %a.small{ onclick: 'sendData();' } Ten paciencia, la consulta puede demorar
+        .switch
+          %input{ id: 'tarifa_diurna', name: 'switch_accurance', type: 'checkbox', checked: 'true', class: 'tarifa' }
+
+    = render partial: 'markers'
 
 .hide
   = image_tag '/icon/start_marker.png'

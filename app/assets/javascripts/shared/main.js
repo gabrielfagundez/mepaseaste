@@ -22,3 +22,12 @@ var geocoder;
 
 // Esta variable hace referencia a la API KEY para usar la API de taxis internacional
 var apikey = 'd6apr3UDROuv';
+
+$(function () {
+  $('.tarifa').bootstrapSwitch({
+    onText: 'Tarifa Diurna',
+    offText: 'Tarifa Nocturna',
+    onColor: 'warning',
+    offColor: 'danger'
+  })
+});
