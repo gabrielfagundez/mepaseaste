@@ -1,0 +1,20 @@
+#footer {
+  width: 100%;
+  background-color: #bd3e25;
+  padding: 100px 0 150px 0;
+  .title {
+    margin-bottom: 1em;
+    border-bottom: 1px solid #ffffff;
+    b { color: #ffffff; }
+  }
+  a {
+    color: #ffffff;
+    &:hover {
+      color: #c6c6c6;
+    }
+  }
+  .link {
+    display: block;
+    line-height: 2em;
+  }
+}
