@@ -1,16 +1,13 @@
 function createMarker(event) {
   infoWindow.close();
+  var origen = false;
+  if(markerId == 1)
+    origen = true;
 
   if(markerId == 1) {
     icon = '/icon/start_marker.png';
   } else {
     icon = '/icon/end_marker.png';
-  }
-
-  if(markerId == 1) {
-    nombre = 'Desde dónde partimos?';
-  } else {
-    nombre = 'De quién es este hogar?';
   }
 
   if(markerId == 1) {
@@ -26,7 +23,6 @@ function createMarker(event) {
 
     // App Variables
     markerId: markerId,
-    nombre: nombre,
     icon: icon,
     start: start,
 
@@ -56,19 +52,63 @@ function createMarker(event) {
   markerId = markerId + 1;
   markers.push(marker);
 
-
   // Update table
-  tabla = $('#tabla_de_datos');
-  html =
-      "<tr id='fila_" + marker.markerId + "'>" +
-          "<a href='javascript:centerMarker(" + marker.markerId + ");'>" +
-          "<th class='table-small'>" +
-          "<img src='" + marker.icon + "'>" +
-          "</th>" +
-          "</a>" +
-          "<th class='table-big' id='geocode_" + marker.markerId + "'><p>Obteniendo dirección.. </p></th>" +
-          "<th class='table-big' id='nombre_" + marker.markerId + "' ><p>" + marker.nombre + "</p></th>" +
-          "</tr>";
+  var tabla = $('#markers-list');
+  var html, name, color;
+  if(origen) {
+    html = '<div class="col-xs-4 col-xs-offset-4">';
+    name = 'Origen';
+    color = 'green';
+  }
+  else {
+    html = '<div class="col-xs-4">';
+    name = 'Pasajero #' + marker.markerId
+    color = 'red';
+  }
+
+  html += '<div class="marker">' +
+    '<a href="javascript:centerMarker(' + marker.markerId + ');">' +
+      '<div class="name">' + name + '</div>' +
+    '</a>' +
+    "<div class='address-box' id='geocode_" + marker.markerId + "'>Obteniendo dirección..</div>" +
+    '<div class="map"></div>';
+
+  if(!origen) {
+    html += '<div class="options">' +
+      '<hr>' +
+      '<div class="row">' +
+        '<div class="delay">' +
+          'Está el pasajero apresurado?' +
+        '</div>' +
+      '<div class="col-lg-4">' +
+        '<div class="radio radio-danger">' +
+          '<input checked="true" id="radio_ap_1_1" name="pasajero_1" type="radio" value="1">' +
+          '<label for="radio_ap_1_1">No</label>' +
+        '</div>' +
+      '</div>' +
+    '<div class="col-lg-4">' +
+      '<div class="radio radio-danger">' +
+        '<input id="radio_ap_2_1" name="pasajero_1" type="radio" value="2">' +
+        '<label for="radio_ap_2_1">Poco</label>' +
+      '</div>' +
+    '</div>' +
+    '<div class="col-lg-4">' +
+      '<div class="radio radio-danger">' +
+        '<input id="radio_ap_3_1" name="pasajero_1" type="radio" value="3">' +
+        '<label for="radio_ap_3_1">Muy</label>' +
+      '</div>' +
+    '</div>' +
+    '</div>';
+  }
+    html += '<hr>' +
+    '<img src="http://maps.googleapis.com/maps/api/staticmap?center=' + event.latLng.lat() + ',' + event.latLng.lng() + '&zoom=15&markers=color:' + color + '%7Clabel:%7C' + event.latLng.lat() + ',' + event.latLng.lng() + '&size=200x200&sensor=false' + '">' +
+    '</div>' +
+    '</div>' +
+  '</div>';
+
+  if(origen)
+    html += '<div class="clearfix"></div>';
+
   tabla.append(html);
 
 
@@ -93,7 +133,7 @@ function createMarker(event) {
   geocoder.geocode({'latLng': event.latLng}, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
       if (results[0]) {
-        $('#geocode_' + marker.markerId).html("<p>" + results[0].formatted_address + "</p>");
+        $('#geocode_' + marker.markerId).html(results[0].formatted_address);
         getMarkerByID(marker.markerId).address = results[0].formatted_address;
       }
     } else {
@@ -114,12 +154,6 @@ function createMarkerGivenLatLng(latitude, longitude) {
   }
 
   if(markerId == 1) {
-    nombre = 'Desde dónde partimos?';
-  } else {
-    nombre = 'De quién es este hogar?';
-  }
-
-  if(markerId == 1) {
     start = true;
   } else {
     start = false;
@@ -134,7 +168,6 @@ function createMarkerGivenLatLng(latitude, longitude) {
 
         // App Variables
         markerId: markerId,
-        nombre: nombre,
         icon: icon,
         start: start,
 
@@ -163,22 +196,6 @@ function createMarkerGivenLatLng(latitude, longitude) {
   // Update marker ID
   markerId = markerId + 1;
   markers.push(marker);
-
-
-  // Update table
-  tabla = $('#tabla_de_datos');
-  html =
-      "<tr id='fila_" + marker.markerId + "'>" +
-          "<a href='javascript:centerMarker(" + marker.markerId + ");'>" +
-          "<th class='table-small'>" +
-          "<img src='" + marker.icon + "'>" +
-          "</th>" +
-          "</a>" +
-          "<th class='table-big' id='geocode_" + marker.markerId + "'><p>Obteniendo dirección.. </p></th>" +
-          "<th class='table-big' id='nombre_" + marker.markerId + "' ><p>" + marker.nombre + "</p></th>" +
-          "</tr>";
-  tabla.append(html);
-
 
   // Delete Info Box
   $('#con-datos').show();

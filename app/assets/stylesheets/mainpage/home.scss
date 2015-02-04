@@ -25,6 +25,20 @@
       padding: 1em;
       margin: 1em;
       .name { font-weight: bold }
+      .address-box {
+        font-size: 11px;
+        padding: 0;
+      }
+      .options {
+        margin-top: 1em;
+        input {
+          display: inline-block;
+        }
+        label {
+          display: inline-block;
+          font-size: 12px;
+        }
+      }
     }
   }
   .no-markers {
