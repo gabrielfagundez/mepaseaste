@@ -101,7 +101,7 @@ function createMarker(event) {
     '</div>';
   }
     html += '<hr>' +
-    '<img src="http://maps.googleapis.com/maps/api/staticmap?center=' + event.latLng.lat() + ',' + event.latLng.lng() + '&zoom=15&markers=color:' + color + '%7Clabel:%7C' + event.latLng.lat() + ',' + event.latLng.lng() + '&size=200x200&sensor=false' + '">' +
+    '<img src="http://maps.googleapis.com/maps/api/staticmap?center=' + event.latLng.lat() + ',' + event.latLng.lng() + '&zoom=15&markers=color:' + color + '%7Clabel:%7C' + event.latLng.lat() + ',' + event.latLng.lng() + '&size=200x100&sensor=false' + '">' +
     '</div>' +
     '</div>' +
   '</div>';
@@ -113,7 +113,7 @@ function createMarker(event) {
 
 
   // Delete Info Box
-  $('#con-datos').show();
+  $('#con-datos').removeClass('hide');
   $('#sin-datos').hide();
 
   if(markers.length == 1) {
