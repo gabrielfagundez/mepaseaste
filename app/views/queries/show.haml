@@ -1,0 +1,124 @@
+#show-data
+  .container
+    .row.mt.centered
+      .col-lg-6.col-lg-offset-3
+        %h1
+          El costo total del viaje es de
+          .costo_total
+            $#{ @query.costo_total ? @query.costo_total : '[calculando..]' }
+
+    .row.mt.centered
+      .col-lg-4
+        %img{ alt: '', src: asset_path('img/costo.png'), width: '180'}
+        %h4 1 - Costo del viaje
+        El costo total del viaje es de
+        .costo_total
+          $#{ @query.costo_total ? @query.costo_total : '[calculando..]' }
+        Para la solución has utilizado la tarifa #{ @query.tipo_tarifa }. Recuerda que puedes cambiar esto al momento de realizar la consulta.
+      .col-lg-4
+        %img{ alt: '', src: asset_path('img/cohete.png'), width: '180'}
+        %h4 2 - Resumen de puntos geográficos
+        Partes de 1 lugar hacia #{ @query.cantidad_marcadores - 1 } destinos. La mejor opción requiere de tan solo
+        .cant_taxis
+          #{ @query.solution ? @query.solution.length : '[calculando..]' }
+        taxis. Utilizando esta solución lograrán el menor costo en conjunto.
+      .col-lg-4
+        %img{ alt: '', src: asset_path('img/share.png'), width: '180'}
+        %h4 3 - Comparte la consulta
+        Puedes compartir esta consulta con tus amigos si lo deseas, así ellos también podrán saber cual es el recorrido que realizarán.
+        .share
+          %br
+          %a{ onclick: 'animate_to_share()' }
+            Compartir
+
+    .row.mt.centered
+      = render partial: 'taxis'
+
+    .row.mt.centered
+      = render partial: 'shared/map'
+
+
+-#
+-#
+-#-# Sección compartir
+-##share_div
+-#  .row
+-#    .large-12.columns
+-#      .full-green-upper-line
+-#      .panel.radius
+-#        %br
+-#        .center-text
+-#          Comparte esta consulta con tus amigos, muéstrales el recorrido y el dinero que gastarán en el viaje.
+-#
+-#        %br
+-#        %br
+-#        .row
+-#          .large-4.large-offset-4.columns
+-#            %a
+-#              .boton-verde.panel{ 'data-reveal-id' => 'modalCompartir' }
+-#                Compartir
+-#
+-#= render partial: 'data/modals'
+-#
+-#.hide
+-#  = image_tag '/img/taxi-icon.png'
+-#
+-#
+-#
+-#- # Inicializamos el mapa
+-#:javascript
+-#  initialize(false, #{ @query.solution.blank? });
+-#- if @query.solution.nil?
+-#  :javascript
+-#    fileExists('/#{ @query.id }/raw_results.txt', #{ @query.id })
+-#- @marcadores.each do |marcador|
+-#  :javascript
+-#    addMarkerToResultPage('#{ marcador.latitude }', '#{ marcador.longitude }', '#{ marcador.icon }', '#{ marcador.address }', '#{ marcador.location_query_pos }');
+-#
+-#- # Si la solución proviene de la base, creamos la estructura javascript de los taxis
+-#- if @query.solution
+-#  - @query.solution.each do |taxi|
+-#    :javascript
+-#       t = new Array();
+-#    - taxi.each do |pasajero|
+-#      :javascript
+-#        t.push(#{ pasajero });
+-#    :javascript
+-#      taxis.push(t);
+-#
+-#- # Agregamos los marcadores al arreglo global
+-#- if @query.solution
+-#  - @query.locations.each do |location|
+-#    :javascript
+-#      marker = new google.maps.Marker({
+-#              draggable: false,
+-#              position: new google.maps.LatLng('#{ location.latitude.to_s }', '#{ location.longitude.to_s }'),
+-#              map: map,
+-#
+-#              // App Variables
+-#              markerId: #{ location.location_query_pos },
+-#              nombre: 'nombre',
+-#              icon: '#{ location.icon }',
+-#
+-#              address: '#{ location.address }',
+-#
+-#              // Esta sección se usa para la parte estándar
+-#              distancias_anteriores_raw: new Array(),
+-#              distancias_anteriores_string: new Array(),
+-#
+-#              tiempos_anteriores_raw: new Array(),
+-#              tiempos_anteriores_string: new Array(),
+-#
+-#              // Esta sección se usa para la parte internacional
+-#              costos_anteriores: new Array()
+-#          });
+-#      markers.push(marker);
+-#
+-#- # Movemos la pantalla al mapa
+-#:javascript
+-#  $('.imagen-taxi').click(function() {
+-#    $('html, body').animate({
+-#          scrollTop: $('#map').offset().top - 100
+-#        }, 800);
+-#  });
+-#  autoCenter();

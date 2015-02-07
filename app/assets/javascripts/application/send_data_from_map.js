@@ -45,7 +45,7 @@ function sendData() {
     contentType: 'application/json',
     data: json,
     type: 'POST',
-    url: '/sending_data'
+    url: '/api/queries/'
   });
 
 }

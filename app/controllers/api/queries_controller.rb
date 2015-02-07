@@ -1,9 +1,21 @@
-class DataController < ApplicationController
-  skip_before_filter :verify_authenticity_token,  only: [ :process_data, :save_query ]
+class Api::QueriesController < ActionController::Base
 
-  before_filter :crear_matriz_de_distancias,      only: [ :process_data ]
-  append_before_filter :crear_matriz_de_costos,   only: [ :process_data ]
+  API_VERSION = '1.0.0'
 
+  skip_before_filter :verify_authenticity_token,  only: [ :new, :create ]
+  before_filter :crear_matriz_de_distancias,      only: [ :create ]
+  before_filter :crear_matriz_de_costos,          only: [ :create ]
+
+
+  #
+  # Mediante este método es posible validar si la API está funcionando bien.
+  #
+  def index
+    render json: {
+      data: 'The API is working properly.',
+      version: API_VERSION
+    }
+  end
 
   #
   # El algoritmo evolutivo necesita de 4 parametros para funcionar.
@@ -15,8 +27,8 @@ class DataController < ApplicationController
   # Además, utilizamos un comando para filtrar resultados y brindamos los
   # mismos de forma amigable.
   #
-  def process_data
-
+  # @old process_data
+  def create
     # Creamos y almacenamos la entidad de query
     @query = Query.create(
         cantidad_marcadores:  cantidad_marcadores,
@@ -33,7 +45,6 @@ class DataController < ApplicationController
           query:              @query,
           location_query_pos: data_marcador['location_query_pos'],
           latitude:           data_marcador['latitude'],
-          longitude:          data_marcador['longitude'],
           longitude:          data_marcador['longitude'],
           icon:               data_marcador['icon'],
           address:            data_marcador['address']
@@ -74,23 +85,8 @@ class DataController < ApplicationController
     # Renderizamos la nueva pagina
     respond_to do |format|
       format.js {
-        render text: "window.location.replace('/show_data?query_id=#{ @query.id }');"
+        render text: "window.location.replace('/queries/#{ @query.id }');"
       }
-    end
-  end
-
-  #
-  # Esta acción muestra la información para una determinada query. En caso que no tenga solución
-  # la levanta de un archivo de texto, y la muestra en pantalla. Además, almacena dicha información
-  # para futuros accesos.
-  #
-  def show_data
-    @query = Query.find(params[:query_id])
-    @marcadores = @query.locations
-
-    if !@query.shared? && @query.user != current_user
-      flash[:alert] = 'No puedes ingresar a esta consulta.'
-      redirect_to :root
     end
   end
 
@@ -98,7 +94,8 @@ class DataController < ApplicationController
   # Esta acción almacena la solución del algoritmos en la query, para poder
   # acceder más tarde sin los archivos.
   #
-  def save_query
+  # @old save_query
+  def update
     query = Query.find(params[:query_id])
     query.solution = params[:solution]
     query.costo_total = params[:costo]
@@ -107,13 +104,8 @@ class DataController < ApplicationController
     render nothing: true
   end
 
-  def share_query
-    @query = Query.find(params[:query_id])
-    @query.shared = true
-    @query.save!
-  end
-
   private
+
   def archivo_de_configuracion
     @archivo_configuracion ||= AE_CONFIG['archivo_de_configuracion']
   end

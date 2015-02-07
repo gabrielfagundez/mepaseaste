@@ -7,16 +7,16 @@ Mepaseaste::Application.routes.draw do
 
   devise_for :users
 
-  # Manejo de consultas
-  post '/sending_data'  => 'data#process_data'
-  post '/save_query'    => 'data#save_query'
-  get '/show_data'      => 'data#show_data'
+  resources :queries, only: [:show]
 
-  # Acerca De
   resources :about, only: [:index] do
     collection do
       get 'ga'
     end
+  end
+
+  namespace :api do
+    resources :queries
   end
 
 end
