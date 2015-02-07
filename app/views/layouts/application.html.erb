@@ -33,7 +33,9 @@
     <%= render partial: 'shared/header' %>
 
     <!--Body-->
-    <%= yield %>
+    <div ng-app='MePaseaste' >
+      <%= yield %>
+    </div>
 
     <!--Footer-->
     <%= render partial: 'shared/footer' %>

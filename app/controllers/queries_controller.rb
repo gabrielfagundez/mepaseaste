@@ -7,7 +7,14 @@ class QueriesController < ApplicationController
   #
   def show
     @query = Query.find(params[:id])
-    @marcadores = @query.locations
+    respond_to do |format|
+      format.html {
+        @marcadores = @query.locations
+      }
+      format.json {
+        render json: JSON.parse(Query.first.to_json).merge({ marcadores: Query.first.locations }).to_json
+      }
+    end
   end
 
 end

@@ -19,3 +19,10 @@
 //= require application/get_distance
 //= require home
 //= require pages/favourite_locations
+
+// Angular App
+//= require angular/app
+//= require angular/routes
+//= require_tree ./angular/directives
+//= require_tree ./angular/controllers
+//= require_tree ./angular/models
