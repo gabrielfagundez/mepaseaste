@@ -13,5 +13,6 @@
  *= require 'mainpage/home'
  *= require 'mainpage/about'
  *= require 'mainpage/data'
+ *= require 'mainpage/queries'
  *= require 'mainpage/shared'
  */
