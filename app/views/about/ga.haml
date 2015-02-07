@@ -1,0 +1,79 @@
+#about
+  .container
+    .about-section
+      .title
+        %h1.centered Algoritmos Evolutivos
+        %h2.centered Inteligencia computacional aplicada a problemas de optimización
+
+      .malva-container
+        .row
+          .col-lg-2.col-sm-offset-5
+            %a{ href: 'http://themalvaproject.github.io' }
+              = image_tag 'about/malva_icon.png', width: '100%'
+          .col-sm-12
+            .about-text
+              %strong{ style: 'font-size: 14px' }
+                The Malva Project - Un framework para inteligencia computacional usado y actualmente desarrollado por MePaseasteUY
+      .row
+        .separator
+      .row
+        .col-lg-12.columns
+          .about-text
+            La computación evolutiva es una rama de la inteligencia artificial que involucra problemas de optimización
+            combinatoria.
+            Se inspira en los mecanismos de la Evolución biológica.
+      .row
+        .separator
+      .row
+        .col-lg-12.columns
+          .about-text
+            Durante los años 50 se comenzó a aplicar los principios de Charles Darwin en la resolución de problemas. Durante
+            los años 60 y 70, varias corrientes de investigación independientes comenzaron a formar lo que ahora se conoce
+            como computación evolutiva:
+            %li Programación evolutiva
+            %li Estrategias Evolutivas
+            %li Algoritmos genéticos
+      .row
+        .separator
+      .row
+        .col-lg-12.columns
+          .about-text
+            La programación evolutiva nació en la década de 1960 y su creador fue Lawrence J. Fogel.
+            %br/
+            Este desarrollo comenzó como un esfuerzo encaminado a crear inteligencia artificial basado en la evolución de
+            máquinas de estado finitas.
+      .row
+        .separator
+      .row
+        .col-lg-12.columns
+          .about-text
+            Las estrategias evolutivas fueron propuestas por Ingo Rechenberg y Hans-Paul Schwefel en la década de 1970.
+            Su principal objetivo era el de optimizar de parámetros.
+            Los algoritmos genéticos fueron propuestos por John H. Holland en 1975 y su motivación inicial fue la de
+            proponer un modelo general de proceso adaptable.
+      .row
+        .separator
+      .row
+        .col-lg-12.columns
+          .about-text
+            De manera general la computación evolutiva toma como base las ideas de la evolución propuestas por Charles Darwin
+            y en los descubrimientos realizados por Gregor Mendel en el campo de la genética. Podemos apreciar el pseudocódigo
+            a la derecha.
+      .row
+        .separator
+      .row
+        .col-lg-12.columns
+          .about-text
+            Pseudocódigo de un Algoritmo Evolutivo:
+          .row
+            .col-sm-6.col-sm-offset-3
+              %pre
+                :preserve
+                  t:= 0
+                  Inicialización P(t)
+                  Evaluación P(t)
+                  Hacer
+                  P'(t):= variación[P(t)]
+                  Evaluación[P'(t)]
+                  P(t+1):= selección[P'(t) U Q]
+                  t:= t+1
