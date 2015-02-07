@@ -12,25 +12,11 @@ Mepaseaste::Application.routes.draw do
   post '/save_query'    => 'data#save_query'
   get '/show_data'      => 'data#show_data'
 
-  # Manejo del perfil
-  get '/profile'        => 'profile#show'
-
-  # Consultas
-  resources :queries, only: [ :index, :destroy, :show ]
-
-  # Ubicaciones preferidas
-  resources :favourite_locations
-
   # Acerca De
-  resources :about, only: :index do
+  resources :about, only: [:index] do
     collection do
       get 'ga'
     end
-  end
-
-  # API para desarrollo mobile
-  namespace :api do
-    resources :queries
   end
 
 end

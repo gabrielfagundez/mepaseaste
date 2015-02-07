@@ -16,10 +16,6 @@ gem 'httparty'
 gem 'haml'
 gem 'sass-rails', '~> 4.0.0'
 
-# Admin Page with users
-gem 'devise'
-gem 'rails_admin'
-
 group :production do
   gem 'rails_12factor'
   gem 'pg'
