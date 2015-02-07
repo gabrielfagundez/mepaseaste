@@ -62,7 +62,7 @@ function createMarker(event) {
   }
   else {
     html = '<div class="col-xs-4">';
-    name = 'Pasajero #' + marker.markerId
+    name = 'Pasajero #' + (marker.markerId  - 1);
     color = 'red';
   }
 
