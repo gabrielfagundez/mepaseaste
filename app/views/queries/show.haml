@@ -24,11 +24,20 @@
     .centered
       %h2 Se formaron los siguientes taxis:
 
-    .row.mt.centered{ 'ng-repeat' => 'taxi in taxis' }
-      %h4 Taxi {{ $index + 1 }}
-      %img{ 'ng-src' => '{{ staticMapImageUrl(taxi) }}' }
+    .row.mt.centered
+      .col-sm-6.col-xs-12.taxi{ 'ng-repeat' => 'taxi in taxis' }
+        %h4 Taxi {{ $index + 1 }}
+        %hr
+        %h5
+          Este taxi se hará cargo de los pasajeros
+          %b {{ pasajeros(taxi) }}
+          siguiendo la ruta que se muestra a continuación.
+        %hr
+        %img{ 'ng-src' => '{{ staticMapImageUrl(taxi) }}' }
+        %hr
 
     .row.mt.centered
+      %h2 Marcadores ingresados para esta consulta:
       = render partial: 'shared/map'
 
 
@@ -52,40 +61,3 @@
 -#        t.push(#{ pasajero });
 -#    :javascript
 -#      taxis.push(t);
--#
--#- # Agregamos los marcadores al arreglo global
--#- if @query.solution
--#  - @query.locations.each do |location|
--#    :javascript
--#      marker = new google.maps.Marker({
--#              draggable: false,
--#              position: new google.maps.LatLng('#{ location.latitude.to_s }', '#{ location.longitude.to_s }'),
--#              map: map,
--#
--#              // App Variables
--#              markerId: #{ location.location_query_pos },
--#              nombre: 'nombre',
--#              icon: '#{ location.icon }',
--#
--#              address: '#{ location.address }',
--#
--#              // Esta sección se usa para la parte estándar
--#              distancias_anteriores_raw: new Array(),
--#              distancias_anteriores_string: new Array(),
--#
--#              tiempos_anteriores_raw: new Array(),
--#              tiempos_anteriores_string: new Array(),
--#
--#              // Esta sección se usa para la parte internacional
--#              costos_anteriores: new Array()
--#          });
--#      markers.push(marker);
--#
--#- # Movemos la pantalla al mapa
--#:javascript
--#  $('.imagen-taxi').click(function() {
--#    $('html, body').animate({
--#          scrollTop: $('#map').offset().top - 100
--#        }, 800);
--#  });
--#  autoCenter();
