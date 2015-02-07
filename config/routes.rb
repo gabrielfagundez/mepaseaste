@@ -5,8 +5,6 @@ Mepaseaste::Application.routes.draw do
   get 'landing' => 'home#landing'
   get 'app'     => 'home#app'
 
-  devise_for :users
-
   resources :queries, only: [:show]
 
   resources :about, only: [:index] do
