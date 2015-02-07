@@ -1,6 +1,14 @@
+# Main assets
 asset 'jquery', '2.1.1'
 asset 'jquery-ui', '1.11.2'
 asset 'jquery-ujs', '1.0.2'
+
+# Angular
+asset 'angular', '1.3.9'
+asset 'angular-route', '1.3.9'
+asset 'angular-resource', '1.3.9'
+
+# Estilos
 asset 'bootstrap', '3.3.1'
 asset 'ionicons', '1.5.2'
 asset 'font-awesome', '4.2.0'
