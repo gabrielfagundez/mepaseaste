@@ -16,11 +16,10 @@ gem 'httparty'
 gem 'haml'
 gem 'sass-rails', '~> 4.0.0'
 
+# Plugin handler
+gem 'bower-rails'
+
 group :production do
   gem 'rails_12factor'
   gem 'pg'
-end
-
-group :development do
-  gem 'bower-rails'
 end
