@@ -1,4 +1,20 @@
 #queries {
+  .taxi-section, .map-section {
+    .mini-title {
+      margin-bottom: 40px;
+      color: #4180C8;
+      font-size: 12px;
+      border-bottom: 1px solid #4180C8;
+    }
+    width: 100%;
+  }
+  .taxi-section {
+    padding: 50px 0;
+    background-color: #ffffff;
+  }
+  .map-section {
+
+  }
   .taxi {
     margin-bottom: 50px;
   }

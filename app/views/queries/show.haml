@@ -21,24 +21,30 @@
         .share
           %a Compartir
 
-    .centered
-      %h2 Se formaron los siguientes taxis:
+  .taxi-section
+    .container
+      .centered
+        .mini-title TAXIS
+        %h2 Se formaron los siguientes taxis:
 
-    .row.mt.centered
-      .col-sm-6.col-xs-12.taxi{ 'ng-repeat' => 'taxi in taxis' }
-        %h4 Taxi {{ $index + 1 }}
-        %hr
-        %h5
-          Este taxi se hará cargo de los pasajeros
-          %b {{ pasajeros(taxi) }}
-          siguiendo la ruta que se muestra a continuación.
-        %hr
-        %img{ 'ng-src' => '{{ staticMapImageUrl(taxi) }}' }
-        %hr
+      .row.mt.centered
+        .col-sm-6.col-xs-12.taxi{ 'ng-repeat' => 'taxi in taxis' }
+          %h4 Taxi {{ $index + 1 }}
+          %hr
+          %h5
+            Este taxi se hará cargo de los pasajeros
+            %b {{ pasajeros(taxi) }}
+            siguiendo la ruta que se muestra a continuación.
+          %hr
+          %img{ 'ng-src' => '{{ staticMapImageUrl(taxi) }}' }
+          %hr
 
-    .row.mt.centered
-      %h2 Marcadores ingresados para esta consulta:
-      = render partial: 'shared/map'
+  .map-section
+    .container
+      .row.mt.centered
+        .mini-title MARCADORES
+        %h2 Marcadores ingresados para esta consulta:
+        = render partial: 'shared/map'
 
 
 -#- # Inicializamos el mapa
