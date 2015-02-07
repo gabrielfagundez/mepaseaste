@@ -18,9 +18,11 @@
 </head>
 
 <% if controller_name == 'home' %>
-    <body onload="initialize(true, false)">
+  <body onload="initialize(true, false)">
+<% elsif controller_name == 'queries' %>
+  <body onload="initialize(false, false)">
 <% else %>
-    <body>
+  <body>
 <% end %>
 
     <div class="progress-indicator hide">

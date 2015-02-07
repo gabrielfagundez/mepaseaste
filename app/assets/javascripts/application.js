@@ -5,6 +5,11 @@
 //= require bootstrap/dist/js/bootstrap
 //= require bootstrap-switch/dist/js/bootstrap-switch.js
 
+// Angular
+//= require angular/angular
+//= require angular-route/angular-route
+//= require angular-resource/angular-resource
+
 //= require shared/main
 //= require shared/map
 //= require shared/markers_handling
@@ -13,5 +18,4 @@
 //= require application/send_data_from_map
 //= require application/get_distance
 //= require home
-//= require data
 //= require pages/favourite_locations
