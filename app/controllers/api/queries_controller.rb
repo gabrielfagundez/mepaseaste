@@ -33,7 +33,6 @@ class Api::QueriesController < ActionController::Base
     @query = Query.create(
         cantidad_marcadores:  cantidad_marcadores,
         tipo_tarifa:          tipo_tarifa,
-        user:                 current_user,
         distancias:           @matriz_distancias,
         costos:               @matriz_costos,
         shared:               false
