@@ -1,14 +1,5 @@
 class HomeController < ApplicationController
 
-  def landing
-    render layout: false
-  end
-
-  def app
-    delete_previous_run
-    render :index
-  end
-
   def index
     delete_previous_run
   end
