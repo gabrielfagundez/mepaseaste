@@ -1,52 +1,54 @@
-.send-data {
-  background-color: #45b39c;
-  radius: 25px 25px;
-  text-align: center;
-  padding: 10px 10px 10px 10px;
-  .switch {
-    margin-top: 1em;
+#home {
+  .send-data {
+    background-color: #45b39c;
+    radius: 25px 25px;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    .switch {
+      margin-top: 1em;
+    }
+    .big, .small {
+      color: #ffffff;
+      cursor: pointer;
+    }
+    .big {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .small { font-size: 14px }
   }
-  .big, .small {
-    color: #ffffff;
-    cursor: pointer;
-  }
-  .big {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  .small { font-size: 14px }
-}
 
-#markers {
-  margin-top: 2em;
-  .markers {
-    .marker {
-      border: 1px solid #c6c6c6;
-      padding: 1em;
-      margin: 1em;
-      .name { font-weight: bold }
-      .address-box {
-        font-size: 11px;
-        padding: 0;
-      }
-      .options {
-        margin-top: 1em;
-        input {
-          display: inline-block;
+  #markers {
+    margin-top: 2em;
+    .markers {
+      .marker {
+        border: 1px solid #c6c6c6;
+        padding: 1em;
+        margin: 1em;
+        .name { font-weight: bold }
+        .address-box {
+          font-size: 11px;
+          padding: 0;
         }
-        label {
-          display: inline-block;
-          font-size: 12px;
+        .options {
+          margin-top: 1em;
+          input {
+            display: inline-block;
+          }
+          label {
+            display: inline-block;
+            font-size: 12px;
+          }
         }
       }
     }
-  }
-  .no-markers {
-    border: 1px solid #c6c6c6;
-    padding: 2em;
-  }
-  #sin-datos {
-    border: 1px solid #CCCCCC;
-    padding: 2em;
+    .no-markers {
+      border: 1px solid #c6c6c6;
+      padding: 2em;
+    }
+    #sin-datos {
+      border: 1px solid #CCCCCC;
+      padding: 2em;
+    }
   }
 }

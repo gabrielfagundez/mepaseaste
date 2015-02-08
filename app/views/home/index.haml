@@ -1,39 +1,40 @@
-#headerwrap
-  .container
-    .row.centered
-      .col-lg-6.col-lg-offset-3
-        %h1 Los viajes compartidos en taxis nunca fueron tan fáciles.
-        %form.form-inline{ role: 'form' }
-          .form-group
-          %button.btn.btn-warning.btn-lg{ type: 'submit' } Empezar!
+#home{ 'ng-controller' => 'HomeController ' }
+  #headerwrap
+    .container
+      .row.centered
+        .col-lg-6.col-lg-offset-3
+          %h1 Los viajes compartidos en taxis nunca fueron tan fáciles.
+          %form.form-inline{ role: 'form' }
+            .form-group
+            %button.btn.btn-warning.btn-lg{ type: 'submit', 'ng-click' => 'handleStartButton()' } Empezar!
 
-.container
-  .row.mt.centered
-    .col-lg-12
-      %hr
-      %h1
-        Calcula tu viaje compartido y ahorra dinero
-      %h3
-        Ingresa el origen en el mapa, seguido de los destinos. Luego presiona enviar y MePaseaste.UY calculará la mejor
-        distribución de pasajeros y taxis con algoritmos de inteligencia computacional para que ahorres en tu viaje.
-      %hr
+  .container#scroll-div
     .row.mt.centered
-      %br
-      %br
-
-    .col-lg-12
-      = render template: 'shared/_map'
-
-
-      .send-data
-        %a.big{ onclick: 'sendData();' } Calcular
+      .col-lg-12
+        %hr
+        %h1
+          Calcula tu viaje compartido y ahorra dinero
+        %h3
+          Ingresa el origen en el mapa, seguido de los destinos. Luego presiona enviar y MePaseaste.UY calculará la mejor
+          distribución de pasajeros y taxis con algoritmos de inteligencia computacional para que ahorres en tu viaje.
+        %hr
+      .row.mt.centered
         %br
-        %a.small{ onclick: 'sendData();' } Ten paciencia, la consulta puede demorar
-        .switch
-          %input{ id: 'tarifa_diurna', name: 'switch_accurance', type: 'checkbox', checked: 'true', class: 'tarifa' }
+        %br
 
-    = render partial: 'markers'
+      .col-lg-12
+        = render template: 'shared/_map'
 
-.hide
-  = image_tag '/icon/start_marker.png'
-  = image_tag '/icon/end_marker.png'
+
+        .send-data
+          %a.big{ onclick: 'sendData();' } Calcular
+          %br
+          %a.small{ onclick: 'sendData();' } Ten paciencia, la consulta puede demorar
+          .switch
+            %input{ id: 'tarifa_diurna', name: 'switch_accurance', type: 'checkbox', checked: 'true', class: 'tarifa' }
+
+      = render partial: 'markers'
+
+  .hide
+    = image_tag '/icon/start_marker.png'
+    = image_tag '/icon/end_marker.png'
