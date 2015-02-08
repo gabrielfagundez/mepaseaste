@@ -35,7 +35,8 @@ class Api::QueriesController < ActionController::Base
         tipo_tarifa:          tipo_tarifa,
         distancias:           @matriz_distancias,
         costos:               @matriz_costos,
-        shared:               false
+        shared:               false,
+        resolved:             false
     )
 
     # Almacenamos la información de los marcadores

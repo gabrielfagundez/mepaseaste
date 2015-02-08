@@ -15,7 +15,6 @@
 //= require shared/markers_handling
 //= require shared/filling_with_data
 //= require shared/routes_handling
-//= require application/send_data_from_map
 //= require application/get_distance
 //= require home
 //= require pages/favourite_locations
