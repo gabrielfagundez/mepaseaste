@@ -81,12 +81,16 @@ class Api::QueriesController < ActionController::Base
       puts '### ### ### ###'
     end
 
-    # Renderizamos la nueva pagina
-    respond_to do |format|
-      format.js {
-        render text: "window.location.replace('/queries/#{ @query.id }');"
+    render json: {
+      status: 'success',
+      data: {
+        query: @query
       }
-    end
+    }
+  rescue
+    render json: {
+      status: 'fail'
+    }
   end
 
   #

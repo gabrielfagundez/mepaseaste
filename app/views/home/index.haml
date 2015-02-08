@@ -27,11 +27,11 @@
 
 
         .send-data
-          %a.big{ onclick: 'sendData();' } Calcular
+          %a.big{ 'ng-click' => 'executeGA()' } Calcular
           %br
-          %a.small{ onclick: 'sendData();' } Ten paciencia, la consulta puede demorar
+          .small Ten paciencia, la consulta puede demorar
           .switch
-            %input{ id: 'tarifa_diurna', name: 'switch_accurance', type: 'checkbox', checked: 'true', class: 'tarifa' }
+            %input{ id: 'rateType', name: 'switch_accurance', type: 'checkbox', checked: 'true', class: 'tarifa' }
 
       = render partial: 'markers'
 
