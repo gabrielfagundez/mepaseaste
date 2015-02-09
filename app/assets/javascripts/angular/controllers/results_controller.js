@@ -96,7 +96,6 @@ app.controller('ResultsController', ['$scope', '$location', 'Query', 'TextResult
       $scope.taxisCount   = data.solution.length;
       $scope.taxis        = data.solution;
     } else {
-      console.log('Retrieving from text file');
       TextResultsHelper.process(data.id)
     }
   }

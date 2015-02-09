@@ -4,15 +4,11 @@ app.factory('TextResultsHelper', ['$rootScope', function($rootScope) {
   var greedyResults;
 
   var fileExists = function(file_name, query_id) {
-    console.log('JS Debug - Retrieving', file_name);
-    console.log('JS Debug - Query ID:', query_id);
-
     $.ajax({
       url: file_name,
       type:'HEAD',
       error: function() {
         setTimeout(function() {
-          console.log('JS Debug - AE file retrieving failed');
           fileExists(file_name, query_id);
         }, 20);
       },
@@ -21,10 +17,6 @@ app.factory('TextResultsHelper', ['$rootScope', function($rootScope) {
           url: file_name,
           success: function(data) {
             if(data.match(/Solution/)) {
-
-              console.log('JS Debug - Solution of the AE :');
-              console.log(data);
-              console.log('JS Debug - END :');
 
               AEResults = data;
 
@@ -37,7 +29,6 @@ app.factory('TextResultsHelper', ['$rootScope', function($rootScope) {
               })
             } else {
               setTimeout(function() {
-                console.log('JS Debug - AE file retrieving failed');
                 fileExists(file_name, query_id);
               }, 100);
             }
@@ -129,7 +120,7 @@ app.factory('TextResultsHelper', ['$rootScope', function($rootScope) {
     //    costo = "518.76"
     var costo = data.substr(11).substr(pos_F + 9);
 
-    // Convertimos a JSON
+    // Conconsvertimos a JSON
     obj.costo = costo;
     var json = JSON.stringify(obj);
 
@@ -277,10 +268,6 @@ app.factory('TextResultsHelper', ['$rootScope', function($rootScope) {
     //    costo = data.substr(11).substr(pos_F + 9);
     //    costo = "518.76"
     var costo = data.substr(10).substr(pos_F + 9);
-
-    console.log('El costo del viaje es de: ')
-    console.log(costo);
-
     return costo;
   };
 
