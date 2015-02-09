@@ -22,9 +22,6 @@ app.controller('ResultsController', ['$scope', '$location', 'Query', 'TextResult
     if(width > 750)
       width = width / 2;
     var passengers = [$scope.markers[0]];
-    var passengers = [];
-
-    console.log($scope.markers)
 
     $.each(taxi, function (index, taxiPassenger) {
       var marker = findMarker(taxiPassenger, $scope.markers);
@@ -32,9 +29,7 @@ app.controller('ResultsController', ['$scope', '$location', 'Query', 'TextResult
     });
 
     var latLng = '';
-    console.log('passengers', passengers);
     $.each(passengers, function (index, passenger) {
-      console.log(passenger);
       latLng += '|' + passenger.latitude + ',' + passenger.longitude;
     });
     var url = 'http://maps.googleapis.com/maps/api/staticmap?size=' + width + 'x300&path=color:0x0000ff|weight:5' + latLng;
@@ -66,7 +61,7 @@ app.controller('ResultsController', ['$scope', '$location', 'Query', 'TextResult
   function findMarker(id, markers) {
     var marker;
     $.each(markers, function(index, m) {
-      if(parseInt(m.location_query_pos) == parseInt(id))
+      if((parseInt(m.location_query_pos) + 1) == parseInt(id))
         marker = m;
     });
     return marker;
