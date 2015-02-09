@@ -17,6 +17,15 @@ class Api::QueriesController < ActionController::Base
     }
   end
 
+  def show
+    query = Query.find(params[:id])
+    render json: {
+       data: {
+           query: query
+       }
+    }
+  end
+
   #
   # El algoritmo evolutivo necesita de 4 parametros para funcionar.
   #   - La ruta del archivo binario a ser ejecutado.
