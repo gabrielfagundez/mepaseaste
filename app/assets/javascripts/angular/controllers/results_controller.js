@@ -18,6 +18,7 @@ app.controller('ResultsController', ['$scope', '$location', 'Query', 'TextResult
   });
 
   $scope.staticMapImageUrl = function (taxi) {
+    console.log('Armando taxi...', taxi)
     var width = $('#queries .container').width();
     if(width > 750)
       width = width / 2;
@@ -65,12 +66,12 @@ app.controller('ResultsController', ['$scope', '$location', 'Query', 'TextResult
         marker = m;
     });
     return marker;
-  };
+  }
 
   function getIdFromRoute() {
     var arr = $location.path().split('/');
     return arr[arr.length - 1];
-  };
+  }
 
   function handleResourceSuccess(data) {
     $scope.rateType     = data.tipo_tarifa;

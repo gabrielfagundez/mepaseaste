@@ -1,6 +1,6 @@
 // Global variables
 var map;
-var zoom = 10;
+var zoom = 11;
 var infoWindow = new google.maps.InfoWindow();
 var markerId = 1;
 var taxis = new Array();
