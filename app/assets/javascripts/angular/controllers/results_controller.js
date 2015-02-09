@@ -73,8 +73,6 @@ app.controller('ResultsController', ['$scope', '$location', 'Query', 'TextResult
   };
 
   function handleResourceSuccess(data) {
-    console.log('JS - Debug: Marcadores de la consulta', data.marcadores)
-
     $scope.rateType     = data.tipo_tarifa;
     $scope.markersCount = data.cantidad_marcadores;
     $scope.markers      = data.marcadores;
