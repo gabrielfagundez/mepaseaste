@@ -88,13 +88,13 @@ class Api::QueriesController < ActionController::Base
         query: @query
       }
     }
-  rescue $!
+  rescue Exception => ex
     puts '### ### ###'
     puts '### ### ###'
     puts '### ### ###'
     puts '### ### ###'
     puts 'Exception raised!'
-    puts $!.message
+    puts ex.message
     puts '### ### ###'
     puts '### ### ###'
     puts '### ### ###'
