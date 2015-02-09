@@ -2,7 +2,7 @@ class Api::QueriesController < ActionController::Base
 
   API_VERSION = '1.0.0'
 
-  skip_before_filter :verify_authenticity_token,  only: [ :new, :create ]
+  skip_before_filter :verify_authenticity_token,  only: [ :new, :create, :update ]
   before_filter :crear_matriz_de_distancias,      only: [ :create ]
   before_filter :crear_matriz_de_costos,          only: [ :create ]
 
@@ -89,18 +89,9 @@ class Api::QueriesController < ActionController::Base
       }
     }
   rescue Exception => ex
-    puts '### ### ###'
-    puts '### ### ###'
-    puts '### ### ###'
-    puts '### ### ###'
-    puts 'Exception raised!'
-    puts ex.message
-    puts '### ### ###'
-    puts '### ### ###'
-    puts '### ### ###'
-    puts '### ### ###'
     render json: {
-      status: 'fail'
+      status: 'fail',
+      exception: ex.message
     }
   end
 

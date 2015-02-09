@@ -138,7 +138,7 @@ app.factory('TextResultsHelper', ['$rootScope', function($rootScope) {
       contentType: 'application/json',
       data: json,
       type: 'PATCH',
-      url: '/queries/' + query_id,
+      url: '/api/queries/' + query_id,
       success: function() {
         $rootScope.$broadcast('queryParsed', { query_id: query_id })
       }
@@ -236,7 +236,7 @@ app.factory('TextResultsHelper', ['$rootScope', function($rootScope) {
       contentType: 'application/json',
       data: json,
       type: 'PATCH',
-      url: '/queries/' + query_id,
+      url: '/api/queries/' + query_id,
       success: function() {
         $rootScope.$broadcast('queryParsed', { query_id: query_id })
       }
