@@ -104,6 +104,7 @@ class Api::QueriesController < ActionController::Base
     query = Query.find(params[:query_id])
     query.solution = params[:solution]
     query.costo_total = params[:costo]
+    query.resolved = true
     query.save!
 
     render nothing: true

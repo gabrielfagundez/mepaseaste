@@ -14,34 +14,7 @@ app.controller('ResultsController', ['$scope', '$location', 'Query', 'TextResult
 
 
   Query.get({ id: $scope.queryId }, function(data) {
-    console.log(data);
-
-    $scope.rateType     = data.tipo_tarifa;
-    $scope.markersCount = data.cantidad_marcadores;
-    $scope.markers      = data.marcadores;
-
-    $.each(data.marcadores, function (index, marker) {
-      marker = new google.maps.Marker({
-        draggable: false,
-        position: new google.maps.LatLng(marker.latitude, marker.longitude),
-        map: map,
-
-        // App Variables
-        markerId: marker.id,
-        icon: marker.icon,
-        address: marker.address
-      });
-      markers.push(marker);
-    });
-
-    if(data.resolved) {
-      $scope.totalCost    = '$' + data.costo_total;
-      $scope.taxisCount   = data.solution.length;
-      $scope.taxis        = data.solution;
-    } else {
-      console.log('Retrieving from text file');
-      TextResultsHelper.process(data.id)
-    }
+    handleResourceSuccess(data);
   });
 
   $scope.staticMapImageUrl = function (taxi) {
@@ -80,9 +53,8 @@ app.controller('ResultsController', ['$scope', '$location', 'Query', 'TextResult
   };
 
   $scope.$on('queryParsed', function(data) {
-    console.log('queryParsed triggered with', data);
     Query.get({ id: $scope.queryId }, function(data) {
-      console.log(data);
+      handleResourceSuccess(data)
     });
   });
 
@@ -98,6 +70,35 @@ app.controller('ResultsController', ['$scope', '$location', 'Query', 'TextResult
   function getIdFromRoute() {
     var arr = $location.path().split('/');
     return arr[arr.length - 1];
+  };
+
+  function handleResourceSuccess(data) {
+    $scope.rateType     = data.tipo_tarifa;
+    $scope.markersCount = data.cantidad_marcadores;
+    $scope.markers      = data.marcadores;
+
+    $.each(data.marcadores, function (index, marker) {
+      marker = new google.maps.Marker({
+        draggable: false,
+        position: new google.maps.LatLng(marker.latitude, marker.longitude),
+        map: map,
+
+        // App Variables
+        markerId: marker.id,
+        icon: marker.icon,
+        address: marker.address
+      });
+      markers.push(marker);
+    });
+
+    if(data.resolved) {
+      $scope.totalCost    = '$' + data.costo_total;
+      $scope.taxisCount   = data.solution.length;
+      $scope.taxis        = data.solution;
+    } else {
+      console.log('Retrieving from text file');
+      TextResultsHelper.process(data.id)
+    }
   }
 
 }]);
