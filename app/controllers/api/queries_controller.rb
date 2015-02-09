@@ -88,7 +88,17 @@ class Api::QueriesController < ActionController::Base
         query: @query
       }
     }
-  rescue
+  rescue $!
+    puts '### ### ###'
+    puts '### ### ###'
+    puts '### ### ###'
+    puts '### ### ###'
+    puts 'Exception raised!'
+    puts $!.message
+    puts '### ### ###'
+    puts '### ### ###'
+    puts '### ### ###'
+    puts '### ### ###'
     render json: {
       status: 'fail'
     }
