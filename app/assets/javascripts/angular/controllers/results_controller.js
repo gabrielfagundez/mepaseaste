@@ -61,7 +61,7 @@ app.controller('ResultsController', ['$scope', '$location', 'Query', 'TextResult
   function findMarker(id, markers) {
     var marker;
     $.each(markers, function(index, m) {
-      if((parseInt(m.location_query_pos) + 1) == parseInt(id))
+      if((parseInt(m.location_query_pos) - 1) == parseInt(id))
         marker = m;
     });
     return marker;
