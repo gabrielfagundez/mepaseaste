@@ -1,4 +1,4 @@
-app.controller('HomeController', ['$scope', function($scope) {
+app.controller('HomeController', ['$scope', '$location', function($scope, $location) {
 
   $scope.handleStartButton = function () {
     $('html, body').animate({
@@ -15,8 +15,10 @@ app.controller('HomeController', ['$scope', function($scope) {
       data: json,
       type: 'POST',
       url: '/api/queries/'
-    }).done(function(data) {
-      console.log(data)
+    }).done(function(result) {
+      $scope.$apply(function() {
+        window.location.replace('/queries/' + result.data.query.id);
+      });
     });
   };
 

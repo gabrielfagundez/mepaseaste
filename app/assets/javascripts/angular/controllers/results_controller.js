@@ -1,4 +1,6 @@
-app.controller('ResultsController', ['$scope', 'Query', function($scope, Query) {
+app.controller('ResultsController', ['$scope', '$location', 'Query', 'TextResultsHelper', function($scope, $location, Query, TextResultsHelper) {
+
+  $scope.queryId = getIdFromRoute();
 
   // Variable que determina si los resultados se deben traer de un txt o no.
   $scope.resultsReady = false;
@@ -11,13 +13,12 @@ app.controller('ResultsController', ['$scope', 'Query', function($scope, Query) 
   $scope.markers = [];
 
 
-  Query.get({ id: 1 }, function(data) {
-    $scope.totalCost    = '$' + data.costo_total;
+  Query.get({ id: $scope.queryId }, function(data) {
+    console.log(data);
+
     $scope.rateType     = data.tipo_tarifa;
     $scope.markersCount = data.cantidad_marcadores;
-    $scope.taxisCount   = data.solution.length;
     $scope.markers      = data.marcadores;
-    $scope.taxis        = data.solution;
 
     $.each(data.marcadores, function (index, marker) {
       marker = new google.maps.Marker({
@@ -31,7 +32,16 @@ app.controller('ResultsController', ['$scope', 'Query', function($scope, Query) 
         address: marker.address
       });
       markers.push(marker);
-    })
+    });
+
+    if(data.resolved) {
+      $scope.totalCost    = '$' + data.costo_total;
+      $scope.taxisCount   = data.solution.length;
+      $scope.taxis        = data.solution;
+    } else {
+      console.log('Retrieving from text file');
+      TextResultsHelper.process(data.id)
+    }
   });
 
   $scope.staticMapImageUrl = function (taxi) {
@@ -64,10 +74,17 @@ app.controller('ResultsController', ['$scope', 'Query', function($scope, Query) 
     var pasajeros = '';
     $.each(taxi, function (index, pasajero) {
       pasajeros += pasajero + ', ';
-    })
+    });
 
     return pasajeros;
-  }
+  };
+
+  $scope.$on('queryParsed', function(data) {
+    console.log('queryParsed triggered with', data);
+    Query.get({ id: $scope.queryId }, function(data) {
+      console.log(data);
+    });
+  });
 
   function findMarker(id, markers) {
     var marker;
@@ -76,6 +93,11 @@ app.controller('ResultsController', ['$scope', 'Query', function($scope, Query) 
         marker = m;
     });
     return marker;
+  };
+
+  function getIdFromRoute() {
+    var arr = $location.path().split('/');
+    return arr[arr.length - 1];
   }
 
 }]);

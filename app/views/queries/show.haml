@@ -44,25 +44,3 @@
         .mini-title MARCADORES
         %h2 Marcadores ingresados para esta consulta:
         = render partial: 'shared/map'
-
-
--#- # Inicializamos el mapa
--#:javascript
--#  initialize(false, #{ @query.solution.blank? });
--#- if @query.solution.nil?
--#  :javascript
--#    fileExists('/#{ @query.id }/raw_results.txt', #{ @query.id })
--#- @marcadores.each do |marcador|
--#  :javascript
--#    addMarkerToResultPage('#{ marcador.latitude }', '#{ marcador.longitude }', '#{ marcador.icon }', '#{ marcador.address }', '#{ marcador.location_query_pos }');
--#
--#- # Si la solución proviene de la base, creamos la estructura javascript de los taxis
--#- if @query.solution
--#  - @query.solution.each do |taxi|
--#    :javascript
--#       t = new Array();
--#    - taxi.each do |pasajero|
--#      :javascript
--#        t.push(#{ pasajero });
--#    :javascript
--#      taxis.push(t);

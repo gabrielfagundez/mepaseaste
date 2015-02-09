@@ -13,7 +13,6 @@
 //= require shared/main
 //= require shared/map
 //= require shared/markers_handling
-//= require shared/filling_with_data
 //= require shared/routes_handling
 //= require application/get_distance
 //= require home
@@ -25,3 +24,4 @@
 //= require_tree ./angular/directives
 //= require_tree ./angular/controllers
 //= require_tree ./angular/models
+//= require_tree ./angular/helpers
