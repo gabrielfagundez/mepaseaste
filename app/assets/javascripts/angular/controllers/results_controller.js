@@ -18,7 +18,6 @@ app.controller('ResultsController', ['$scope', '$location', 'Query', 'TextResult
   });
 
   $scope.staticMapImageUrl = function (taxi) {
-    console.log('Armando taxi...', taxi)
     var width = $('#queries .container').width();
     if(width > 750)
       width = width / 2;
@@ -31,6 +30,7 @@ app.controller('ResultsController', ['$scope', '$location', 'Query', 'TextResult
 
     var latLng = '';
     $.each(passengers, function (index, passenger) {
+      console.log(passenger);
       latLng += '|' + passenger.latitude + ',' + passenger.longitude;
     });
     var url = 'http://maps.googleapis.com/maps/api/staticmap?size=' + width + 'x300&path=color:0x0000ff|weight:5' + latLng;
