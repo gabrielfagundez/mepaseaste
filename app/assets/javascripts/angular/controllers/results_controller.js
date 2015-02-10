@@ -58,6 +58,10 @@ app.controller('ResultsController', ['$scope', '$location', 'Query', 'TextResult
     });
   });
 
+  $scope.showSpinner = function() {
+    return $scope.taxis.length == 0
+  };
+
   function findMarker(id, markers) {
     var marker;
     $.each(markers, function(index, m) {

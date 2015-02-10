@@ -25,7 +25,12 @@
     .container
       .row.centered
         .mini-title TAXIS
-        %h2 Se formaron los siguientes taxis:
+        %h2{ 'ng-show' => '!showSpinner()' }
+          Se formaron los siguientes taxis:
+
+        .col-sm-12.col-xs-12.taxi{ 'ng-show' => 'showSpinner()' }
+          %h3 Calculando taxis.. Ten paciencia
+          = image_tag '/img/loading.gif', width: '50', height: '50'
 
         .col-sm-6.col-xs-12.taxi{ 'ng-repeat' => 'taxi in taxis' }
           %h4 Taxi {{ $index + 1 }}
