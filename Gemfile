@@ -18,6 +18,9 @@ gem 'httparty'
 gem 'haml'
 gem 'sass-rails', '~> 4.0.0'
 
+# Users & Admin
+gem 'devise'
+
 # Plugin handler
 gem 'bower-rails'
 
