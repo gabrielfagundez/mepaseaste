@@ -1,3 +1,5 @@
+ruby '1.9.3'
+
 source 'https://rubygems.org'
 
 # We are using the latest version of each technology Yeah!
