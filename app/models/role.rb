@@ -8,9 +8,9 @@ class Role < ActiveRecord::Base
     amount_loaded = 0
     Role.delete_all
     ROLES_BY_PRIVILEGE.each_with_index do |role_name, index|
-      role = Role.where(:name => role_name).first
+      role = Role.where(name: role_name).first
       if role.blank?
-        role = Role.new(:name => role_name)
+        role = Role.new(name: role_name)
         role.id = index + 1
         role.save!
         amount_loaded += 1
