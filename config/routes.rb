@@ -5,7 +5,9 @@ Mepaseaste::Application.routes.draw do
   resources :queries, only: [:show]
   resources :about, only: [:index] do
     collection do
-      get 'ga'
+      get :algoritmos_evolutivos
+      get :premios
+      get :articulos
     end
   end
 
