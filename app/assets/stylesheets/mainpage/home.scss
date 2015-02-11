@@ -1,4 +1,10 @@
 #home {
+  #tour {
+    display: inline;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover { color: #45b39c }
+  }
   #headerwrap {
     background: image-url('background-big.jpg') no-repeat center center;
   }

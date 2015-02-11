@@ -1,6 +1,6 @@
 #home{ 'ng-controller' => 'HomeController ' }
   #headerwrap
-    .container
+    .container#step5
       .row.centered
         .col-lg-6.col-lg-offset-3
           %h1 Los viajes compartidos en taxis nunca fueron tan fáciles.
@@ -26,11 +26,11 @@
         = render template: 'shared/_map'
 
 
-        .send-data
+        .send-data#step3
           %a.big{ 'ng-click' => 'executeGA()' } Calcular
           %br
           .small Ten paciencia, la consulta puede demorar
-          .switch
+          #step2.switch
             %input{ id: 'rateType', name: 'switch_accurance', type: 'checkbox', checked: 'true', class: 'tarifa' }
 
       = render partial: 'markers'

@@ -3,6 +3,7 @@
 //= require jquery-ui/jquery-ui
 //= require jquery-ujs/src/rails
 //= require bootstrap/dist/js/bootstrap
+//= require bootstrap-tour/build/js/bootstrap-tour
 //= require bootstrap-switch/dist/js/bootstrap-switch.js
 
 // Angular
