@@ -22,6 +22,7 @@ var geocoder;
 
 // Esta variable hace referencia a la API KEY para usar la API de taxis internacional
 var apikey = 'd6apr3UDROuv';
+var tour;
 
 $(function () {
   $('.tarifa').bootstrapSwitch({
@@ -31,7 +32,7 @@ $(function () {
     offColor: 'danger'
   });
 
-  var tour = new Tour({
+  tour = new Tour({
     steps: [
       {
         element: '#map',
@@ -68,7 +69,6 @@ $(function () {
   });
 
   tour.init();
-  tour.start();
 
   $('#tour').click(function () {
     tour.restart();

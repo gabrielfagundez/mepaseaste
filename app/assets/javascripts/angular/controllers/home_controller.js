@@ -4,6 +4,7 @@ app.controller('HomeController', ['$scope', '$location', function($scope, $locat
     $('html, body').animate({
       scrollTop: $('#scroll-div').offset().top - 50
     }, 1000);
+    tour.start();
   };
 
   $scope.executeGA = function () {
