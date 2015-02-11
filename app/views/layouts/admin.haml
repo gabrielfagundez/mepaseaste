@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %title Admin | MePaseaste.UY
+    %link{:href => 'favicon.ico', :rel => "icon", :type => "image/ico"}/
+
+    = stylesheet_link_tag    'admin', media: 'all'
+    = javascript_include_tag 'admin'
+    = csrf_meta_tags
+
+  %body.skin-blue
+    = yield

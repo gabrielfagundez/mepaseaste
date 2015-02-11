@@ -1,0 +1,39 @@
+%header.header
+  = link_to 'MePaseaste.UY', admin_home_index_path, class: 'logo'
+
+  %nav.navbar.navbar-static-top{:role => "navigation"}
+    %a.navbar-btn.sidebar-toggle{"data-toggle" => "offcanvas", :href => "#", :role => "button"}
+      %span.sr-only Toggle navigation
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+
+.wrapper.row-offcanvas.row-offcanvas-left
+  %aside.left-side.sidebar-offcanvas
+    %section.sidebar
+      %ul.sidebar-menu
+        %li.active
+          = link_to admin_home_index_path, class: 'logo' do
+            %i.fa.fa-dashboard
+            %span Dashboard
+
+  %aside.right-side
+    %section.content-header
+      %h1
+        Dashboard
+        %small Control panel
+      %ol.breadcrumb
+        %li
+          %i.fa.fa-dashboard
+          Home
+        %li.active Dashboard
+    / Main content
+    %section.content
+      .row
+        %section.col-lg-6
+          = render partial: 'tarifa_dia'
+        %section.col-lg-6
+          = render partial: 'tarifa_noche'
+      .row
+        %section.col-lg-12
+          = render partial: 'parameters'

@@ -17,4 +17,8 @@ Mepaseaste::Application.routes.draw do
     resources :queries
   end
 
+  namespace :admin do
+    resources :home, only: :index
+  end
+
 end

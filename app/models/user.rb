@@ -12,6 +12,13 @@ class User < ActiveRecord::Base
 
   scope :superadmins, includes(:roles).where("roles.name = 'superadmin'")
 
+  def self.load_seeds
+    User.create(email: 'admin@mepaseaste.uy', password: 'superadmin')   unless User.find_by_email('admin@mepaseaste.uy')
+    User.create(email: 'gabriel@mepaseaste.uy', password: 'superadmin') unless User.find_by_email('gabriel@mepaseaste.uy')
+    User.create(email: 'renzo@mepaseaste.uy', password: 'superadmin')   unless User.find_by_email('renzo@mepaseaste.uy')
+    User.create(email: 'sergio@mepaseaste.uy', password: 'superadmin')  unless User.find_by_email('sergio@mepaseaste.uy')
+  end
+
   def has_role(role_name)
     roles.include?(Role.where(name: role_name).first)
   end
