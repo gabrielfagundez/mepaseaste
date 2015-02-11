@@ -34,6 +34,7 @@
 
         .col-sm-6.col-xs-12.taxi{ 'ng-repeat' => 'taxi in taxis' }
           %h4 Taxi {{ $index + 1 }}
+          .costo-taxi El costo de este taxi es {{ costoTaxi(taxi) }}
           %hr
           %h5
             Este taxi se hará cargo de los pasajeros

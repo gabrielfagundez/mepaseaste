@@ -52,6 +52,20 @@ app.controller('ResultsController', ['$scope', '$location', 'Query', 'TextResult
     return pasajeros;
   };
 
+  $scope.costoTaxi = function(taxi) {
+    console.log('Calculando costo taxi...')
+    console.log('Sumo de 0 a', taxi[0]);
+    var costo = $scope.costos[0][taxi[0]];
+    $.each(taxi, function(index, pasajero) {
+      if(index > 0) {
+        console.log('Sumo de', taxi[index-1], 'a', taxi[index])
+        costo += $scope.costos[taxi[index-1]][taxi[index]];
+      }
+    });
+
+    return costo;
+  };
+
   $scope.$on('queryParsed', function(data) {
     Query.get({ id: $scope.queryId }, function(data) {
       handleResourceSuccess(data)
@@ -96,6 +110,7 @@ app.controller('ResultsController', ['$scope', '$location', 'Query', 'TextResult
     });
 
     if(data.resolved) {
+      $scope.costos       = data.costos;
       $scope.totalCost    = '$' + data.costo_total;
       $scope.taxisCount   = data.solution.length;
       $scope.taxis        = data.solution;

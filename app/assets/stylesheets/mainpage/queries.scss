@@ -1,6 +1,10 @@
 #queries {
   .taxi-section, .map-section {
     padding: 50px 0;
+    .costo-taxi {
+      color: #777;
+      text-decoration: underline;
+    }
     .mini-title {
       margin-bottom: 40px;
       color: #4180C8;

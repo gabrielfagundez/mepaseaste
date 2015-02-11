@@ -55,7 +55,7 @@ $(function () {
       {
         element: '#step5',
         title: 'Taxis',
-        content: 'Aquí verás la distribución de pasajeros y taxis, junto con la ruta que deberá seguir el mismo.',
+        content: 'Aquí verás la distribución de pasajeros y taxis, junto con la ruta que deberá seguir el mismo y el costo de cada taxi en particular.',
         placement: 'top'
       }
     ],
