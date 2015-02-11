@@ -1,0 +1,57 @@
+#funcionamiento
+  .header
+    .container
+      .row
+        .col-lg-12
+          %h1 Cómo utilizar MePaseaste?
+
+  .section.section-white
+    .container
+      .row.centered
+        .col-lg-4
+          = image_tag 'seleccionar.png'
+        .col-lg-8
+          .text
+            .title Ingresa el origen y los destinos
+            .description
+              MePaseaste.UY considera el problema de taxi pooling one-to-many. La solución aplica a situaciones reales como:
+              todos en un cumple, o en el estadio, y nos vamos a casa. Para ello, primero ingresa el origen, de donde partirán
+              todos los pasajeros. Luego, ingresa uno a uno en el mapa los destinos. El origen será identificado con un marcador verde,
+              mientras que los destinos serán marcados con rojo.
+  .section.section-grey
+    .container
+      .row.centered
+        .col-lg-4
+          = image_tag 'trip.png'
+        .col-lg-8
+          .text
+            .title Presiona en Calcular
+            .description
+              MePaseaste.UY utiliza técnicas computación inteligente para calcular la solución óptima sobre los datos ingresados. Para
+              eso se hace uso de algoritmos evolutivos, técnicas basadas en la genética de Darwing. Después de presionar el botón de
+              Calcular, espera unos segundos, y tendrás el trayecto de cada uno de los taxis a disposición.
+  .section.section-white
+    .container
+      .row.centered
+        .col-lg-4
+          = image_tag 'viajar.png'
+        .col-lg-8
+          .text
+            .title Viaja
+            .description
+              Utiliza los datos que MePaseaste.UY te brinda para realizar viajes, compartir vehículos y ahorrar. Además, ayuda a disminuir
+              los gases provocados por los vehículos, disminuyendo la contaminación. Viajar en taxis además, es más cómodo y rápido que
+              hacerlo en ómnibus, y MePaseaste.UY te lo hace más fácil!
+  .section.section-video.section-grey
+    .container
+      .row.centered
+        .col-lg-12
+          %h1 Aún no estás convencido?
+          %h2 Mira estos videos promocionales del sitio
+        .col-lg-12
+          %iframe{ width: '854', height: '510', src: 'https://www.youtube.com/embed/rilFlpEZJkE', frameborder: '0', allowfullscreen: true }
+  .section.section-video.section-white
+    .container
+      .row.centered
+        .col-lg-12
+          %iframe{ width: '854', height: '510', src: 'https://www.youtube.com/embed/oCS2UUXFMaI', frameborder: '0', allowfullscreen: true }

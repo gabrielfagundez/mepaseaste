@@ -10,6 +10,7 @@ Mepaseaste::Application.routes.draw do
       get :algoritmos_evolutivos
       get :premios
       get :articulos
+      get :funcionamiento
     end
   end
 
